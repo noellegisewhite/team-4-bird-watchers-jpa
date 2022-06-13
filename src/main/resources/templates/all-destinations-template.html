@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/all-dest-style.css">
+    <title>All Destinations</title>
+</head>
+
+<header>
+    <h1>This is a page!</h1>
+</header>
+
+<body>
+<main>
+    <section th:each="destinations: ${allDestinations}" class="single-dest">
+        <div class="dest-container">
+            <h2 class="dest-name" th:text="${destinations.packageName}">Package Name</h2>
+            <h3 class="dest-price" th:text="${destinations.packagePrice}">Price</h3>
+            <img class="dest-main-img" th:src="${destinations.destinationImageUrl}"/>
+            <button class="dest-button" th:text="${destinations.packageCategory}">Category</button>
+            <p class="dest-id" th:text="${destinations.id}">Id</p>
+            <p class="dest-country" th:text="${destinations.country}">Country</p>
+            <p class="dest-region" th:text="${destinations.region}">Region</p>
+            <p class="dest-habitat" th:text="${destinations.habitat}">Habitat</p>
+            <p class="dest-description" th:text="${destinations.packageDesc}">Description</p>
+            <a th:text="${destinations.packageName}" th:href="'/single-destination/'+${destinations.id}"></a>
+        </div>
+    </section>
+</main>
+</body>
+</html>

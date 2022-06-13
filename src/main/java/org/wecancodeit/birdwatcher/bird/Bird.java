@@ -1,4 +1,4 @@
-package org.wecancodeit.birdwatcher;
+package org.wecancodeit.birdwatcher.bird;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
