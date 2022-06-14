@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import java.util.Objects;
 
 @Entity
-public abstract class Bird {
+public class Bird {
 
     @GeneratedValue (strategy= GenerationType.AUTO)
     @Id
@@ -73,6 +73,11 @@ public abstract class Bird {
     }
 
     public Bird(){
+    }
+
+    // MVP Constructor
+    public Bird(String nameOfBird) {
+        this.nameOfBird = nameOfBird;
     }
 
     public Bird(long id, String nameOfBird, String birdImageUrl, String colorOfBird, double lengthOfBeak, double lengthOfWing, String species,

@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Team 4 - Home</title>
+    <title>Title</title>
 </head>
 
 <header>
@@ -16,10 +16,17 @@
             <li><a href="/#contact">Contact</a></li>
         </ul>
     </nav>
-    <h1>This is the homepage</h1>
+    <h1>This is the all birds page</h1>
 </header>
 
 <body>
+<main>
+    <section th:each="bird: ${allBirds}" class="single-bird">
+        <div class="bird-container">
+            <h2 class="bird-name" th:text="${bird.nameOfBird}">Bird Name</h2>
+        </div>
+    </section>
+</main>
 
 </body>
 </html>

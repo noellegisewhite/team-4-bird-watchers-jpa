@@ -21,14 +21,12 @@ public class HomeController {
     @GetMapping("/")
     public String displayHomeBirds(Model model) {
         model.addAttribute("birdModel", birdRepo.findAll());
-        return ("home-template");
-    }
-
-    @GetMapping("/")
-    public String displayHomeDestinations(Model model) {
         model.addAttribute("destinationModel", destinationRepo.findAll());
         return ("home-template");
     }
 
-
+    @GetMapping("/about")
+    public String displayAboutPage() {
+        return ("about-template.html");
+    }
 }

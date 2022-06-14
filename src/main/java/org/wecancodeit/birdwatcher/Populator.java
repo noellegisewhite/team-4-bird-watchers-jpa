@@ -2,6 +2,8 @@ package org.wecancodeit.birdwatcher;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
+import org.wecancodeit.birdwatcher.bird.Bird;
+import org.wecancodeit.birdwatcher.bird.BirdRepository;
 import org.wecancodeit.birdwatcher.destination.Destinations;
 import org.wecancodeit.birdwatcher.destination.DestinationsRepository;
 
@@ -9,6 +11,9 @@ import javax.annotation.Resource;
 
 @Component
 public class Populator implements CommandLineRunner {
+
+    @Resource
+    private BirdRepository birdStorage;
 
     @Resource
     private DestinationsRepository destinationStorage;
@@ -21,5 +26,10 @@ public class Populator implements CommandLineRunner {
         Destinations packageTwo = new Destinations(86.99, "Private Dolphin Tour and Snorkeling at Mnemba Island reef", "Snorkeling", "Tanzania", "East Africa", "Tropical", "/images/dolphinTourAndSnorkeling.jpg", "Combine three of Zanzibar’s must-do outdoor adventures into one half-day private tour without all the hassle of having to arrange anything for yourself. Head for the island’s north-eastern waters and watch for dolphins in their natural habitat before snorkeling at Mnemba Island Reef, where corals and clear waters teem with angel fish, rays and other tropical species. Finish at a sandbank to swim in the calm and bright shallows—the perfect finale.");
         destinationStorage.save(packageOne);
         destinationStorage.save(packageTwo);
+
+        Bird birdOne = new Bird("Seagull");
+        Bird birdTwo = new Bird("Flamingo");
+        birdStorage.save(birdOne);
+        birdStorage.save(birdTwo);
     }
 }
