@@ -5,10 +5,10 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 
-import org.wecancodeit.birdwatcher.destination.Destinations;
-import org.wecancodeit.birdwatcher.hashtag.Hashtag;
-import org.wecancodeit.birdwatcher.destination.DestinationsRepository;
-import org.wecancodeit.birdwatcher.hashtag.HashtagRepository;
+import org.wecancodeit.birdwatcher.model.Destinations;
+import org.wecancodeit.birdwatcher.model.Hashtag;
+import org.wecancodeit.birdwatcher.repository.DestinationsRepository;
+import org.wecancodeit.birdwatcher.repository.HashtagRepository;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;

@@ -1,7 +1,8 @@
-package org.wecancodeit.birdwatcher.destination;
+package org.wecancodeit.birdwatcher.repository;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
+import org.wecancodeit.birdwatcher.model.Destinations;
 
 import java.util.List;
 

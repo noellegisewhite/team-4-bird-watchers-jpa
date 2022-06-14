@@ -1,4 +1,4 @@
-package org.wecancodeit.birdwatcher.bird;
+package org.wecancodeit.birdwatcher.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,7 +11,7 @@ public class Bird {
 
     @GeneratedValue (strategy= GenerationType.AUTO)
     @Id
-    private long id;
+    private Long id;
     private String nameOfBird;
     private String birdImageUrl;
     private String colorOfBird;
@@ -24,23 +24,7 @@ public class Bird {
     private String countryRegion;
     private String habitat;
 
-    public String getContinent() {
-        return continent;
-    }
-
-    public String getCountry() {
-        return country;
-    }
-
-    public String getCountryRegion() {
-        return countryRegion;
-    }
-
-    public String getHabitat() {
-        return habitat;
-    }
-
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
@@ -72,6 +56,23 @@ public class Bird {
         return description;
     }
 
+    public String getContinent() {
+        return continent;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public String getCountryRegion() {
+        return countryRegion;
+    }
+
+    public String getHabitat() {
+        return habitat;
+    }
+
+    // Empty Constructor
     public Bird(){
     }
 
@@ -80,9 +81,8 @@ public class Bird {
         this.nameOfBird = nameOfBird;
     }
 
-    public Bird(long id, String nameOfBird, String birdImageUrl, String colorOfBird, double lengthOfBeak, double lengthOfWing, String species,
-                String description, String continent, String country, String countryRegion, String habitat) {
-        this.id = id;
+    public Bird(String nameOfBird, String birdImageUrl, String colorOfBird, double lengthOfBeak, double lengthOfWing,
+                String species, String description, String continent, String country, String countryRegion, String habitat) {
         this.nameOfBird = nameOfBird;
         this.birdImageUrl = birdImageUrl;
         this.colorOfBird = colorOfBird;
@@ -94,19 +94,6 @@ public class Bird {
         this.country = country;
         this.countryRegion = countryRegion;
         this.habitat = habitat;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Bird)) return false;
-        Bird bird = (Bird) o;
-        return getId() == bird.getId() && Double.compare(bird.getLengthOfBeak(), getLengthOfBeak()) == 0 && Double.compare(bird.getLengthOfWing(), getLengthOfWing()) == 0 && getNameOfBird().equals(bird.getNameOfBird()) && getBirdImageUrl().equals(bird.getBirdImageUrl()) && getColorOfBird().equals(bird.getColorOfBird()) && getSpecies().equals(bird.getSpecies()) && getDescription().equals(bird.getDescription()) && getContinent().equals(bird.getContinent()) && getCountry().equals(bird.getCountry()) && getCountryRegion().equals(bird.getCountryRegion()) && getHabitat().equals(bird.getHabitat());
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(getId(), getNameOfBird(), getBirdImageUrl(), getColorOfBird(), getLengthOfBeak(), getLengthOfWing(), getSpecies(), getDescription(), getContinent(), getCountry(), getCountryRegion(), getHabitat());
     }
 
     @Override
@@ -125,5 +112,18 @@ public class Bird {
                 ", countryRegion='" + countryRegion + '\'' +
                 ", habitat='" + habitat + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Bird)) return false;
+        Bird bird = (Bird) o;
+        return getId() == bird.getId() && Double.compare(bird.getLengthOfBeak(), getLengthOfBeak()) == 0 && Double.compare(bird.getLengthOfWing(), getLengthOfWing()) == 0 && getNameOfBird().equals(bird.getNameOfBird()) && getBirdImageUrl().equals(bird.getBirdImageUrl()) && getColorOfBird().equals(bird.getColorOfBird()) && getSpecies().equals(bird.getSpecies()) && getDescription().equals(bird.getDescription()) && getContinent().equals(bird.getContinent()) && getCountry().equals(bird.getCountry()) && getCountryRegion().equals(bird.getCountryRegion()) && getHabitat().equals(bird.getHabitat());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId(), getNameOfBird(), getBirdImageUrl(), getColorOfBird(), getLengthOfBeak(), getLengthOfWing(), getSpecies(), getDescription(), getContinent(), getCountry(), getCountryRegion(), getHabitat());
     }
 }
