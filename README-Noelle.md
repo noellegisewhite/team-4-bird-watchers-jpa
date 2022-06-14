@@ -18,3 +18,6 @@ Updates 06/13/2022:
 - Hashtag Class & Repo build for testing
 - Passing Wire tests for Destinations
 Notes: 'AddHashtag' test will not pass. Need further help as to why I can never get these methods to work.
+
+Updates 06/14/2022:
+- 

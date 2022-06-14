@@ -91,7 +91,19 @@ public class Destinations {
         this.hashtags = List.of(hashtags);
     }
 
-    // MVP Controller
+    // Minimal Controller
+    public Destinations(Double packagePrice, String packageName, String packageCategory, String country, String region, String habitat, String destinationImageUrl, String packageDesc) {
+        this.packagePrice = packagePrice;
+        this.packageName = packageName;
+        this.packageCategory = packageCategory;
+        this.country = country;
+        this.region = region;
+        this.habitat = habitat;
+        this.destinationImageUrl = destinationImageUrl;
+        this.packageDesc = packageDesc;
+    }
+
+    // Stretch Constructor With Hashtags
     public Destinations(Double packagePrice, String packageName, String packageCategory, String country, String region, String habitat, String destinationImageUrl, String packageDesc, Hashtag...hashtags) {
         this.packagePrice = packagePrice;
         this.packageName = packageName;
