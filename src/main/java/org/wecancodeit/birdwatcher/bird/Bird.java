@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import java.util.Objects;
 
 @Entity
-public abstract class Bird {
+public class Bird {
 
     @GeneratedValue (strategy= GenerationType.AUTO)
     @Id
