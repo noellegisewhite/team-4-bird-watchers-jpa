@@ -1,4 +1,6 @@
 package org.wecancodeit.birdwatcher.hashtag;
 
-public class HashtagRepository {
+import org.springframework.data.repository.CrudRepository;
+
+public interface HashtagRepository extends CrudRepository<Hashtag, Long> {
 }

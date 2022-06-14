@@ -1,10 +1,10 @@
 package org.wecancodeit.birdwatcher.destination;
 import org.wecancodeit.birdwatcher.hashtag.Hashtag;
-import org.wecancodeit.birdwatcher.review.Review;
 
 import javax.persistence.*;
 
 import java.util.Collection;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -23,14 +23,14 @@ public class Destinations {
     private String destinationImageUrl;
     @Lob // Longer text allowance
     private String packageDesc;
+    @ManyToMany
+    private Collection<Hashtag> hashtags;
 
     // Stretch Task Variables ================================================================
 //    @ManyToOne
-//    private Collection<Photos> photos;
+//    private Collection<Review> reviews;
 //    @ManyToOne
-//    private Collection<Review> review;
-//    @ManyToMany
-//    private Collection<Hashtag> hashtag;
+//    private Collection<Photos> photos;
 
     // Getters ===============================================================================
     public Long getId() {
@@ -69,24 +69,30 @@ public class Destinations {
         return packageDesc;
     }
 
-//    public Collection<Photos> getPhotos() {
-//        return photos;
-//    }
-//
+    public Collection<Hashtag> getHashtags() {
+        return hashtags;
+    }
+
 //    public Collection<Review> getReviews() {
 //        return review;
 //    }
 //
-//    public Collection<Hashtag> getHashtags() {
-//        return hashtag;
+//    public Collection<Photos> getPhotos() {
+//        return photos;
 //    }
 
     // Constructors ==========================================================================
     public Destinations() {
     }
 
+    // For Testing Only
+    public Destinations(String packageName, Hashtag...hashtags) {
+        this.packageName = packageName;
+        this.hashtags = List.of(hashtags);
+    }
+
     // MVP Controller
-    public Destinations(Double packagePrice, String packageName, String packageCategory, String country, String region, String habitat, String destinationImageUrl, String packageDesc) {
+    public Destinations(Double packagePrice, String packageName, String packageCategory, String country, String region, String habitat, String destinationImageUrl, String packageDesc, Hashtag...hashtags) {
         this.packagePrice = packagePrice;
         this.packageName = packageName;
         this.packageCategory = packageCategory;
@@ -95,19 +101,20 @@ public class Destinations {
         this.habitat = habitat;
         this.destinationImageUrl = destinationImageUrl;
         this.packageDesc = packageDesc;
+        this.hashtags = List.of(hashtags);
     }
 
     // Methods ===============================================================================
+    public void addOneHashtag(Hashtag hashtagToAdd) {
+        hashtags.add(hashtagToAdd);
+    }
+
 //    public void addPhoto(Photos photoToAdd) {
 //        photos.add(photoToAdd);
 //    }
 //
 //    public void addReview(Review reviewToAdd) {
-//        review.add(reviewToAdd);
-//    }
-//
-//    public void addHashtag(Hashtag hashtagToAdd) {
-//        hashtag.add(hashtagToAdd);
+//        reviews.add(reviewToAdd);
 //    }
 
 
