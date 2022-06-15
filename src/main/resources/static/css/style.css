@@ -1,3 +1,38 @@
+:root {
+
+    /* variables */
+    --color-off-gray: #e7e7e7;
+    --color-off-white: #f8f8f8;
+    --color-white: #fff;
+    --color-black: #0B0B0D;
+    --color-gray: #272932;
+}
+
 * {
-    background-color: #FFFFCC;
+    box-sizing: border-box;
+}
+
+.nav-container {
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 10px 10px;
+}
+
+.hero-section {
+    margin-top: 20px;
+    height: 75vh;
+    background-color: var(--color-off-white);
 }

@@ -1,4 +1,4 @@
-package org.wecancodeit.controller;
+package org.wecancodeit.birdwatcher.controller;
 
 import org.springframework.stereotype.Controller;
 import javax.annotation.Resource;
