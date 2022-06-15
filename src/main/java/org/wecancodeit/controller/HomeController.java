@@ -1,4 +1,4 @@
-package org.wecancodeit.birdwatcher.homepage;
+package org.wecancodeit.controller;
 
 import org.springframework.stereotype.Controller;
 import javax.annotation.Resource;
@@ -6,8 +6,8 @@ import javax.annotation.Resource;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.ui.Model;
 
-import org.wecancodeit.birdwatcher.bird.BirdRepository;
-import org.wecancodeit.birdwatcher.destination.DestinationsRepository;
+import org.wecancodeit.birdwatcher.repository.BirdRepository;
+import org.wecancodeit.birdwatcher.repository.DestinationsRepository;
 
 @Controller
 public class HomeController {
@@ -21,14 +21,12 @@ public class HomeController {
     @GetMapping("/")
     public String displayHomeBirds(Model model) {
         model.addAttribute("birdModel", birdRepo.findAll());
-        return ("home-template");
-    }
-
-    @GetMapping("/")
-    public String displayHomeDestinations(Model model) {
         model.addAttribute("destinationModel", destinationRepo.findAll());
         return ("home-template");
     }
 
-
+    @GetMapping("/about")
+    public String displayAboutPage() {
+        return ("about-template.html");
+    }
 }

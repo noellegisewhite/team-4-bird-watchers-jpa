@@ -1,5 +1,4 @@
-package org.wecancodeit.birdwatcher.destination;
-import org.wecancodeit.birdwatcher.hashtag.Hashtag;
+package org.wecancodeit.birdwatcher.model;
 
 import javax.persistence.*;
 
