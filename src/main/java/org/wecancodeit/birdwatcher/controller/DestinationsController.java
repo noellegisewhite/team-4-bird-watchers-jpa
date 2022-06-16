@@ -22,6 +22,11 @@ public class DestinationsController {
         return ("all-destinations-template.html"); // HTML File name
     }
 
+    @RequestMapping ("/test")
+    public String displayTest(Model model) {
+        return ("z-global-template.html"); // HTML File name
+    }
+
     @GetMapping ("/destinations/{country}")
     public String displayOneDestinationByCountry(@PathVariable String country, Model model) {
         model.addAttribute("countryDestination", destinationsRepo.findByCountry(country));

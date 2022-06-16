@@ -24,6 +24,15 @@
 
 /* =========================== GLOBAL ============================ */
 
+.test {
+    width: 100%;
+    margin: 10px auto;
+}
+
+.test h6 {
+    font-size: 0.8rem;
+}
+
 * {
     font-family: var(--font-prime);
     padding: 0;
@@ -134,6 +143,41 @@
 
 .global-threecol__container {
     margin: 10px 10px;
+}
+
+.global-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.global-cards__container {
+    margin: 20px;
+    padding: 100px 40px;
+    color: var(--color-white);
+}
+
+.global-cards__dark-orange {
+    background-color: var(--color-dark-orange);
+}
+
+.global-cards__orange {
+    background-color: var(--color-orange);
+}
+
+.global-cards__yellow {
+    background-color: var(--color-yellow);
+}
+
+.global-cards__purple {
+    background-color: var(--color-purple);
+}
+
+.global-cards__red {
+    background-color: var(--color-red);
+}
+
+.global-cards__blue {
+    background-color: var(--color-blue);
 }
 
 /* ========================== // GLOBAL ========================== */
