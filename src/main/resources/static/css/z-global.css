@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap');
+
+/* ========================== VARIABLES ========================== */
+
+:root {
+
+    /* colors */
+    --color-black: #0B0B0D;
+    --color-gray: #272932;
+    --color-light-gray: #999;
+    --color-dark-orange: #E36414;
+    --color-orange: #F4983C;
+    --color-yellow: #FFDB78;
+    --color-purple: #5F0F40;
+    --color-red: #9A031E;
+    --color-blue: #0F4C5C;
+    --color-white: #fff;
+    
+    /* fonts */
+    --font-prime: 'Poppins', sans-serif;
+}
+
+/* ========================= // VARIABLES ======================== */
+
+/* =========================== GLOBAL ============================ */
+
+* {
+    font-family: var(--font-prime);
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.global-container {
+    margin: 50px 50px;
+}
+
+.global-divider {
+    margin: 30px auto;
+}
+
+.global-h1, .global-h2, .global-h3 {
+    line-height: 1.5;
+}
+
+.global-h4, .global-h5, .global-h6 {
+    line-height: 1.5;
+}
+
+.global-h1 {
+    font-size: 4.5rem;;
+}
+
+.global-h2 {
+    font-size: 4rem;
+}
+
+.global-h3 {
+    font-size: 3.5rem;
+}
+
+.global-h4 {
+    font-size: 3rem;
+}
+
+.global-h5 {
+    font-size: 2.5rem;
+}
+
+.global-h6 {
+    font-size: 2rem;
+}
+
+.global-text {
+    line-height: 1.8;
+    color: var(--color-gray);
+}
+
+.global-button {
+    text-decoration: none;
+    color: var(--color-white);
+    background-color: var(--color-black);
+    margin: 5px 5px;
+    padding: 10px 25px;
+    transition: all 300ms ease;
+    border-radius: 3px;
+    font-weight: 700;
+}
+
+.global-button:hover {
+    color: var(--color-black);
+    background-color: var(--color-white);
+    border: 1px solid var(--color-black);
+}
+
+.global-button__dark-orange {
+    background-color: var(--color-dark-orange);
+}
+
+.global-button__orange {
+    background-color: var(--color-orange);
+}
+
+.global-button__yellow {
+    background-color: var(--color-yellow);
+}
+
+.global-button__purple {
+    background-color: var(--color-purple);
+}
+
+.global-button__red {
+    background-color: var(--color-red);
+}
+
+.global-button__blue {
+    background-color: var(--color-blue);
+}
+
+.global-twocol {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.global-twocol__right {
+    margin: auto auto;
+}
+
+.global-threecol {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.global-threecol__container {
+    margin: 10px 10px;
+}
+
+/* ========================== // GLOBAL ========================== */
