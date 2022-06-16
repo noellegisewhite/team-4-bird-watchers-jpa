@@ -2,12 +2,14 @@
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="/css/style.css">
   <!-- ============ VS Code Path ================= -->
-  <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="stylesheet" href="static/css/reviews.css">
   <title>Team 4 - Home</title>
+  <!-- poppins-font-family -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <!--using-Font-Awesome-------------------->
+  <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
 </head>
-
 <header>
   <nav>
     <ul>
@@ -19,10 +21,149 @@
       <li><a href="/#contact">Contact</a></li>
     </ul>
   </nav>
-  <h1>This is the homepage</h1>
 </header>
 
 <body>
-$END$
+<!--Testimonials------------------->
+<section id="testimonials">
+  <!--heading--->
+  <div class="testimonial-heading">
+    <span>Reviews</span>
+    <h1>Tourists Say</h1>
+  </div>
+  <!--testimonials-box-container------>
+  <div class="testimonial-box-container">
+    <!--BOX-1-------------->
+    <div class="testimonial-box">
+      <!--top------------------------->
+      <div class="box-top">
+        <!--profile----->
+        <div class="profile">
+          <!--img---->
+          <div class="profile-img">
+            <img src="images/c-5.jpg" />
+          </div>
+          <!--name-and-username-->
+          <div class="name-user">
+            <strong>Lorem Ipsum</strong>
+            <span>@loremipsum</span>
+            <span>Visited Kruger National Park From 7/15/22 - 7/20/22</span>
+          </div>
+        </div>
+        <!--reviews------>
+        <div class="reviews">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+          <!--Empty star-->
+        </div>
+      </div>
+      <!--Comments---------------------------------------->
+      <div class="client-comment">
+        <p>I took the safari tour with my family and it was amazing. Although there were a lot of insects
+          around, I was able to see the animals and birds that I wanted to see. My favorites were
+          flamingos and parrots.</p>
+      </div>
+    </div>
+    <!--BOX-2-------------->
+    <div class="testimonial-box">
+      <!--top------------------------->
+      <div class="box-top">
+        <!--profile----->
+        <div class="profile">
+          <!--img---->
+          <div class="profile-img">
+            <img src="images/c-6.jpg" />
+          </div>
+          <!--name-and-username-->
+          <div class="name-user">
+            <strong>Jane Doe</strong>
+            <span>@JaneDoe</span>
+            <span>Visited Rift Valley From 11/21/22 - 11/26/22</span>
+          </div>
+        </div>
+        <!--reviews------>
+        <div class="reviews">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <!--Empty star-->
+        </div>
+      </div>
+      <!--Comments---------------------------------------->
+      <div class="client-comment">
+        <p>There was a lot of variety in wildlife around.I love seeing hornbills, parrots, and flamingos.
+        </p>
+      </div>
+    </div>
+    <!--BOX-3-------------->
+    <div class="testimonial-box">
+      <!--top------------------------->
+      <div class="box-top">
+        <!--profile----->
+        <div class="profile">
+          <!--img---->
+          <div class="profile-img">
+            <img src="images/c-7.jpg" />
+          </div>
+          <!--name-and-username-->
+          <div class="name-user">
+            <strong>John Smith</strong>
+            <span>@therealjsmith</span>
+          </div>
+        </div>
+        <!--reviews------>
+        <div class="reviews">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+          <!--Empty star-->
+        </div>
+      </div>
+      <!--Comments---------------------------------------->
+      <div class="client-comment">
+        <p>I loved seeing all of the birds and I enjoyed many of the tourist activities.</p>
+      </div>
+    </div>
+    <!--BOX-4-------------->
+    <div class="testimonial-box">
+      <!--top------------------------->
+      <div class="box-top">
+        <!--profile----->
+        <div class="profile">
+          <!--img---->
+          <div class="profile-img">
+            <img src="images/c-8.jpg" />
+          </div>
+          <!--name-and-username-->
+          <div class="name-user">
+            <strong>Random Name</strong>
+            <span>@RandName</span>
+          </div>
+        </div>
+        <!--reviews------>
+        <div class="reviews">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+          <!--Empty star-->
+        </div>
+      </div>
+      <!--Comments---------------------------------------->
+      <div class="client-comment">
+        <p>If you go on this tour, you will love every moment of it. The scenes are breathtaking and while capturing certain sights weren't easy, I got enough pictures. </p>
+      </div>
+    </div>
+  </div>
+</section>
+
 </body>
 </html>
