@@ -8,6 +8,8 @@
     <!-- ============ Global Styles ================= -->
     <link rel="stylesheet" href="/css/z-global.css">
     <link rel="stylesheet" href="/static/css/z-global.css">
+    <!-- ============= Dest Styles ================== -->
+
     <title>All Destinations</title>
 </head>
 
@@ -30,21 +32,37 @@
 </header>
 
 <body>
-<main>
-    <section th:each="destinations: ${allDestinations}" class="single-dest">
-        <div class="dest-container">
-            <h2 class="dest-name" th:text="${destinations.packageName}">Package Name</h2>
-            <h3 class="dest-price" th:text="${destinations.packagePrice}">Price</h3>
-            <img class="dest-main-img" th:src="${destinations.destinationImageUrl}"/>
-            <button class="dest-button" th:text="${destinations.packageCategory}">Category</button>
-            <p class="dest-id" th:text="${destinations.id}">Id</p>
-            <p class="dest-country" th:text="${destinations.country}">Country</p>
-            <p class="dest-region" th:text="${destinations.region}">Region</p>
-            <p class="dest-habitat" th:text="${destinations.habitat}">Habitat</p>
-            <p class="dest-description" th:text="${destinations.packageDesc}">Description</p>
-            <a th:text="${destinations.packageName}" th:href="'/single-destination/'+${destinations.id}"></a>
-        </div>
-    </section>
-</main>
+    <main>
+        <section th:each="destinations: ${allDestinations}" class="single-dest">
+            <div class="dest-container">
+                <h2 class="dest-name" th:text="${destinations.packageName}">Package Name</h2>
+                <h3 class="dest-price" th:text="${destinations.packagePrice}">Price</h3>
+                <img class="dest-main-img" th:src="${destinations.destinationImageUrl}" />
+                <button class="dest-button" th:text="${destinations.packageCategory}">Category</button>
+                <p class="dest-id" th:text="${destinations.id}">Id</p>
+                <p class="dest-country" th:text="${destinations.country}">Country</p>
+                <p class="dest-region" th:text="${destinations.region}">Region</p>
+                <p class="dest-habitat" th:text="${destinations.habitat}">Habitat</p>
+                <p class="dest-description" th:text="${destinations.packageDesc}">Description</p>
+                <a th:text="${destinations.packageName}" th:href="'/single-destination/'+${destinations.id}"></a>
+            </div>
+        </section>
+
+        <section class="dest-gallery">
+            <input type="radio" name="destinations" id="button1" checked>
+            <input type="radio" name="destinations" id="button1" checked>
+            <input type="radio" name="destinations" id="button1" checked>
+            <input type="radio" name="destinations" id="button1" checked>
+            <input type="radio" name="destinations" id="button1" checked>
+
+
+
+
+            <div class="dest-gallery__container">
+
+            </div>
+        </section>
+    </main>
 </body>
+
 </html>
