@@ -29,4 +29,9 @@ public class HomeController {
     public String displayAboutPage() {
         return ("about-template.html");
     }
+
+    @GetMapping("/company")
+    public String displayCompanyPage() {
+        return ("company-template.html");
+    }
 }
