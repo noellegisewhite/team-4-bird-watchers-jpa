@@ -8,13 +8,17 @@
     <!-- ============ Global Styles ================= -->
     <link rel="stylesheet" href="/css/z-global.css">
     <link rel="stylesheet" href="/static/css/z-global.css">
+    <!-- ============= Dest Styles ================== -->
+    <link rel="stylesheet" href="/css/destinations.css">
+    <link rel="stylesheet" href="/static/css/destinations.css">
+
     <title>All Destinations</title>
 </head>
 
 <header>
     <nav>
         <div class="nav-container">
-            <img src="/images/macaw.png" width="5%" />
+            <img src="/images/macaw.png" width="5%"/>
             <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="/about">About</a></li>
@@ -31,6 +35,30 @@
 
 <body>
 <main>
+    <section class="dest-gallery__country">
+        <input type="radio" name="destinations" id="button1" checked>
+        <input type="radio" name="destinations" id="button2">
+        <input type="radio" name="destinations" id="button3">
+        <input type="radio" name="destinations" id="button4">
+        <input type="radio" name="destinations" id="button5">
+        <h2 class="global-h2">Search Destinations By Country</h2>
+        <div class="dest-label__country">
+            <label for="button1">All Countries</label>
+            <label for="button2">Kenya</label>
+            <label for="button3">Madagascar</label>
+            <label for="button4">Algeria</label>
+            <label for="button5">Tanzania</label>
+        </div>
+        <div class="dest-gallery__main" >
+            <div class="dest-gallery__elements" th:each="destinations: ${allDestinations}">
+                <a th:href="'/single-destination/'+${destinations.id}"><img class="dest-main-img" th:id="${destinations.country}" th:src="${destinations.destinationImageUrl}"/></a>
+                <div class="dest-gallery__text" th:id="${destinations.country}">
+                    <button th:text="${destinations.country}">Country</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section th:each="destinations: ${allDestinations}" class="single-dest">
         <div class="dest-container">
             <h2 class="dest-name" th:text="${destinations.packageName}">Package Name</h2>
@@ -45,6 +73,8 @@
             <a th:text="${destinations.packageName}" th:href="'/single-destination/'+${destinations.id}"></a>
         </div>
     </section>
+
 </main>
 </body>
+
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 
 <head>
     <meta charset="UTF-8">
@@ -12,6 +12,45 @@
 </head>
 
 <body>
+    <!--================================= Tests With Jordan =================================-->
+    <section class="test global-threecol">
+        <div class="global-threecol__container">
+            <h6 class="global-h6 global-threecol__h6-1">/dolphinTourAndSnorkeling.jpg</h6>
+            <img src="/dolphinTourAndSnorkeling.jpg" alt="image" class="global-threecol__img" width="100%">
+        </div>
+        <div class="global-threecol__container">
+            <h6 class="global-h6 global-threecol__h6-1">/images/dolphinTourAndSnorkeling.jpg</h6>
+            <img src="/images/dolphinTourAndSnorkeling.jpg" alt="image" class="global-threecol__img" width="100%">
+        </div>
+        <div class="global-threecol__container">
+            <h6 class="global-h6 global-threecol__h6-1">/static/images/dolphinTourAndSnorkeling.jpg</h6>
+            <img src="/static/images/dolphinTourAndSnorkeling.jpg" alt="image" class="global-threecol__img"
+                width="100%">
+        </div>
+        <div class="global-threecol__container">
+            <h6 class="global-h6 global-threecol__h6-1">/resources/static/images/dolphinTourAndSnorkeling.jpg</h6>
+            <img src="/resources/static/images/dolphinTourAndSnorkeling.jpg" alt="image" class="global-threecol__img"
+                width="100%">
+        </div>
+        <div class="global-threecol__container">
+            <h6 class="global-h6 global-threecol__h6-1">/main/resources/static/images/dolphinTourAndSnorkeling.jpg</h6>
+            <img src="/main/resources/static/images/dolphinTourAndSnorkeling.jpg" alt="image"
+                class="global-threecol__img" width="100%">
+        </div>
+        <div class="global-threecol__container">
+            <h6 class="global-h6 global-threecol__h6-1">src/main/resources/static/images/dolphinTourAndSnorkeling.jpg
+            </h6>
+            <img src="src/main/resources/static/images/dolphinTourAndSnorkeling.jpg" alt="image"
+                class="/global-threecol__img" width="100%">
+        </div>
+    </section>
+    <!--================================= // Tests With Jordan =================================-->
+
+    <div class="global-divider">
+        <hr size="8" width="100%" color="red">
+    </div>
+
+    <!-- =========== headers =========== -->
     <div class="global-container">
         <h1 class="global-h1">This Is An H1 Tag</h1>
         <h2 class="global-h2">This Is An H2 Tag</h2>
@@ -21,16 +60,7 @@
         <h6 class="global-h6">This Is An H6 Tag</h6>
     </div>
 
-    <div class="global-container">
-        <a href="home#" class="global-button">BUTTON</a>
-        <a href="home#" class="global-button global-button__dark-orange">BUTTON</a>
-        <a href="home#" class="global-button global-button__orange">BUTTON</a>
-        <a href="home#" class="global-button global-button__yellow">BUTTON</a>
-        <a href="home#" class="global-button global-button__purple">BUTTON</a>
-        <a href="home#" class="global-button global-button__red">BUTTON</a>
-        <a href="home#" class="global-button global-button__blue">BUTTON</a>
-    </div>
-
+    <!-- =========== text =========== -->
     <div class="global-container">
         <p class="global-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, delectus dolores! Eveniet
             maxime dolore voluptate dolor rem nesciunt deleniti vel, animi quod eaque repudiandae, dicta veniam aliquid.
@@ -39,6 +69,7 @@
             ab non?</p>
     </div>
 
+    <!-- =========== lists =========== -->
     <div class="global-container">
         <ul class="global-ul">
             <li class="global-ul-item">This is an un-ordered list item</li>
@@ -59,6 +90,18 @@
         </ol>
     </div>
 
+    <!-- =========== buttons =========== -->
+    <div class="global-container">
+        <a href="https://www.google.com/" class="global-button">BUTTON</a>
+        <a href="https://www.google.com/" class="global-button global-button__dark-orange">BUTTON</a>
+        <a href="https://www.google.com/" class="global-button global-button__orange">BUTTON</a>
+        <a href="https://www.google.com/" class="global-button global-button__yellow">BUTTON</a>
+        <a href="https://www.google.com/" class="global-button global-button__purple">BUTTON</a>
+        <a href="https://www.google.com/" class="global-button global-button__red">BUTTON</a>
+        <a href="https://www.google.com/" class="global-button global-button__blue">BUTTON</a>
+    </div>
+
+    <!-- =========== two column grid =========== -->
     <section class="global-twocol">
         <img src="https://images.pexels.com/photos/247431/pexels-photo-247431.jpeg" alt="image"
             class="global-twocol__img" width="100%">
@@ -82,6 +125,7 @@
         <hr size="8" width="100%" color="red">
     </div>
 
+    <!-- =========== three column grid =========== -->
     <section class="global-threecol">
         <div class="global-threecol__container">
             <img src="https://images.pexels.com/photos/247431/pexels-photo-247431.jpeg" alt="image"
@@ -131,12 +175,38 @@
         <hr size="8" width="100%" color="red">
     </div>
 
-    <section class="global-container">
-
-    </section>
-
-    <section class="global-container">
-
+    <!-- =========== cards =========== -->
+    <section class="global-cards">
+        <div class="global-cards__container global-cards__dark-orange">
+            <h6 class="global-h6 global-cards__h6">This is a title</h6>
+            <p class="global-cards__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Quasi, odio.</p>
+        </div>
+        <div class="global-cards__container global-cards__orange">
+            <h6 class="global-h6 global-cards__h6">This is a title</h6>
+            <p class="global-cards__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Quasi, odio.</p>
+        </div>
+        <div class="global-cards__container global-cards__yellow">
+            <h6 class="global-h6 global-cards__h6">This is a title</h6>
+            <p class="global-cards__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Quasi, odio.</p>
+        </div>
+        <div class="global-cards__container global-cards__purple">
+            <h6 class="global-h6 global-cards__h6">This is a title</h6>
+            <p class="global-cards__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Quasi, odio.</p>
+        </div>
+        <div class="global-cards__container global-cards__red">
+            <h6 class="global-h6 global-cards__h6">This is a title</h6>
+            <p class="global-cards__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Quasi, odio.</p>
+        </div>
+        <div class="global-cards__container global-cards__blue">
+            <h6 class="global-h6 global-cards__h6">This is a title</h6>
+            <p class="global-cards__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Quasi, odio.</p>
+        </div>
     </section>
 
 </body>

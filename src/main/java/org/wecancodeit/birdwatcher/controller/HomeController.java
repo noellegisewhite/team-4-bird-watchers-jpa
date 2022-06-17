@@ -6,6 +6,7 @@ import javax.annotation.Resource;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.ui.Model;
 
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.wecancodeit.birdwatcher.repository.BirdRepository;
 import org.wecancodeit.birdwatcher.repository.DestinationsRepository;
 
@@ -33,5 +34,15 @@ public class HomeController {
     @GetMapping("/company")
     public String displayCompanyPage() {
         return ("company-template.html");
+    }
+
+    @GetMapping("/reviews")
+    public String displayReviewsPage(Model model) {
+        return ("reviews.html");
+    }
+
+    @GetMapping("/test")
+    public String displayTest(Model model) {
+        return ("z-global-template.html");
     }
 }
