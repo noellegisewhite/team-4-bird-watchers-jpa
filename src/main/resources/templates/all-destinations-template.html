@@ -35,6 +35,7 @@
 
 <body>
 <main>
+    <!-- ============= COUNTRY ================== -->
     <section class="dest-gallery__country">
         <input type="radio" name="destinations" id="button1" checked>
         <input type="radio" name="destinations" id="button2">
@@ -52,27 +53,79 @@
         <div class="dest-gallery__main" >
             <div class="dest-gallery__elements" th:each="destinations: ${allDestinations}">
                 <a th:href="'/single-destination/'+${destinations.id}"><img class="dest-main-img" th:id="${destinations.country}" th:src="${destinations.destinationImageUrl}"/></a>
-                <div class="dest-gallery__text" th:id="${destinations.country}">
+                <div class="gallery-text__country" th:id="${destinations.country}">
                     <button th:text="${destinations.country}">Country</button>
                 </div>
             </div>
         </div>
     </section>
-
-    <section th:each="destinations: ${allDestinations}" class="single-dest">
-        <div class="dest-container">
-            <h2 class="dest-name" th:text="${destinations.packageName}">Package Name</h2>
-            <h3 class="dest-price" th:text="${destinations.packagePrice}">Price</h3>
-            <img class="dest-main-img" th:src="${destinations.destinationImageUrl}"/>
-            <button class="dest-button" th:text="${destinations.packageCategory}">Category</button>
-            <p class="dest-id" th:text="${destinations.id}">Id</p>
-            <p class="dest-country" th:text="${destinations.country}">Country</p>
-            <p class="dest-region" th:text="${destinations.region}">Region</p>
-            <p class="dest-habitat" th:text="${destinations.habitat}">Habitat</p>
-            <p class="dest-description" th:text="${destinations.packageDesc}">Description</p>
-            <a th:text="${destinations.packageName}" th:href="'/single-destination/'+${destinations.id}"></a>
+    <!-- ============= // COUNTRY ================== -->
+    <!-- =============== REGION ==================== -->
+    <section class="dest-gallery__region">
+        <input type="radio" name="destinations" id="region1" checked>
+        <input type="radio" name="destinations" id="region2">
+        <input type="radio" name="destinations" id="region3">
+        <input type="radio" name="destinations" id="region4">
+        <h2 class="global-h2">Search Destinations By Region</h2>
+        <div class="dest-label__region">
+            <label for="region1">All Regions</label>
+            <label for="region2">East</label>
+            <label for="region3">Island</label>
+            <label for="region4">North</label>
+        </div>
+        <div class="dest-gallery__main" >
+            <div class="dest-gallery__elements" th:each="destinations: ${allDestinations}">
+                <a th:href="'/single-destination/'+${destinations.id}"><img class="dest-main-img" th:id="${destinations.region}" th:src="${destinations.destinationImageUrl}"/></a>
+                <div class="gallery-text__region" th:id="${destinations.region}">
+                    <button th:text="${destinations.region}">Region</button>
+                </div>
+            </div>
         </div>
     </section>
+    <!-- ============= // REGION ================== -->
+    <!-- ============== HABITAT =================== -->
+    <section class="dest-gallery__habitat">
+        <input type="radio" name="destinations" id="habitat1" checked>
+        <input type="radio" name="destinations" id="habitat2">
+        <input type="radio" name="destinations" id="habitat3">
+        <input type="radio" name="destinations" id="habitat4">
+        <input type="radio" name="destinations" id="habitat5">
+        <input type="radio" name="destinations" id="habitat6">
+
+        <h2 class="global-h2">Search Destinations By Habitat</h2>
+        <div class="dest-label__habitat">
+            <label for="habitat1">All Habitats</label>
+            <label for="habitat2">Coastal</label>
+            <label for="habitat3">Tropical</label>
+            <label for="habitat4">Mountain</label>
+            <label for="habitat5">Plains</label>
+            <label for="habitat6">Desert</label>
+        </div>
+        <div class="dest-gallery__main" >
+            <div class="dest-gallery__elements" th:each="destinations: ${allDestinations}">
+                <a th:href="'/single-destination/'+${destinations.id}"><img class="dest-main-img" th:id="${destinations.habitat}" th:src="${destinations.destinationImageUrl}"/></a>
+                <div class="gallery-text__habitat" th:id="${destinations.habitat}">
+                    <button th:text="${destinations.habitat}">Habitat</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ============= // HABITAT ================== -->
+
+<!--    <section th:each="destinations: ${allDestinations}" class="single-dest">-->
+<!--        <div class="dest-container">-->
+<!--            <h2 class="dest-name" th:text="${destinations.packageName}">Package Name</h2>-->
+<!--            <h3 class="dest-price" th:text="${destinations.packagePrice}">Price</h3>-->
+<!--            <img class="dest-main-img" th:src="${destinations.destinationImageUrl}"/>-->
+<!--            <button class="dest-button" th:text="${destinations.packageCategory}">Category</button>-->
+<!--            <p class="dest-id" th:text="${destinations.id}">Id</p>-->
+<!--            <p class="dest-country" th:text="${destinations.country}">Country</p>-->
+<!--            <p class="dest-region" th:text="${destinations.region}">Region</p>-->
+<!--            <p class="dest-habitat" th:text="${destinations.habitat}">Habitat</p>-->
+<!--            <p class="dest-description" th:text="${destinations.packageDesc}">Description</p>-->
+<!--            <a th:text="${destinations.packageName}" th:href="'/single-destination/'+${destinations.id}"></a>-->
+<!--        </div>-->
+<!--    </section>-->
 
 </main>
 </body>

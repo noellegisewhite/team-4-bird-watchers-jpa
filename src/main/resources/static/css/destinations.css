@@ -4,17 +4,23 @@
     padding 120px;
 }
 
-.dest-gallery__country input{
+.dest-gallery__country input,
+.dest-gallery__habitat input,
+.dest-gallery__region input {
     visibility: hidden;
 }
 
-.dest-label__country {
-    background-color: #999;
+.dest-label__country,
+.dest-label__region,
+.dest-label__habitat {
+    color: white;
+    background-color: #9A031E;
     width: 80%;
-    margin: auto;
 }
 
-.dest-label__country label {
+.dest-label__country label,
+.dest-label__region label,
+.dest-label__habitat label {
     font-size: 2rem;
     margin: 30px 10px;
 }
@@ -36,13 +42,15 @@ dest-gallery__elements {
     margin: auto;
 }
 
-.dest-gallery__text {
+.gallery-text__country,
+.gallery-text__region,
+.gallery-text__habitat {
     position: relative;
     top: -25%;
     left: 5%
 }
 
-.dest-gallery__text button {
+.gallery-text__country button {
     color: white;
     background-color: #E36414;
     font-size: 1rem;
@@ -51,6 +59,25 @@ dest-gallery__elements {
     padding: 8px 30px;
 }
 
+.gallery-text__region button {
+    color: white;
+    background-color: #0F4C5C;
+    font-size: 1rem;
+    border: none;
+    border-radius: 100px;
+    padding: 8px 30px;
+}
+
+.gallery-text__habitat button {
+    color: white;
+    background-color: #5F0F40;
+    font-size: 1rem;
+    border: none;
+    border-radius: 100px;
+    padding: 8px 30px;
+}
+
+/* ================== COUNTRY ================== */
 #button1:checked ~ .dest-gallery__main .dest-main-img .dest-gallery__elements {
     display: block;
 }
@@ -94,3 +121,81 @@ dest-gallery__elements {
 #button5:checked ~ .dest-gallery__main .dest-gallery__elements #Algeria  {
     display: none;
 }
+/* ================== // COUNTRY ================== */
+/* ==================== REGION ==================== */
+#region1:checked ~ .dest-region__main .dest-main-img .dest-gallery__elements {
+    display: block;
+}
+
+#region2:checked ~ .dest-gallery__main .dest-gallery__elements #East {
+    display: block;
+}
+
+#region2:checked ~ .dest-gallery__main .dest-gallery__elements #Island,
+#region2:checked ~ .dest-gallery__main .dest-gallery__elements #North {
+    display: none;
+}
+
+#region3:checked ~ .dest-gallery__main .dest-gallery__elements #Island {
+    display: block;
+}
+
+#region3:checked ~ .dest-gallery__main .dest-gallery__elements #East,
+#region3:checked ~ .dest-gallery__main .dest-gallery__elements #North {
+    display: none;
+}
+
+#region4:checked ~ .dest-gallery__main .dest-gallery__elements #North {
+    display: block;
+}
+
+#region4:checked ~ .dest-gallery__main .dest-gallery__elements #East,
+#region4:checked ~ .dest-gallery__main .dest-gallery__elements #Island {
+    display: none;
+}
+/* ================== // REGION =================== */
+/* ==================== HABITAT =================== */
+#button1:checked ~ .dest-gallery__main .dest-main-img .dest-gallery__elements {
+    display: block;
+}
+
+#button2:checked ~ .dest-gallery__main .dest-gallery__elements #Kenya {
+    display: block;
+}
+
+#button2:checked ~ .dest-gallery__main .dest-gallery__elements #Madagascar,
+#button2:checked ~ .dest-gallery__main .dest-gallery__elements #Algeria,
+#button2:checked ~ .dest-gallery__main .dest-gallery__elements #Tanzania {
+    display: none;
+}
+
+#button3:checked ~ .dest-gallery__main .dest-gallery__elements #Madagascar {
+    display: block;
+}
+
+#button3:checked ~ .dest-gallery__main .dest-gallery__elements #Kenya,
+#button3:checked ~ .dest-gallery__main .dest-gallery__elements #Algeria,
+#button3:checked ~ .dest-gallery__main .dest-gallery__elements #Tanzania {
+    display: none;
+}
+
+#button4:checked ~ .dest-gallery__main .dest-gallery__elements #Algeria {
+    display: block;
+}
+
+#button4:checked ~ .dest-gallery__main .dest-gallery__elements #Kenya,
+#button4:checked ~ .dest-gallery__main .dest-gallery__elements #Madagascar,
+#button4:checked ~ .dest-gallery__main .dest-gallery__elements #Tanzania {
+    display: none;
+}
+
+#button5:checked ~ .dest-gallery__main .dest-gallery__elements #Tanzania {
+    display: block;
+}
+
+#button5:checked ~ .dest-gallery__main .dest-gallery__elements #Kenya,
+#button5:checked ~ .dest-gallery__main .dest-gallery__elements #Madagascar,
+#button5:checked ~ .dest-gallery__main .dest-gallery__elements #Algeria  {
+    display: none;
+}
+/* ================== // HABITAT ================== */
