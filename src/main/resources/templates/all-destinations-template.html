@@ -33,6 +33,20 @@
 
 <body>
     <main>
+        <section class="dest-gallery__country">
+            <input type="radio" name="destinations" id="button1" checked>
+            <input type="radio" name="destinations" id="button2">
+            <input type="radio" name="destinations" id="button3">
+            <input type="radio" name="destinations" id="button4">
+            <h2 class="global-h2">Search Destinations By Country</h2>
+            <div class="dest-label__country">
+                <label for="button1">All Countries</label>
+                <label for="button2">Kenya</label>
+                <label for="button3">Madagascar</label>
+                <label for="button4">Algeria</label>
+            </div>
+        </section>
+
         <section th:each="destinations: ${allDestinations}" class="single-dest">
             <div class="dest-container">
                 <h2 class="dest-name" th:text="${destinations.packageName}">Package Name</h2>
@@ -48,20 +62,6 @@
             </div>
         </section>
 
-        <section class="dest-gallery">
-            <input type="radio" name="destinations" id="button1" checked>
-            <input type="radio" name="destinations" id="button1" checked>
-            <input type="radio" name="destinations" id="button1" checked>
-            <input type="radio" name="destinations" id="button1" checked>
-            <input type="radio" name="destinations" id="button1" checked>
-
-
-
-
-            <div class="dest-gallery__container">
-
-            </div>
-        </section>
     </main>
 </body>
 
