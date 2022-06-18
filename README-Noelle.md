@@ -41,3 +41,4 @@ Updates 06/17/2022:
 
 Updates 06/18/2022:
 - Single destinations html/css
+- Added Bird Watcher template
