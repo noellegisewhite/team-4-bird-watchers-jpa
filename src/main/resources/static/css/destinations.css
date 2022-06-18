@@ -1,7 +1,14 @@
-.dest-gallery__country {
-    width: 100%;
+.dest-gallery__country,
+.dest-gallery__region,
+.dest-gallery__habitat {
+    width: 80%;
     margin: 20px auto;
     padding 120px;
+}
+
+.gallery-h2 {
+    text-align: center;
+    margin: 10px auto;
 }
 
 .dest-gallery__country input,
@@ -14,29 +21,40 @@
 .dest-label__region,
 .dest-label__habitat {
     color: white;
-    background-color: #9A031E;
-    width: 80%;
+    background-color: #E36414;
+    border-top: 5px solid #FFDB78;
+    border-bottom: 5px solid #9A031E;
+    width: 100%;
 }
 
 .dest-label__country label,
 .dest-label__region label,
 .dest-label__habitat label {
     font-size: 2rem;
-    margin: 30px 10px;
+    margin: 30px auto;
+    padding: 10px;
+    text-align: center;
+    border-right: 3px solid #FFF;
+    cursor: pointer;
 }
 
-.dest-gallery__main {
+.dest-gallery__main,
+.dest-region__main,
+.dest-habitat__main {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
     margin: auto;
 }
 
-dest-gallery__elements {
-    margin: auto;
+.dest-gallery__elements,
+.dest-region__elements,
+.dest-habitat__elements {
 }
 
-.dest-main-img {
+.dest-main-img,
+.dest-region__img,
+.dest-habitat__img {
     width: 100%;
     height: 100%;
     margin: auto;
@@ -123,79 +141,94 @@ dest-gallery__elements {
 }
 /* ================== // COUNTRY ================== */
 /* ==================== REGION ==================== */
-#region1:checked ~ .dest-region__main .dest-main-img .dest-gallery__elements {
+#region1:checked ~ .dest-region__main .dest-region__img .dest-region__elements {
     display: block;
 }
 
-#region2:checked ~ .dest-gallery__main .dest-gallery__elements #East {
+#region2:checked ~ .dest-region__main .dest-region__elements #East {
     display: block;
 }
 
-#region2:checked ~ .dest-gallery__main .dest-gallery__elements #Island,
-#region2:checked ~ .dest-gallery__main .dest-gallery__elements #North {
+#region2:checked ~ .dest-region__main .dest-region__elements #Island,
+#region2:checked ~ .dest-region__main .dest-region__elements #North {
     display: none;
 }
 
-#region3:checked ~ .dest-gallery__main .dest-gallery__elements #Island {
+#region3:checked ~ .dest-region__main .dest-region__elements #Island {
     display: block;
 }
 
-#region3:checked ~ .dest-gallery__main .dest-gallery__elements #East,
-#region3:checked ~ .dest-gallery__main .dest-gallery__elements #North {
+#region3:checked ~ .dest-region__main .dest-region__elements #East,
+#region3:checked ~ .dest-region__main .dest-region__elements #North {
     display: none;
 }
 
-#region4:checked ~ .dest-gallery__main .dest-gallery__elements #North {
+#region4:checked ~ .dest-region__main .dest-region__elements #North {
     display: block;
 }
 
-#region4:checked ~ .dest-gallery__main .dest-gallery__elements #East,
-#region4:checked ~ .dest-gallery__main .dest-gallery__elements #Island {
+#region4:checked ~ .dest-region__main .dest-region__elements #East,
+#region4:checked ~ .dest-region__main .dest-region__elements #Island {
     display: none;
 }
 /* ================== // REGION =================== */
 /* ==================== HABITAT =================== */
-#button1:checked ~ .dest-gallery__main .dest-main-img .dest-gallery__elements {
+#habitat1:checked ~ .dest-habitat__main .dest-habitat__img .dest-habitat__elements {
     display: block;
 }
 
-#button2:checked ~ .dest-gallery__main .dest-gallery__elements #Kenya {
+#habitat2:checked ~ .dest-habitat__main .dest-habitat__elements #coastal {
     display: block;
 }
 
-#button2:checked ~ .dest-gallery__main .dest-gallery__elements #Madagascar,
-#button2:checked ~ .dest-gallery__main .dest-gallery__elements #Algeria,
-#button2:checked ~ .dest-gallery__main .dest-gallery__elements #Tanzania {
+#habitat2:checked ~ .dest-habitat__main .dest-habitat__elements #tropical,
+#habitat2:checked ~ .dest-habitat__main .dest-habitat__elements #mountain,
+#habitat2:checked ~ .dest-habitat__main .dest-habitat__elements #plains,
+#habitat2:checked ~ .dest-habitat__main .dest-habitat__elements #desert {
     display: none;
 }
 
-#button3:checked ~ .dest-gallery__main .dest-gallery__elements #Madagascar {
+#habitat3:checked ~ .dest-habitat__main .dest-habitat__elements #tropical {
     display: block;
 }
 
-#button3:checked ~ .dest-gallery__main .dest-gallery__elements #Kenya,
-#button3:checked ~ .dest-gallery__main .dest-gallery__elements #Algeria,
-#button3:checked ~ .dest-gallery__main .dest-gallery__elements #Tanzania {
+#habitat3:checked ~ .dest-habitat__main .dest-habitat__elements #coastal,
+#habitat3:checked ~ .dest-habitat__main .dest-habitat__elements #mountain,
+#habitat3:checked ~ .dest-habitat__main .dest-habitat__elements #plains,
+#habitat3:checked ~ .dest-habitat__main .dest-habitat__elements #desert {
     display: none;
 }
 
-#button4:checked ~ .dest-gallery__main .dest-gallery__elements #Algeria {
+#habitat4:checked ~ .dest-habitat__main .dest-habitat__elements #mountain {
     display: block;
 }
 
-#button4:checked ~ .dest-gallery__main .dest-gallery__elements #Kenya,
-#button4:checked ~ .dest-gallery__main .dest-gallery__elements #Madagascar,
-#button4:checked ~ .dest-gallery__main .dest-gallery__elements #Tanzania {
+#habitat4:checked ~ .dest-habitat__main .dest-habitat__elements #coastal,
+#habitat4:checked ~ .dest-habitat__main .dest-habitat__elements #tropical,
+#habitat4:checked ~ .dest-habitat__main .dest-habitat__elements #plains,
+#habitat4:checked ~ .dest-habitat__main .dest-habitat__elements #desert {
     display: none;
 }
 
-#button5:checked ~ .dest-gallery__main .dest-gallery__elements #Tanzania {
+#habitat5:checked ~ .dest-habitat__main .dest-habitat__elements #plains {
     display: block;
 }
 
-#button5:checked ~ .dest-gallery__main .dest-gallery__elements #Kenya,
-#button5:checked ~ .dest-gallery__main .dest-gallery__elements #Madagascar,
-#button5:checked ~ .dest-gallery__main .dest-gallery__elements #Algeria  {
+#habitat5:checked ~ .dest-habitat__main .dest-habitat__elements #coastal,
+#habitat5:checked ~ .dest-habitat__main .dest-habitat__elements #tropical,
+#habitat5:checked ~ .dest-habitat__main .dest-habitat__elements #mountain,
+#habitat5:checked ~ .dest-habitat__main .dest-habitat__elements #desert  {
+    display: none;
+}
+
+#habitat6:checked ~ .dest-habitat__main .dest-habitat__elements #desert {
+    display: block;
+}
+
+#habitat6:checked ~ .dest-habitat__main .dest-habitat__elements #coastal,
+#habitat6:checked ~ .dest-habitat__main .dest-habitat__elements #tropical,
+#habitat6:checked ~ .dest-habitat__main .dest-habitat__elements #mountain,
+#habitat6:checked ~ .dest-habitat__main .dest-habitat__elements #plains  {
     display: none;
 }
 /* ================== // HABITAT ================== */
