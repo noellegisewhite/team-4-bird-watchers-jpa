@@ -109,36 +109,38 @@ public class JPAWiringTest {
         assertEquals(2, hashSize);
     }
 
-//    @Test // Also fails
-//    public void willAddTwoTagsToNewDestCollectionOfTags() {
-//        hashStorage.save(testTag1);
-//        hashStorage.save(testTag2);
-//
-//        Destinations newDest = new Destinations("Sunset Seagull Soiree");
-//        testDest1.addOneHashtag(testTag1);
-//        testDest1.addOneHashtag(testTag2);
-//        destStorage.save(newDest);
-//
-//        entityManager.flush();
-//        entityManager.clear();
-//
-//        assertThat(newDest.getHashtags(), containsInAnyOrder(testTag2, testTag1));
-//    }
-//
-//    @Test // Need help getting this to pass. Will work on tomorrow.
-//    public void willAddTestTag2ToTestDest1ListOfHashtags() {
-//        hashStorage.save(testTag1);
-//        hashStorage.save(testTag2);
-//        destStorage.save(testDest1);
-//
-//        Destinations newDest = destStorage.findById(testDest1.getId()).get();
-//        testDest1.addOneHashtag(testTag2);
-//        destStorage.save(newDest);
-//
-//        entityManager.flush();
-//        entityManager.clear();
-//
-//        int hashSize = newDest.getHashtags().size();
-//        assertEquals(1, hashSize);
-//    }
+    @Test // Also fails
+    public void willAddTwoTagsToNewDestCollectionOfTags() {
+        hashStorage.save(testTag1);
+        hashStorage.save(testTag2);
+
+        Destinations newDest = new Destinations("Package Name");
+        newDest.addOneHashtag(testTag1);
+        newDest.addOneHashtag(testTag2);
+        destStorage.save(newDest);
+
+        entityManager.flush();
+        entityManager.clear();
+
+        assertThat(newDest.getHashtags(), containsInAnyOrder(testTag2, testTag1));
+    }
+
+    @Test // Need help getting this to pass. Will work on tomorrow.
+    public void willAddTestTag2ToTestDest1ListOfHashtags() {
+        hashStorage.save(testTag1);
+        hashStorage.save(testTag2);
+        destStorage.save(testDest1);
+
+        Destinations newDest = destStorage.findById(testDest1.getId()).get();
+        newDest.addOneHashtag(testTag1);
+        newDest.addOneHashtag(testTag2);
+        destStorage.save(newDest);
+
+        entityManager.flush();
+        entityManager.clear();
+
+        int hashSize = newDest.getHashtags().size();
+        assertEquals(2, hashSize);
+        assertThat(newDest.getPackageName(), is("Sunset Seagull Soiree"));
+    }
 }

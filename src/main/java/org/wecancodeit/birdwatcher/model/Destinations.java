@@ -1,10 +1,7 @@
 package org.wecancodeit.birdwatcher.model;
 
 import javax.persistence.*;
-
-import java.util.Collection;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 @Entity
 public class Destinations {
@@ -23,7 +20,7 @@ public class Destinations {
     @Lob // Longer text allowance
     private String packageDesc;
     @ManyToMany
-    private Collection<Hashtag> hashtags;
+    private Set<Hashtag> hashtags;
 
     // Stretch Task Variables ================================================================
 //    @ManyToOne
@@ -68,7 +65,7 @@ public class Destinations {
         return packageDesc;
     }
 
-    public Collection<Hashtag> getHashtags() {
+    public Set<Hashtag> getHashtags() {
         return hashtags;
     }
 
@@ -87,7 +84,7 @@ public class Destinations {
     // For Testing Only
     public Destinations(String packageName, Hashtag...hashtags) {
         this.packageName = packageName;
-        this.hashtags = List.of(hashtags);
+        this.hashtags = new HashSet<>();
     }
 
     // Minimal Controller
@@ -112,7 +109,7 @@ public class Destinations {
         this.habitat = habitat;
         this.destinationImageUrl = destinationImageUrl;
         this.packageDesc = packageDesc;
-        this.hashtags = List.of(hashtags);
+        this.hashtags = new HashSet<>();
     }
 
     // Methods ===============================================================================
@@ -127,7 +124,6 @@ public class Destinations {
 //    public void addReview(Review reviewToAdd) {
 //        reviews.add(reviewToAdd);
 //    }
-
 
     @Override
     public String toString() {
