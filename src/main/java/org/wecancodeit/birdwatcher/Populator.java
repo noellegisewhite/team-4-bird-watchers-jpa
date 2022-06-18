@@ -3,9 +3,11 @@ package org.wecancodeit.birdwatcher;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import org.wecancodeit.birdwatcher.model.Bird;
+import org.wecancodeit.birdwatcher.model.Hashtag;
 import org.wecancodeit.birdwatcher.repository.BirdRepository;
 import org.wecancodeit.birdwatcher.model.Destinations;
 import org.wecancodeit.birdwatcher.repository.DestinationsRepository;
+import org.wecancodeit.birdwatcher.repository.HashtagRepository;
 
 import javax.annotation.Resource;
 
@@ -18,8 +20,19 @@ public class Populator implements CommandLineRunner {
     @Resource
     private DestinationsRepository destinationStorage;
 
+    @Resource
+    private HashtagRepository hashtagStorage;
+
     @Override
     public void run(String... args) throws Exception {
+
+        Hashtag africaTag = new Hashtag("africa");
+        Hashtag safariTag = new Hashtag("safari");
+        Hashtag oceanTag = new Hashtag("ocean");
+
+        hashtagStorage.save(africaTag);
+        hashtagStorage.save(safariTag);
+        hashtagStorage.save(oceanTag);
 
         // public Destinations(Double packagePrice, String packageName, String packageCategory, String country, String region, String habitat, String destinationImageUrl, String packageDesc)
         Destinations packageOne = new Destinations(3975.00, "9 Days Africa Wildlife Photographic Private Safari Package", "Safari", "Kenya", "East", "tropical", "/images/wildlifePhotographicSafari.jpg", "Explore the Tsavo West, Amboseli, Lake Nakuru and Masai Mara ecosystem the best African photo safari destinations, capture the best wildebeest migration experience, an encounter with big cats and large herds of Elephants and other animals. This 9 days Africa Wildlife Photographic Tour Safari offers a great opportunity to view and photograph Africa’s iconic animals – including Elephants, Lions, Cheetahs, Leopards and Giraffes – under expert guidance and tuition from our wildlife photographer guide. Also exciting is a cultural visit to one of the traditional villages and Mount Kilimanjaro breathtaking views. To maximize the amazing photographic opportunities, you simply need to be at the right place, in the right sport at the right time with the sun from just where you need it to be. This requires the services of a specialist guide and driver.");

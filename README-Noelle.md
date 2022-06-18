@@ -33,3 +33,8 @@ Updates 06/14/2022:
 - Connected basic stylesheet to all templates
 - Added Thymeleaf bird data to all-birds template
 Notes: 
+
+Updates 06/17/2022:
+- Updated destinations page & single destinations page
+- Updated homepage
+- JPA testing
