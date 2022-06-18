@@ -28,19 +28,28 @@
             </ul>
         </div>
     </nav>
-    <h1>Single Destinations Template</h1>
+<!--    <h1>Single Destinations Template</h1>-->
 </header>
 
 <body>
 <main>
-    <h2 class="global-h2" th:text="${singleDestination.packageName}">Package Name</h2>
-    <h4 class="global-h4" th:text="${singleDestination.packagePrice}">Price</h4>
-    <p class="global-text" th:text="${singleDestination.packageCategory}">Category</p>
-    <p class="global-text" th:text="${singleDestination.country}">Country</p>
-    <p class="global-text" th:text="${singleDestination.region}">Region</p>
-    <p class="global-text" th:text="${singleDestination.habitat}">Habitat</p>
-    <img th:src="${singleDestination.destinationImageUrl}" th:alt="${singleDestination.packageName}">
-    <p class="global-text" th:text="${singleDestination.packageDesc}">Description</p>
+    <section class="single-hero">
+        <div class="single-hero__container">
+        <h5 class="global-h5" th:text="${singleDestination.country}">Country</h5>
+        <h3 class="global-h3" th:text="${singleDestination.packageName}">Package Name</h3>
+        </div>
+    </section>
+
+    <section class="dest-main">
+        <h4 class="global-h4" th:text="${singleDestination.packagePrice}">Price</h4>
+        <img th:src="${singleDestination.destinationImageUrl}" th:alt="${singleDestination.packageName}">
+        <div class="grid-elements">
+            <p class="global-text" th:text="${singleDestination.packageCategory}">Category</p>
+            <p class="global-text" th:text="${singleDestination.region}">Region</p>
+            <p class="global-text" th:text="${singleDestination.habitat}">Habitat</p>
+            <p class="global-text" th:text="${singleDestination.packageDesc}">Description</p>
+        </div>
+    </section>
 </main>
 </body>
 </html>

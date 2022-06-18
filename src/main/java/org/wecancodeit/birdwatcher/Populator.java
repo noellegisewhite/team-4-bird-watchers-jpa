@@ -35,8 +35,8 @@ public class Populator implements CommandLineRunner {
         hashtagStorage.save(oceanTag);
 
         // public Destinations(Double packagePrice, String packageName, String packageCategory, String country, String region, String habitat, String destinationImageUrl, String packageDesc)
-        Destinations packageOne = new Destinations(3975.00, "9 Days Africa Wildlife Photographic Private Safari Package", "Safari", "Kenya", "East", "tropical", "/images/wildlifePhotographicSafari.jpg", "Explore the Tsavo West, Amboseli, Lake Nakuru and Masai Mara ecosystem the best African photo safari destinations, capture the best wildebeest migration experience, an encounter with big cats and large herds of Elephants and other animals. This 9 days Africa Wildlife Photographic Tour Safari offers a great opportunity to view and photograph Africa’s iconic animals – including Elephants, Lions, Cheetahs, Leopards and Giraffes – under expert guidance and tuition from our wildlife photographer guide. Also exciting is a cultural visit to one of the traditional villages and Mount Kilimanjaro breathtaking views. To maximize the amazing photographic opportunities, you simply need to be at the right place, in the right sport at the right time with the sun from just where you need it to be. This requires the services of a specialist guide and driver.");
-        Destinations packageTwo = new Destinations(86.99, "Private Dolphin Tour and Snorkeling at Mnemba Island reef", "Snorkeling", "Tanzania", "East", "tropical", "/images/dolphinTourAndSnorkeling.jpg", "Combine three of Zanzibar’s must-do outdoor adventures into one half-day private tour without all the hassle of having to arrange anything for yourself. Head for the island’s north-eastern waters and watch for dolphins in their natural habitat before snorkeling at Mnemba Island Reef, where corals and clear waters teem with angel fish, rays and other tropical species. Finish at a sandbank to swim in the calm and bright shallows—the perfect finale.");
+        Destinations packageOne = new Destinations(3975.00, "9 Days Africa Wildlife Photographic Private Safari Package", "Safari", "Kenya", "East", "plains", "/images/wildlifePhotographicSafari.jpg", "Explore the Tsavo West, Amboseli, Lake Nakuru and Masai Mara ecosystem the best African photo safari destinations, capture the best wildebeest migration experience, an encounter with big cats and large herds of Elephants and other animals. This 9 days Africa Wildlife Photographic Tour Safari offers a great opportunity to view and photograph Africa’s iconic animals – including Elephants, Lions, Cheetahs, Leopards and Giraffes – under expert guidance and tuition from our wildlife photographer guide. Also exciting is a cultural visit to one of the traditional villages and Mount Kilimanjaro breathtaking views. To maximize the amazing photographic opportunities, you simply need to be at the right place, in the right sport at the right time with the sun from just where you need it to be. This requires the services of a specialist guide and driver.");
+        Destinations packageTwo = new Destinations(86.99, "Private Dolphin Tour and Snorkeling at Mnemba Island reef", "Snorkeling", "Tanzania", "East", "coastal", "/images/dolphinTourAndSnorkeling.jpg", "Combine three of Zanzibar’s must-do outdoor adventures into one half-day private tour without all the hassle of having to arrange anything for yourself. Head for the island’s north-eastern waters and watch for dolphins in their natural habitat before snorkeling at Mnemba Island Reef, where corals and clear waters teem with angel fish, rays and other tropical species. Finish at a sandbank to swim in the calm and bright shallows—the perfect finale.");
 
         destinationStorage.save(packageOne);
         destinationStorage.save(packageTwo);
@@ -70,20 +70,20 @@ public class Populator implements CommandLineRunner {
         birdStorage.save(birdH);
 
         // Dummy Data
-        Destinations kenya1 = new Destinations(1444.99, "Kozy Kenya Kayaking", "boat", "Kenya", "East", "coastal", "/images/dest (1).jpg", "Package description");
-        Destinations kenya2 = new Destinations(1333.99, "Koastal Retreat", "romantic", "Kenya", "East", "tropical", "/images/dest (2).jpg", "Package description");
-        Destinations kenya3 = new Destinations(1222.99, "Kenyan Klimbing", "safari", "Kenya", "East", "mountain", "/images/dest (3).jpg", "Package description");
-        Destinations kenya4 = new Destinations(1111.99, "Kamel Trekking In Kenya", "safari", "Kenya", "East", "desert", "/images/dest (4).jpg", "Package description");
+        Destinations kenya1 = new Destinations(1444.99, "Kamel Trekking In Kenya", "safari", "Kenya", "East", "plains", "/images/dest (1).jpg", "Package description");
+        Destinations kenya2 = new Destinations(1333.99, "Koastal Retreat", "luxury", "Kenya", "East", "tropical", "/images/dest (2).jpg", "Package description");
+        Destinations kenya3 = new Destinations(1222.99, "Kozy Kenya Kayaking", "romantic", "Kenya", "East", "coastal", "/images/dest (3).jpg", "Package description");
+        Destinations kenya4 = new Destinations(1111.99, "Kenya Kove", "luxury", "Kenya", "East", "coastal", "/images/dest (4).jpg", "Package description");
 
-        Destinations mad1 = new Destinations(2555.99, "Madagascar Nascar", "safari", "Madagascar", "Island", "desert", "/images/dest (5).jpg", "Package description");
+        Destinations mad1 = new Destinations(2555.99, "Madagascar Nascar", "safari", "Madagascar", "Island", "tropical", "/images/dest (5).jpg", "Package description");
         Destinations mad2 = new Destinations(2444.99, "Madagascar Madness", "boat", "Madagascar", "Island", "coastal", "/images/dest (6).jpg", "Package description");
-        Destinations mad3 = new Destinations(2333.99, "Madagascar & Caviar", "luxury", "Madagascar", "Island", "plains", "/images/dest (7).jpg", "Package description");
-        Destinations mad4 = new Destinations(2222.99, "Madagascar Under The Stars", "romantic", "Madagascar", "Island", "plains", "/images/dest (8).jpg", "Package description");
-        Destinations mad5 = new Destinations(2111.99, "Mornings in Madagascar", "safari", "Madagascar", "Island", "tropical", "/images/dest (9).jpg", "Package description");
+        Destinations mad3 = new Destinations(2333.99, "Madagascar & Caviar", "luxury", "Madagascar", "Island", "coastal", "/images/dest (7).jpg", "Package description");
+        Destinations mad4 = new Destinations(2222.99, "Madagascar Under The Stars", "romantic", "Madagascar", "Island", "mountain", "/images/dest (8).jpg", "Package description");
+        Destinations mad5 = new Destinations(2111.99, "Mornings in Madagascar", "boat", "Madagascar", "Island", "tropical", "/images/dest (9).jpg", "Package description");
 
-        Destinations alge1 = new Destinations(3333.99, "Algeria Pizzaria", "romantic", "Algeria", "North", "tropical", "/images/dest (10).jpg", "Package description");
-        Destinations alge2 = new Destinations(3222.99, "Algae in Algeria", "boat", "Algeria", "North", "coastal", "/images/dest (11).jpg", "Package description");
-        Destinations alge3 = new Destinations(3111.99, "All Aboard Algeria", "luxury", "Algeria", "North", "coastal", "/images/dest (12).jpg", "Package description");
+        Destinations alge1 = new Destinations(3333.99, "Algeria Pizzaria", "romantic", "Algeria", "North", "mountain", "/images/dest (10).jpg", "Package description");
+        Destinations alge2 = new Destinations(3222.99, "Alpines of Algeria", "safari", "Algeria", "North", "mountain", "/images/dest (11).jpg", "Package description");
+        Destinations alge3 = new Destinations(3111.99, "Algerian Mysteries", "safari", "Algeria", "North", "desert", "/images/dest (12).jpg", "Package description");
 
         destinationStorage.save(kenya1);
         destinationStorage.save(kenya2);

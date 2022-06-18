@@ -38,3 +38,6 @@ Updates 06/17/2022:
 - Updated destinations page & single destinations page
 - Updated homepage
 - JPA testing
+
+Updates 06/18/2022:
+- Single destinations html/css
