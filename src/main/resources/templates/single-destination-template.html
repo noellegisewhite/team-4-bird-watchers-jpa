@@ -7,6 +7,9 @@
     <!-- ============ Global Styles ================= -->
     <link rel="stylesheet" href="/css/z-global.css">
     <link rel="stylesheet" href="/static/css/z-global.css">
+    <!-- ============ Sng Dest Styles =============== -->
+    <link rel="stylesheet" href="/css/single-destination.css">
+    <link rel="stylesheet" href="/static/css/single-destination.css">
     <title>This Is A Single Destination</title>
 </head>
 
@@ -25,10 +28,19 @@
             </ul>
         </div>
     </nav>
-    <h1>Single destinationsTemplate</h1>
+    <h1>Single Destinations Template</h1>
 </header>
 
 <body>
-
+<main>
+    <h2 class="global-h2" th:text="${singleDestination.packageName}">Package Name</h2>
+    <h4 class="global-h4" th:text="${singleDestination.packagePrice}">Price</h4>
+    <p class="global-text" th:text="${singleDestination.packageCategory}">Category</p>
+    <p class="global-text" th:text="${singleDestination.country}">Country</p>
+    <p class="global-text" th:text="${singleDestination.region}">Region</p>
+    <p class="global-text" th:text="${singleDestination.habitat}">Habitat</p>
+    <img th:src="${singleDestination.destinationImageUrl}" th:alt="${singleDestination.packageName}">
+    <p class="global-text" th:text="${singleDestination.packageDesc}">Description</p>
+</main>
 </body>
 </html>

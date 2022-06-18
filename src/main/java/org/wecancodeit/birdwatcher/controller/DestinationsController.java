@@ -40,9 +40,9 @@ public class DestinationsController {
         return ("all-destinations-template.html");
     }
 
-    @GetMapping ("/single-destination/{id}")
+    @RequestMapping ("/single-destination/{id}")
     public String displayOneDestinationById(@PathVariable Long id, Model model) {
-        model.addAttribute("singleDestination", destinationsRepo.findById(id));
+        model.addAttribute("singleDestination", destinationsRepo.findById(id).get());
         return ("single-destination-template.html");
     }
 }
