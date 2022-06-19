@@ -2,15 +2,17 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/css/z-global.css">
+    <link rel="stylesheet" href="/static/css/z-global.css">
     <title>Bird Watchers</title>
 </head>
-<body>
-<div class="container">
-    <header class="header">
-        <h1 class="header logo">Bird Watching Enthusiasts</h1>
-        <nav class="header nav">
-            <ul class="header_nav_list">
+<header>
+    <nav>
+        <div class="nav-container">
+            <img src="/images/parrot-small.png"/>
+            <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="/about">About</a></li>
                 <li><a href="/company">Company</a></li>
@@ -19,8 +21,11 @@
                 <li><a href="/destinations">Destinations</a></li>
                 <li><a href="/reviews">Reviews</a></li>
             </ul>
-        </nav>
-        </header>
+        </div>
+    </nav>
+    <h1>Bird Watchers</h1>
+</header>
+        <body>
     <section class="profile">
         <figure>
             <img src="https://www.bing.com/th/id/OGC.68f42f86bfffda397f51e30305f0e8c8?pid=1.7&rurl=https%3a%2f%2fmedia.giphy.com%2fmedia%2f11yKRmmE5umKMo%2fgiphy.gif&ehk=81nAuRwLbl92ISS8VnPGlIHwLT%2fxi4WlU46wPCUu%2fYs%3d" alt="birder image">
@@ -48,4 +53,10 @@
 </div>
 
 </body>
+</main>
+<footer>
+    <section class="footer">
+        <p>&copy; TEAM 4 WCCI</p>
+    </section>
+</footer>
 </html>
