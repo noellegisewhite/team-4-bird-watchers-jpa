@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Birds By Country</title>
+    <title>Birds By Habitat</title>
 </head>
 <header>
     <nav>
@@ -21,8 +21,8 @@
     </nav>
 </header>
 <body>
-<h1 class="global-h1">Birds By Country</h1>
-<section th:each="bird: ${countryBird}" class="single-bird">
+<h1>This is a habitat template</h1>
+<section th:each="bird: ${habitatBird}" class="single-bird">
     <div class="bird-container">
         <h2 class="bird-name" th:text="${bird.nameOfBird}">Bird Name</h2>
         <h3 class="bird-species" th:text="${bird.species}">Bird Species</h3>

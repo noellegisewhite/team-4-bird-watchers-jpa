@@ -43,21 +43,21 @@ public class Populator implements CommandLineRunner {
 
         // public Bird(long id, String nameOfBird, String birdImageUrl, String colorOfBird, double lengthOfBeak, double lengthOfWing, String species, String description, String continent, String country, String countryRegion, String habitat)
         Bird birdA = new Bird("Saddle-billed stork", "https://th.bing.com/th?q=Saddle-billed+Stork+Female&w=120&h=120&c=1&rs=1&qlt=90&cb=1&dpr=1.25&pid=InlineBlock&mkt=en-US&cc=US&setlang=en&adlt=moderate&t=1&mw=247",
-                "black", 2, 3, "Ephippiorhynchus senegalensis", "bird", "Africa", "east africa", "Kruger National Park", "sahara");
+                "black", 2, 3, "Ephippiorhynchus senegalensis", "bird", "Africa", "east africa", "kruger national park", "sahara");
         Bird birdB = new Bird("Kori Bustard", "https://th.bing.com/th?q=Kori+Bustard+Bird+Wingspan&w=120&h=120&c=1&rs=1&qlt=90&cb=1&dpr=1.25&pid=InlineBlock&mkt=en-US&cc=US&setlang=en&adlt=moderate&t=1&mw=247",
-                "black", 2, 2, "Ardeotis kori", "bird", "Africa", "south", "Kruger National Park", "grasslands");
+                "black", 2, 2, "Ardeotis kori", "bird", "Africa", "south africa", "kruger national park", "grasslands");
         Bird birdC = new Bird("Martial Eagle", "https://th.bing.com/th?q=Martial+Eagle+Wings&w=120&h=120&c=1&rs=1&qlt=90&cb=1&dpr=1.25&pid=InlineBlock&mkt=en-US&cc=US&setlang=en&adlt=moderate&t=1&mw=247",
-                "black", 2, 2, "Polemaetus bellicosus", "bird", "Africa", "south", "Kruger National Park", "sahara");
+                "black", 2, 2, "Polemaetus bellicosus", "bird", "Africa", "south africa", "kruger national park", "sahara");
         Bird birdD = new Bird("Southern Ground Hornbill", "https://th.bing.com/th?q=Southern+Ground+Hornbill+Baby&w=120&h=120&c=1&rs=1&qlt=90&cb=1&dpr=1.25&pid=InlineBlock&mkt=en-US&cc=US&setlang=en&adlt=moderate&t=1&mw=247",
-                "black", 2, 2, "Bucorvus leadbeateri", "bird", "Africa", "south", "Kruger National Park", "savanna");
+                "black", 2, 2, "Bucorvus leadbeateri", "bird", "Africa", "south africa", "kruger national park", "savanna");
         Bird birdE = new Bird("Pel's Fishing Owl", "https://th.bing.com/th?q=Painting+of+a+Pels+Fishing+Owl&dc=2&w=100&h=100&c=1&rs=1&qlt=90&cb=1&dpr=1.25&pid=InlineBlock&mkt=en-US&cc=US&setlang=en&adlt=moderate&t=1&mw=247",
-                "black", 2, 2, "Scotopelia peli", "bird", "Africa", "south", "Kruger National Park", "coastal");
+                "black", 2, 2, "Scotopelia peli", "bird", "Africa", "south africa", "kruger national park", "coastal");
         Bird birdF = new Bird( "Flamingo", "https://th.bing.com/th?q=Flamingo+Fun&w=120&h=120&c=1&rs=1&qlt=90&cb=1&dpr=1.25&pid=InlineBlock&mkt=en-US&cc=US&setlang=en&adlt=moderate&t=1&mw=247",
-                "pink", 2, 2, "Phoeniconaias minor", "bird", "Africa", "kenya", "Rift Valley", "coastal");
+                "pink", 2, 2, "Phoeniconaias minor", "bird", "Africa", "kenya", "rift valley", "tropical");
         Bird birdG = new Bird( "Red-throated bee-eater", "https://th.bing.com/th?q=Red-necked+Bee-eater&w=120&h=120&c=1&rs=1&qlt=90&cb=1&dpr=1.25&pid=InlineBlock&mkt=en-US&cc=US&setlang=en&adlt=moderate&t=1&mw=247",
-                "black", 2, 2, "Merops bulocki", "bird", "Africa", "kenya", "Rift Valley", "savannah");
+                "black", 2, 2, "Merops bulocki", "bird", "Africa", "kenya", "rift valley", "savannah");
         Bird birdH = new Bird("African emeral cuckoo", "https://th.bing.com/th?q=African+Emerald+Cuckoo+Feeding&w=120&h=120&c=1&rs=1&qlt=90&cb=1&dpr=1.25&pid=InlineBlock&mkt=en-US&cc=US&setlang=en&adlt=moderate&t=1&mw=247",
-                "black", 2, 2, "Chrysococcyx cupreus", "bird", "Africa", "kenya", "Rift Valley", "woodlands");
+                "black", 2, 2, "Chrysococcyx cupreus", "bird", "Africa", "kenya", "rift valley", "woodlands");
 
         birdStorage.save(birdA);
         birdStorage.save(birdA);
