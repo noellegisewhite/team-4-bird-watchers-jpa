@@ -7,6 +7,9 @@
     <!-- ============ Global Styles ================= -->
     <link rel="stylesheet" href="/css/z-global.css">
     <link rel="stylesheet" href="/static/css/z-global.css">
+    <!-- ============== Bird Styles ================= -->
+    <link rel="stylesheet" href="/css/birds.css">
+    <link rel="stylesheet" href="/static/css/birds.css">
     <title>All Birds Page</title>
 </head>
 
@@ -30,23 +33,92 @@
 
 <body>
 <main>
-    <section th:each="bird: ${allBirds}" class="single-bird">
-        <div class="bird-container">
-            <h2 class="bird-name" th:text="${bird.nameOfBird}">Bird Name</h2>
-            <h3 class="bird-species" th:text="${bird.species}">Bird Species</h3>
-            <img class="bird-image" th:src="${bird.birdImageUrl}">
-            <p class="bird-continent;" th:text="${bird.continent}">Bird Continent;</p>
-            <p class="bird-country" th:text="${bird.country}">Bird Country</p>
-            <p class="bird-region" th:text="${bird.countryRegion}">Bird Region</p>
-            <p class="bird-habitat" th:text="${bird.habitat}">Bird Habitat</p>
-            <p class="bird-color" th:text="${bird.colorOfBird}">Bird Color</p>
-            <p class="bird-beak" th:text="${bird.lengthOfBeak}">Bird Beak</p>
-            <p class="bird-wing" th:text="${bird.lengthOfWing}">Bird Wing</p>
-            <p class="bird-description" th:text="${bird.description}">Bird Description</p>
-            <a class="bird-link" th:href="'/single-bird/'+${bird.id}">Click To Learn More</a>
+    <section class="main-container">
+        <div class="main-div">
+            <div class="info-tabs">
+                <input type="radio" name="birds" id="button1" checked>
+                <input type="radio" name="birds" id="button2">
+                <input type="radio" name="birds" id="button3">
+                <input type="radio" name="birds" id="button4">
+                <input type="radio" name="birds" id="button5">
+                <input type="radio" name="birds" id="button6">
+                <input type="radio" name="birds" id="button7">
+                <input type="radio" name="birds" id="button8">
+                <input type="radio" name="birds" id="button9">
+                <input type="radio" name="birds" id="button10">
+                <input type="radio" name="birds" id="button11">
+                <input type="radio" name="birds" id="button12">
+                <input type="radio" name="birds" id="button13">
+                <label class="label-all" for="button1">All Birds</label>
+                <label class="label-country" for="button2">Kenya</label>
+                <label class="label-country" for="button3">South Africa</label>
+                <label class="label-country" for="button4">North Africa</label>
+                <label class="label-country" for="button5">East Africa</label>
+                <label class="label-region" for="button6">Rift Valley</label>
+                <label class="label-region" for="button7">Kruger National Park</label>
+                <label class="label-region" for="button8">Island</label>
+                <label class="label-habitat" for="button9">Sahara</label>
+                <label class="label-habitat" for="button10">Grasslands</label>
+                <label class="label-habitat" for="button11">Savanna</label>
+                <label class="label-habitat" for="button12">Woodlands</label>
+                <label class="label-habitat" for="button13">Coastal</label>
+            </div>
+            <section class="bird-grid__main">
+                <div class="bird-content__all">
+                    <div id="all" class="bird-all" th:each="bird: ${allBirds}">
+                        <h6 id="all1" class="bird-name" th:text="${bird.nameOfBird}">Bird Name</h6>
+                        <img id="all2" class="bird-image" th:src="${bird.birdImageUrl}">
+                        <p id="all3" class="bird-country" th:text="${bird.country}">Bird Country</p>
+                        <a id="all4" class="bird-link" th:href="'/single-bird/'+${bird.id}">Click To Learn More</a>
+                    </div>
+                </div>
+
+                <div class="bird-content__country">
+                    <div th:id="${bird.country}" class="bird-country" th:each="bird: ${allBirds}">
+                        <h6 th:id="${bird.country}" class="bird-name" th:text="${bird.nameOfBird}">Bird Name</h6>
+                        <img th:id="${bird.country}" class="bird-image" th:src="${bird.birdImageUrl}">
+                        <p th:id="${bird.country}" class="bird-country" th:text="${bird.country}">Bird Country</p>
+                        <a th:id="${bird.country}" class="bird-link" th:href="'/single-bird/'+${bird.id}">Click To Learn More</a>
+                    </div>
+                </div>
+
+                <div class="bird-content__region">
+                    <div id="reg" class="bird-region" th:each="bird: ${allBirds}">
+                        <h6 id="reg1" class="bird-name" th:text="${bird.nameOfBird}">Bird Name</h6>
+                        <img id="reg2" class="bird-image" th:src="${bird.birdImageUrl}">
+                        <p id="reg3" class="bird-country" th:text="${bird.country}">Bird Country</p>
+                        <a id="reg4" class="bird-link" th:href="'/single-bird/'+${bird.id}">Click To Learn More</a>
+                    </div>
+                </div>
+
+                <div class="bird-content__habitat">
+                    <div id="hab" class="bird-habitat" th:each="bird: ${allBirds}">
+                        <h6 id="hab1" class="bird-name" th:text="${bird.nameOfBird}">Bird Name</h6>
+                        <img id="hab2" class="bird-image" th:src="${bird.birdImageUrl}">
+                        <p id="hab3" class="bird-country" th:text="${bird.country}">Bird Country</p>
+                        <a id="hab4" class="bird-link" th:href="'/single-bird/'+${bird.id}">Click To Learn More</a>
+                    </div>
+                </div>
+            </section>
         </div>
     </section>
-</main>
 
+    <!--    <section th:each="bird: ${allBirds}" class="single-bird">-->
+    <!--        <div class="bird-container">-->
+    <!--            <h2 class="bird-name" th:text="${bird.nameOfBird}">Bird Name</h2>-->
+    <!--            <h3 class="bird-species" th:text="${bird.species}">Bird Species</h3>-->
+    <!--            <img class="bird-image" th:src="${bird.birdImageUrl}">-->
+    <!--            <p class="bird-continent;" th:text="${bird.continent}">Bird Continent;</p>-->
+    <!--            <p class="bird-country" th:text="${bird.country}">Bird Country</p>-->
+    <!--            <p class="bird-region" th:text="${bird.countryRegion}">Bird Region</p>-->
+    <!--            <p class="bird-habitat" th:text="${bird.habitat}">Bird Habitat</p>-->
+    <!--            <p class="bird-color" th:text="${bird.colorOfBird}">Bird Color</p>-->
+    <!--            <p class="bird-beak" th:text="${bird.lengthOfBeak}">Bird Beak</p>-->
+    <!--            <p class="bird-wing" th:text="${bird.lengthOfWing}">Bird Wing</p>-->
+    <!--            <p class="bird-description" th:text="${bird.description}">Bird Description</p>-->
+    <!--            <a class="bird-link" th:href="'/single-bird/'+${bird.id}">Click To Learn More</a>-->
+    <!--        </div>-->
+    <!--    </section>-->
+</main>
 </body>
 </html>
