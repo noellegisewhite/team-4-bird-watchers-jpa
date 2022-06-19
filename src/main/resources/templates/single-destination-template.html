@@ -10,6 +10,7 @@
     <!-- ============ Sng Dest Styles =============== -->
     <link rel="stylesheet" href="/css/single-destination.css">
     <link rel="stylesheet" href="/static/css/single-destination.css">
+    <script src="https://kit.fontawesome.com/fa2ea675bd.js" crossorigin="anonymous"></script>
     <title>This Is A Single Destination</title>
 </head>
 
@@ -28,19 +29,51 @@
             </ul>
         </div>
     </nav>
-    <h1>Single Destinations Template</h1>
+    <!--    <h1>Single Destinations Template</h1>-->
 </header>
 
 <body>
 <main>
-    <h2 class="global-h2" th:text="${singleDestination.packageName}">Package Name</h2>
-    <h4 class="global-h4" th:text="${singleDestination.packagePrice}">Price</h4>
-    <p class="global-text" th:text="${singleDestination.packageCategory}">Category</p>
-    <p class="global-text" th:text="${singleDestination.country}">Country</p>
-    <p class="global-text" th:text="${singleDestination.region}">Region</p>
-    <p class="global-text" th:text="${singleDestination.habitat}">Habitat</p>
-    <img th:src="${singleDestination.destinationImageUrl}" th:alt="${singleDestination.packageName}">
-    <p class="global-text" th:text="${singleDestination.packageDesc}">Description</p>
+    <section class="single-hero">
+        <div class="single-hero__container">
+            <h5 class="global-h5" th:text="${singleDestination.country}">Country</h5>
+            <h3 class="global-h3" th:text="${singleDestination.packageName}">Package Name</h3>
+        </div>
+    </section>
+
+    <section class="dest-main">
+        <div class="grid-elements">
+            <div class="grid-elements__div">
+                <i class="fa-solid fa-tag"></i>
+                <p class="grid-text">Category:</p>
+                <p class="global-text grid-text__low" th:text="${singleDestination.packageCategory}">Category</p>
+            </div>
+
+            <div class="grid-elements__div">
+                <i class="fa-solid fa-earth-africa"></i>
+                <p class="grid-text">Country:</p>
+                <p class="global-text grid-text__low" th:text="${singleDestination.country}">Country</p>
+            </div>
+
+            <div class="grid-elements__div">
+                <i class="fa-solid fa-globe"></i>
+                <p class="grid-text">Region:</p>
+                <p class="global-text grid-text__low" th:text="${singleDestination.region}">Region</p>
+            </div>
+
+            <div class="grid-elements__div hab">
+                <i class="fa-solid fa-mountain"></i>
+                <p class="grid-text">Habitat:</p>
+                <p class="global-text grid-text__low" th:text="${singleDestination.habitat}">Habitat</p>
+            </div>
+        </div>
+        <div class="dest-flex">
+            <img class="grid-img" th:src="${singleDestination.destinationImageUrl}" th:alt="${singleDestination.packageName}">
+            <h6 class="global-h5 price" th:text="${singleDestination.packagePrice}">Price</h6>
+            <h5 class="global-h5 name" th:text="${singleDestination.packageName}">Package Name</h5>
+            <p class="global-text" th:text="${singleDestination.packageDesc}">Description</p>
+        </div>
+    </section>
 </main>
 </body>
 </html>

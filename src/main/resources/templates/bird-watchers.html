@@ -34,14 +34,14 @@
     <section class="Watchers">
         <article class="watchers_column">
             <h3 class="watcher_column_title">Birder Type</h3>
-            <ul th:each=birdWatcher: ${allBirdWatchers}">
-                <li th:text="$ {birdWatcher.typeOfBirdWatcher}"></li>
+            <ul th:each="birdWatchers: ${allBirdWatchers}">
+                <li th:text="${birdWatchers.typeOfBirdWatcher}"></li>
             </ul>
         </article>
         <article class="watchers_column">
             <h3 class="watcher_column_title">Birder Description</h3>
-            <ul th:each="birdWatcher: ${allBirdWatchers}">
-                <li th:text="$ {birdWatcher.birdWatcherDescription}"></li>
+            <ul th:each="birdWatchers: ${allBirdWatchers}">
+                <li th:text="${birdWatchers.birdWatcherDescription}"></li>
             </ul>
         </article>
     </section>

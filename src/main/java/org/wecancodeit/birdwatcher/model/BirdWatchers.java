@@ -1,9 +1,6 @@
 package org.wecancodeit.birdwatcher.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
@@ -13,11 +10,10 @@ public class BirdWatchers {
     @Id
     private Long id;
     private String typeOfBirdWatcher;
+    @Lob
     private String birdWatcherDescription;
 
-    public BirdWatchers(long id, String typeOfBirdWatcher, String birdWatcherDescription) {
-    }
-
+    // Getters
     public Long getId() {
         return id;
     }
@@ -30,15 +26,16 @@ public class BirdWatchers {
         return birdWatcherDescription;
     }
 
+    // Constructors
     public BirdWatchers(){
     }
-
 
     public BirdWatchers(String typeOfBirdWatcher, String birdWatcherDescription){
         this.typeOfBirdWatcher = typeOfBirdWatcher;
         this.birdWatcherDescription = birdWatcherDescription;
     }
 
+    // Methods
     @Override
     public String toString() {
         return "BirdWatchers{" +

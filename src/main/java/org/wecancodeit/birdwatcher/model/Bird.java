@@ -24,6 +24,7 @@ public class Bird {
     private String countryRegion;
     private String habitat;
 
+    // Getters
     public Long getId() {
         return id;
     }
@@ -90,8 +91,8 @@ public class Bird {
         this.lengthOfWing = lengthOfWing;
         this.species = species;
         this.description = description;
-        this.continent = continent;
         this.country = country;
+        this.continent = continent;
         this.countryRegion = countryRegion;
         this.habitat = habitat;
     }

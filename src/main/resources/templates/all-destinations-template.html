@@ -50,7 +50,9 @@
         </div>
         <div class="dest-gallery__main" >
             <div class="dest-gallery__elements" th:each="destinations: ${allDestinations}">
-                <a th:href="'/single-destination/'+${destinations.id}"><img class="dest-main-img" th:id="${destinations.country}" th:src="${destinations.destinationImageUrl}"/></a>
+                <a th:href="'/single-destination/'+${destinations.id}">
+                    <img class="dest-main-img" th:id="${destinations.country}" th:src="${destinations.destinationImageUrl}"/>
+                </a>
                 <div class="gallery-text__country" th:id="${destinations.country}">
                     <button th:text="${destinations.country}">Country</button>
                 </div>
