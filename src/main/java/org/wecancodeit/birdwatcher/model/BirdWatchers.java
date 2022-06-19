@@ -15,6 +15,9 @@ public class BirdWatchers {
     private String typeOfBirdWatcher;
     private String birdWatcherDescription;
 
+    public BirdWatchers(long id, String typeOfBirdWatcher, String birdWatcherDescription) {
+    }
+
     public Long getId() {
         return id;
     }
@@ -29,6 +32,7 @@ public class BirdWatchers {
 
     public BirdWatchers(){
     }
+
 
     public BirdWatchers(String typeOfBirdWatcher, String birdWatcherDescription){
         this.typeOfBirdWatcher = typeOfBirdWatcher;

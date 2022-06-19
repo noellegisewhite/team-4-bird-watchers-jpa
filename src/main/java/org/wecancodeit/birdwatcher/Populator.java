@@ -3,9 +3,11 @@ package org.wecancodeit.birdwatcher;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import org.wecancodeit.birdwatcher.model.Bird;
+import org.wecancodeit.birdwatcher.model.BirdWatchers;
 import org.wecancodeit.birdwatcher.model.Hashtag;
 import org.wecancodeit.birdwatcher.repository.BirdRepository;
 import org.wecancodeit.birdwatcher.model.Destinations;
+import org.wecancodeit.birdwatcher.repository.BirdWatchersRepository;
 import org.wecancodeit.birdwatcher.repository.DestinationsRepository;
 import org.wecancodeit.birdwatcher.repository.HashtagRepository;
 
@@ -22,6 +24,9 @@ public class Populator implements CommandLineRunner {
 
     @Resource
     private HashtagRepository hashtagStorage;
+
+    @Resource
+    private BirdWatchersRepository birdWatchersStorage;
 
     @Override
     public void run(String... args) throws Exception {
@@ -99,5 +104,22 @@ public class Populator implements CommandLineRunner {
         destinationStorage.save(alge1);
         destinationStorage.save(alge2);
         destinationStorage.save(alge3);
+
+        BirdWatchers watchersA = new BirdWatchers(1, "Ornithologist", "Ornithologist is a name for bird watcher who studies different avian species for professional purposes. This person may or may not have a PhD in biology, but bachelor or master degrees are often a must. Ornithologists are paid to watch birds in order to gather new information about avians.");
+        BirdWatchers watchersB = new BirdWatchers(2, "Bird Watchers", "Bird watchers are people who consider birdwatching a hobby, and nothing more. They are amateurs who belong to the beginner level, and their knowledge about birds is just enough to satisfy their hobby.");
+        BirdWatchers watchersC = new BirdWatchers(3, "Twitchers", "Bird watchers are called many names, and one of those is twitchers. These hobbyists are willing to spend money on adventures to different places to watch birds in their natural habitats.");
+        BirdWatchers watchersD = new BirdWatchers(4, "Birders", "Birder is another bird watching term for people who love watching avians. Birders are committed to their hobby, enough to purchase a couple of tools for birdwatching.");
+        BirdWatchers watchersE = new BirdWatchers(5, "Listers", "Another bird watching name is lister. This person makes an extensive list of birds as they perform birdwatching. Listers are known to be obsessed with their list of avians, and they do whatever it takes to constantly update their lifelist.");
+        BirdWatchers watchersF = new BirdWatchers(6, "Dude", "A dude is a casual bird watcher who likes watching birds, but it is not a priority for them. They watch avians when the weather is good, and they rarely go to distant spots.");
+        BirdWatchers watchersG = new BirdWatchers(7, "Protobirder", "A protobirder is a new term for a person who enjoys birdwatching. Protobirders claim to be super knowledgeable about birds, although whether that’s the case is debatable. This term may be new, but it is starting to be used more often in the birdwatching communities from all over the world.");
+
+        birdWatchersStorage.save(watchersA);
+        birdWatchersStorage.save(watchersB);
+        birdWatchersStorage.save(watchersC);
+        birdWatchersStorage.save(watchersD);
+        birdWatchersStorage.save(watchersE);
+        birdWatchersStorage.save(watchersF);
+        birdWatchersStorage.save(watchersG);
+
     }
 }
