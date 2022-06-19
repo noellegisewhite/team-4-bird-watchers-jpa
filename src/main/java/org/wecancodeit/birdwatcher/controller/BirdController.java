@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.wecancodeit.birdwatcher.repository.BirdRepository;
+import org.wecancodeit.birdwatcher.repository.DestinationsRepository;
 
 import javax.annotation.Resource;
 
@@ -14,6 +15,9 @@ public class BirdController {
 
     @Resource
     private BirdRepository birdRepo;
+
+    @Resource
+    DestinationsRepository destRepo;
 
     @GetMapping("/birds")
     public String displayAllBirds(Model model) {
@@ -27,10 +31,10 @@ public class BirdController {
         return ("single-bird-template.html");
     }
 
-    @RequestMapping("/bird/country")
+    @RequestMapping("/bird/country/{'country'}")
     public String displayBirdByCountry(@PathVariable String country, Model model) {
         model.addAttribute("countryBird", birdRepo.findByCountry(country));
-        return ("all-birds-template.html");
+        return ("country-template.html");
     }
 
     @RequestMapping("/bird/region")
