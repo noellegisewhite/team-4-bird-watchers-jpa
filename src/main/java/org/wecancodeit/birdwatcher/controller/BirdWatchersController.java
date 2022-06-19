@@ -15,9 +15,9 @@ public class BirdWatchersController {
     @Resource
     private BirdWatchersRepository birdWatchersRepo;
 
-    @RequestMapping("/birdWatchers")
+    @RequestMapping("/birdwatchers")
     public String displayAllBirdWatchers(Model model){
         model.addAttribute("allBirdWatchers", birdWatchersRepo.findAll());
-        return ("all-bird-watchers-template.html");
+        return ("bird-watchers.html");
     }
 }
