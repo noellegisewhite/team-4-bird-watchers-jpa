@@ -27,19 +27,19 @@
 </header>
 <body>
 <h1>This is a single bird page</h1>
-<section th:each="bird: ${allBirds}" class="all-bird">
+<section class="all-bird">
     <div class="bird-container">
-        <h2 class="bird-name" th:text="${bird.nameOfBird}">Bird Name</h2>
-        <h3 class="bird-species" th:text="${bird.species}">Bird Species</h3>
-        <img class="bird-image" th:src="${bird.birdImageUrl}">
-        <p class="bird-continent;" th:text="${bird.continent}">Bird Continent;</p>
-        <p class="bird-country" th:text="${bird.country}">Bird Country</p>
-        <p class="bird-region" th:text="${bird.countryRegion}">Bird Region</p>
-        <p class="bird-habitat" th:text="${bird.habitat}">Bird Habitat</p>
-        <p class="bird-color" th:text="${bird.colorOfBird}">Bird Color</p>
-        <p class="bird-beak" th:text="${bird.lengthOfBeak}">Bird Beak</p>
-        <p class="bird-wing" th:text="${bird.lengthOfWing}">Bird Wing</p>
-        <p class="bird-description" th:text="${bird.description}">Bird Description</p>
+        <h2 class="bird-name" th:text="${singleBird.nameOfBird}">Bird Name</h2>
+        <h3 class="bird-species" th:text="${singleBird.species}">Bird Species</h3>
+        <img class="bird-image" th:src="${singleBird.birdImageUrl}">
+        <p class="bird-continent;" th:text="${singleBird.continent}">Bird Continent;</p>
+        <p class="bird-country" th:text="${singleBird.country}">Bird Country</p>
+        <p class="bird-region" th:text="${singleBird.countryRegion}">Bird Region</p>
+        <p class="bird-habitat" th:text="${singleBird.habitat}">Bird Habitat</p>
+        <p class="bird-color" th:text="${singleBird.colorOfBird}">Bird Color</p>
+        <p class="bird-beak" th:text="${singleBird.lengthOfBeak}">Bird Beak</p>
+        <p class="bird-wing" th:text="${singleBird.lengthOfWing}">Bird Wing</p>
+        <p class="bird-description" th:text="${singleBird.description}">Bird Description</p>
     </div>
 </section>
 </body>

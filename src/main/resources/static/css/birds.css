@@ -41,6 +41,34 @@
     margin-top: 20px auto;
 }
 
-.links {
-    margin: 20px auto;
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+.info {
+    padding: 50px 20px;
+}
+
+.info-container__country {
+    grid-column: 1 / 1;
+    grid-row: span 2;
+    background-color: pink;
+}
+
+.info-container__reg {
+    grid-column: 3 / 3;
+    grid-row: 1 / span 2;
+    background-color: pink;
+}
+
+.info-container__hab {
+    grid-column: 1 / 1;
+    grid-row: span 3;
+    background-color: pink;
+}
+
+.info-card {
+    background-color: red;
 }

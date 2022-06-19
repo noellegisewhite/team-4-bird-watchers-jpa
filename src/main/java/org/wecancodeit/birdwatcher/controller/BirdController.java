@@ -45,7 +45,7 @@ public class BirdController {
 
     @GetMapping("/single-bird/{id}")
     public String displaySingleBirds(@PathVariable Long id, Model model) {
-        model.addAttribute("singleBird", birdRepo.findById(id));
+        model.addAttribute("singleBird", birdRepo.findById(id).get());
         return ("single-bird-template.html");
     }
 
