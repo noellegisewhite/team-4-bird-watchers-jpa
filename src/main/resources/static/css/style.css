@@ -19,6 +19,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color:#5F0F40;
+    
+}
+
+nav a:hover{
+background: #FFDB78;
+color: #5F0F40;
+
 }
 
 nav ul {
