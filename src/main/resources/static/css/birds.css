@@ -64,7 +64,9 @@ main {
 }
 
 .bird-image {
-    margin-top: 20px;
+    margin: 20px auto;
+    width: 70%;
+    border-radius: 5%;
 }
 
 .article-grid {
