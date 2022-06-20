@@ -32,6 +32,10 @@
 
 }
 
+.cursive {
+    font-family: 'Satisfy', cursive;
+}
+
 body {
     display: block;
 }
