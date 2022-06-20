@@ -7,7 +7,11 @@
     <!-- ============ Global Styles ================= -->
     <link rel="stylesheet" href="/css/z-global.css">
     <link rel="stylesheet" href="/static/css/z-global.css">
-    <title>Single Bird</title>
+    <!-- ============ Sng Bird Styles =============== -->
+    <link rel="stylesheet" href="/css/single-bird.css">
+    <link rel="stylesheet" href="/static/css/single-bird.css">
+    <script src="https://kit.fontawesome.com/fa2ea675bd.js" crossorigin="anonymous"></script>
+    <title>Single Bird Page</title>
 </head>
 <header>
     <nav>
@@ -26,21 +30,78 @@
     </nav>
 </header>
 <body>
-<h1>This is a single bird page</h1>
-<section class="all-bird">
-    <div class="bird-container">
-        <h2 class="bird-name" th:text="${singleBird.nameOfBird}">Bird Name</h2>
-        <h3 class="bird-species" th:text="${singleBird.species}">Bird Species</h3>
-        <img class="bird-image" th:src="${singleBird.birdImageUrl}">
-        <p class="bird-continent;" th:text="${singleBird.continent}">Bird Continent;</p>
-        <p class="bird-country" th:text="${singleBird.country}">Bird Country</p>
-        <p class="bird-region" th:text="${singleBird.countryRegion}">Bird Region</p>
-        <p class="bird-habitat" th:text="${singleBird.habitat}">Bird Habitat</p>
-        <p class="bird-color" th:text="${singleBird.colorOfBird}">Bird Color</p>
-        <p class="bird-beak" th:text="${singleBird.lengthOfBeak}">Bird Beak</p>
-        <p class="bird-wing" th:text="${singleBird.lengthOfWing}">Bird Wing</p>
-        <p class="bird-description" th:text="${singleBird.description}">Bird Description</p>
+<section class="single-hero">
+    <div class="single-hero__container">
+        <h5 class="global-h5" th:text="${singleBird.species}">Bird Species</h5>
+        <h3 class="global-h3" th:text="${singleBird.nameOfBird}">Bird Name</h3>
     </div>
 </section>
+<main>
+    <section class="bird-main">
+        <div class="grid-elements">
+
+            <div class="grid-elements__div">
+                <i class="fa-solid fa-earth-africa"></i>
+                <p class="grid-text">Country:</p>
+                <p class="global-text grid-text__low" th:text="${singleBird.country}">Country</p>
+            </div>
+
+            <div class="grid-elements__div">
+                <i class="fa-solid fa-globe"></i>
+                <p class="grid-text">Region:</p>
+                <p class="global-text grid-text__low" th:text="${singleBird.countryRegion}">Region</p>
+            </div>
+
+            <div class="grid-elements__div">
+                <i class="fa-solid fa-mountain"></i>
+                <p class="grid-text">Habitat:</p>
+                <p class="global-text grid-text__low" th:text="${singleBird.habitat}">Habitat</p>
+            </div>
+
+            <div class="grid-elements__div">
+                <i class="fa-solid fa-palette"></i>
+                <p class="grid-text">Color:</p>
+                <p class="global-text grid-text__low" th:text="${singleBird.colorOfBird}">Color</p>
+            </div>
+
+            <div class="grid-elements__div">
+                <i class="fa-solid fa-kiwi-bird"></i>
+                <p class="grid-text">Beak Size:</p>
+                <p class="global-text grid-text__low" th:text="${singleBird.lengthOfBeak}+' in'">Beak Size</p>
+            </div>
+
+            <div class="grid-elements__div wing">
+                <i class="fa-solid fa-feather-pointed"></i>
+                <p class="grid-text">Wing Size:</p>
+                <p class="global-text grid-text__low" th:text="${singleBird.lengthOfWing}+' ft'">Wing Size</p>
+            </div>
+
+        </div>
+
+        <div class="bird-flex">
+            <img class="grid-img" th:src="${singleBird.birdImageUrl}" th:alt="${singleBird.nameOfBird}">
+            <h6 class="global-h6 continent" th:text="${singleBird.continent}">Continent</h6>
+            <h5 class="global-h5 name" th:text="${singleBird.nameOfBird}">Bird Name</h5>
+            <h6 class="global-h6" th:text="${singleBird.species}">Species</h6>
+            <p class="global-text" th:text="${singleBird.description}">Description</p>
+        </div>
+    </section>
+
+<!--<section class="all-bird">-->
+<!--    <div class="bird-container">-->
+<!--        <h2 class="bird-name" th:text="${singleBird.nameOfBird}">Bird Name</h2>-->
+<!--        <h3 class="bird-species" th:text="${singleBird.species}">Bird Species</h3>-->
+<!--        <img class="bird-image" th:src="${singleBird.birdImageUrl}">-->
+<!--        <p class="bird-continent;" th:text="${singleBird.continent}">Bird Continent</p>-->
+<!--        <p class="bird-country" th:text="${singleBird.country}">Bird Country</p>-->
+<!--        <p class="bird-region" th:text="${singleBird.countryRegion}">Bird Region</p>-->
+<!--        <p class="bird-habitat" th:text="${singleBird.habitat}">Bird Habitat</p>-->
+<!--        <p class="bird-color" th:text="${singleBird.colorOfBird}">Bird Color</p>-->
+<!--        <p class="bird-beak" th:text="${singleBird.lengthOfBeak}">Bird Beak</p>-->
+<!--        <p class="bird-wing" th:text="${singleBird.lengthOfWing}">Bird Wing</p>-->
+<!--        <p class="bird-description" th:text="${singleBird.description}">Bird Description</p>-->
+<!--    </div>-->
+<!--</section>-->
+</main>
 </body>
 </html>
