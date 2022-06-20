@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="/css/single-destination.css">
     <link rel="stylesheet" href="/static/css/single-destination.css">
     <script src="https://kit.fontawesome.com/fa2ea675bd.js" crossorigin="anonymous"></script>
-    <title>This Is A Single Destination</title>
+    <title>Single Destination Page</title>
 </head>
 
 <header>
@@ -29,18 +29,16 @@
             </ul>
         </div>
     </nav>
-    <!--    <h1>Single Destinations Template</h1>-->
 </header>
 
 <body>
+<section class="single-hero">
+    <div class="single-hero__container">
+        <h5 class="global-h5" th:text="${singleDestination.country}">Country</h5>
+        <h3 class="global-h3" th:text="${singleDestination.packageName}">Package Name</h3>
+    </div>
+</section>
 <main>
-    <section class="single-hero">
-        <div class="single-hero__container">
-            <h5 class="global-h5" th:text="${singleDestination.country}">Country</h5>
-            <h3 class="global-h3" th:text="${singleDestination.packageName}">Package Name</h3>
-        </div>
-    </section>
-
     <section class="dest-main">
         <div class="grid-elements">
             <div class="grid-elements__div">
@@ -67,9 +65,10 @@
                 <p class="global-text grid-text__low" th:text="${singleDestination.habitat}">Habitat</p>
             </div>
         </div>
+
         <div class="dest-flex">
             <img class="grid-img" th:src="${singleDestination.destinationImageUrl}" th:alt="${singleDestination.packageName}">
-            <h6 class="global-h5 price" th:text="${singleDestination.packagePrice}">Price</h6>
+            <h6 class="global-h6 price" th:text="${singleDestination.packagePrice}+' USD'">Price</h6>
             <h5 class="global-h5 name" th:text="${singleDestination.packageName}">Package Name</h5>
             <p class="global-text" th:text="${singleDestination.packageDesc}">Description</p>
         </div>

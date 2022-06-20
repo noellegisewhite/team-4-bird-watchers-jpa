@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+.single-hero {
+    width: 100%;
+    height: 40vh;
+    background: url("/images/tree.jpg") no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.single-hero__container {
+    text-align: center;
+}
+
+.single-hero h5 {
+    font-family: 'Satisfy', cursive;
+}
+
+.bird-main {
+    width: 80%;
+    margin: 0px auto;
+    padding: 20px;
+    border: 2px solid rgba(192,192,192,0.4);
+}
+
+.grid-elements {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    margin: 20px auto;
+}
+
+.grid-elements__div {
+    text-align: center;
+    border-right: 2px solid rgba(192,192,192,0.4);
+    padding: 5px auto;
+}
+
+.wing {
+    border-right: none !important;
+}
+
+.grid-elements__div i {
+    font-size: 24px;
+}
+
+.grid-text {
+    font-family: 'Satisfy', cursive;
+    font-size: 24px;
+}
+
+.grid-text__low {
+    text-transform: uppercase;
+}
+
+.bird-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-img {
+    margin: 10px auto;
+    width: 80%;
+}
+
+.continent {
+    color: white;
+    background-color: #5F0F40;
+    text-align: center;
+    margin: 20px 0;
+    padding: 10px auto;
+    width: 30%;
+    font-family: 'Satisfy', cursive;
+}
