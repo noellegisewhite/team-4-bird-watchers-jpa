@@ -45,6 +45,9 @@ Updates 06/18/2022:
 - Added country, region, habitat bird templates
 - Styled all templates
 
-Updates 06/19/2022"
+Updates 06/19/2022:
 - Finished html & styles for bird(s) & destination(s)
 - Bird filters & pages for country/region/habitat
+
+Updates 06/20/2022:
+- Added hashtag class to destinations.

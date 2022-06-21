@@ -1,70 +1,36 @@
 package org.wecancodeit.birdwatcher.model;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
 public class Reviews {
-    @GeneratedValue(strategy = GenerationType.AUTO)
+
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String name;
-    private String touristLocation;
-    private int rating;
-    private String comment;
+    private String revName;
+    @DateTimeFormat(pattern = "MM-dd-yyyy")
+    private String revDate;
+    private String revTitle;
+    @Lob
+    private String revText;
+    private double revRating;
+    private double overallRate;
 
-    public Long getId() {
-        return id;
+    // Constructors
+    public Reviews() {
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public String getTouristLocation() {
-        return touristLocation;
-    }
-
-    public int getRating() {
-        return rating;
-    }
-
-    public String getComment() {
-        return comment;
-    }
-
-    public Reviews(Long id, String name, String touristLocation, int rating, String comment) {
-        this.id = id;
-        this.name = name;
-        this.touristLocation = touristLocation;
-        this.rating = rating;
-        this.comment = comment;
-    }
-
-    public Reviews(){
-    }
-
-    @Override
-    public String toString() {
-        return "Reviews{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", touristLocation='" + touristLocation + '\'' +
-                ", rating=" + rating +
-                ", comment='" + comment + '\'' +
-                '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Reviews)) return false;
-        Reviews reviews = (Reviews) o;
-        return getRating() == reviews.getRating() && getId().equals(reviews.getId()) && getName().equals(reviews.getName()) && getTouristLocation().equals(reviews.getTouristLocation()) && getComment().equals(reviews.getComment());
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(getId(), getName(), getTouristLocation(), getRating(), getComment());
+    public Reviews(String revName, String revDate, String revTitle, String revText, double revRating, double overallRate) {
+        this.revName = revName;
+        this.revDate = revDate;
+        this.revTitle = revTitle;
+        this.revText = revText;
+        this.revRating = revRating;
+        this.overallRate = overallRate;
     }
 }
+
