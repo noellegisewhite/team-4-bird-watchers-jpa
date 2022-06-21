@@ -7,7 +7,30 @@
     <!-- ============ Global Styles ================= -->
     <link rel="stylesheet" href="/css/z-global.css">
     <link rel="stylesheet" href="/static/css/z-global.css">
+    <!-- ============== Bird Watcher Styles ================= -->
+    <link rel="stylesheet" href="/css/bird-watchers.css">
+    <link rel="stylesheet" href="/static/css/bird-watchers.css">
     <title>Bird Watchers</title>
+</head>
+  
+<body>
+<header class="header">
+    <h1 class="header logo">Bird Watching Enthusiasts</h1>
+    <nav class="header_nav">
+        <ul class="header_nav_list">
+            <li class="header_nav_listItem"><a href="/">Home</a></li>
+            <li class="header_nav_listItem"><a href="/about">About</a></li>
+            <li class="header_nav_listItem"><a href="/company">Company</a></li>
+            <li class="header_nav_listItem"><a href="/birds">Birds</a></li>
+            <li class="header_nav_listItem"><a href="/birdwatchers">Bird Watchers</a></li>
+            <li class="header_nav_listItem"><a href="/destinations">Destinations</a></li>
+            <li class="header_nav_listItem"><a href="/reviews">Reviews</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="container">
+
+<!--     <title>Bird Watchers</title>
 </head>
   
 <header>
@@ -28,17 +51,20 @@
     </nav>
     <h1>Bird Watchers</h1>
 </header>
-        <body>
+        <body> -->
           
     <section class="profile">
         <h1 class="header logo">Bird Watching Enthusiasts</h1>
         <figure>
+
+            <img src="https://www.bing.com/th/id/OGC.bd07ab1f3608cac2623bf28e98891a67?pid=1.7&rurl=https%3a%2f%2fmedia3.giphy.com%2fmedia%2fcJ5lwvE80IJmOpeeGm%2f200.gif%3fcid%3d790b7611brmlu8099gthj76zipovz1w4tgv0haf78a480i8w%26rid%3d200.gif%26ct%3dg&ehk=gfiyD7M%2buZIRZhqmJV0yRA1h60K1VDm6VyySyuEUQec%3d" alt="birder image">
             <img src="https://www.bing.com/th/id/OGC.68f42f86bfffda397f51e30305f0e8c8?pid=1.7&rurl=https%3a%2f%2fmedia.giphy.com%2fmedia%2f11yKRmmE5umKMo%2fgiphy.gif&ehk=81nAuRwLbl92ISS8VnPGlIHwLT%2fxi4WlU46wPCUu%2fYs%3d"
                  alt="birder image">
             <img src="https://www.bing.com/th/id/OGC.9c12cfd918b602d0ed0f817f05848567?pid=1.7&rurl=https%3a%2f%2fmedia.giphy.com%2fmedia%2f3o7TKP7LdiBviV886s%2fgiphy.gif&ehk=Ci2d5ZB4ia1XNuloFPSnOyZL0DNJwfC8jTajQuylsjM%3d"
                  alt="birder image">
             <img src="https://www.bing.com/th/id/OGC.bd07ab1f3608cac2623bf28e98891a67?pid=1.7&rurl=https%3a%2f%2fmedia3.giphy.com%2fmedia%2fcJ5lwvE80IJmOpeeGm%2f200.gif%3fcid%3d790b7611brmlu8099gthj76zipovz1w4tgv0haf78a480i8w%26rid%3d200.gif%26ct%3dg&ehk=gfiyD7M%2buZIRZhqmJV0yRA1h60K1VDm6VyySyuEUQec%3d"
                  alt="birder image">
+
         </figure>
         <article class="profile_heading">
             <h2>Which type of Birder are you?</h2>
@@ -46,14 +72,8 @@
     </section>
     <section class="Watchers">
         <article class="watchers_column">
-            <h3 class="watcher_column_title">Birder Type</h3>
             <ul th:each="birdWatchers: ${allBirdWatchers}">
-                <li th:text="${birdWatchers.typeOfBirdWatcher}"></li>
-            </ul>
-        </article>
-        <article class="watchers_column">
-            <h3 class="watcher_column_title">Birder Description</h3>
-            <ul th:each="birdWatchers: ${allBirdWatchers}">
+                <li class="Titles" th:text="${birdWatchers.typeOfBirdWatcher}"></li>
                 <li th:text="${birdWatchers.birdWatcherDescription}"></li>
             </ul>
         </article>
