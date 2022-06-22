@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+.container{
+    background-color: #F4983C;
+    margin: 2rem auto;
+    max-width: 60rem;
+    width: 98%;
+    box-shadow: -4px -1px 11px 2px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: -4px -1px 11px 2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -4px -1px 11px 2px rgba(0, 0, 0, 0.75);
+}
+.header_nav_list{
+display: flex;
+}
+.header_nav_listItem:hover {
+    background-color: #fff;
+    border: 1px solid #272932;
+    border-radius: 1rem;
+    transition: .5s;
+}
+.profile{
+text-align: center;
+}
+.Watchers{
+text-align: center;
+}
+
+body{
+background-image: url("https://www.10wallpaper.com/wallpaper/2560x1600/1204/Seagull_Bird_Clouds-Nature_Scenery_Wallpaper_2560x1600.jpg");
+}
+
+h1{
+color: #9A031E;
+}
+li{
+list-style-type: none;
+}
+h4{
+color: #0F4C5C;
+}
+.Titles{
+color: #9A031E;
+}
