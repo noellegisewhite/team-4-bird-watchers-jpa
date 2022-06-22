@@ -1,3 +1,8 @@
+h1 {
+    text-align: center;
+    color: #5F0F40;
+    padding: 50px;
+}
 .center {
     display: block;
     margin-left: auto;
