@@ -20,13 +20,13 @@ public class Destinations {
     @Lob // Longer text allowance
     private String packageDesc;
     @ManyToMany
-    private Set<Hashtag> hashtags;
+    private Collection<Hashtag> hashtags;
 
     // Stretch Task Variables ================================================================
+//    @OneToOne(mappedBy = "gallDest")
+//    private Gallery gallery;
 //    @ManyToOne
 //    private Collection<Review> reviews;
-//    @ManyToOne
-//    private Collection<Photos> photos;
 
     // Getters ===============================================================================
     public Long getId() {
@@ -65,17 +65,18 @@ public class Destinations {
         return packageDesc;
     }
 
-    public Set<Hashtag> getHashtags() {
+    public Collection<Hashtag> getHashtags() {
         return hashtags;
     }
+
+//    public Gallery getGallery() {
+//        return gallery;
+//    }
 
 //    public Collection<Review> getReviews() {
 //        return review;
 //    }
 //
-//    public Collection<Photos> getPhotos() {
-//        return photos;
-//    }
 
     // Constructors ==========================================================================
     public Destinations() {
@@ -100,6 +101,7 @@ public class Destinations {
     }
 
     // Stretch Constructor With Hashtags
+    // this.hashtags = new HashSet<>();
     public Destinations(Double packagePrice, String packageName, String packageCategory, String country, String region, String habitat, String destinationImageUrl, String packageDesc, Hashtag...hashtags) {
         this.packagePrice = packagePrice;
         this.packageName = packageName;
@@ -109,7 +111,7 @@ public class Destinations {
         this.habitat = habitat;
         this.destinationImageUrl = destinationImageUrl;
         this.packageDesc = packageDesc;
-        this.hashtags = new HashSet<>();
+        this.hashtags = List.of(hashtags);
     }
 
     // Methods ===============================================================================
@@ -137,6 +139,7 @@ public class Destinations {
                 ", habitat='" + habitat + '\'' +
                 ", destinationImageUrl='" + destinationImageUrl + '\'' +
                 ", packageDesc='" + packageDesc + '\'' +
+                ", hashtags=" + hashtags +
                 '}';
     }
 
@@ -145,11 +148,11 @@ public class Destinations {
         if (this == o) return true;
         if (!(o instanceof Destinations)) return false;
         Destinations that = (Destinations) o;
-        return getId().equals(that.getId()) && getPackagePrice().equals(that.getPackagePrice()) && getPackageName().equals(that.getPackageName()) && getPackageCategory().equals(that.getPackageCategory()) && getCountry().equals(that.getCountry()) && getRegion().equals(that.getRegion()) && getHabitat().equals(that.getHabitat()) && getDestinationImageUrl().equals(that.getDestinationImageUrl()) && getPackageDesc().equals(that.getPackageDesc());
+        return getId().equals(that.getId()) && getPackagePrice().equals(that.getPackagePrice()) && getPackageName().equals(that.getPackageName()) && getPackageCategory().equals(that.getPackageCategory()) && getCountry().equals(that.getCountry()) && getRegion().equals(that.getRegion()) && getHabitat().equals(that.getHabitat()) && getDestinationImageUrl().equals(that.getDestinationImageUrl()) && getPackageDesc().equals(that.getPackageDesc()) && getHashtags().equals(that.getHashtags());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getPackagePrice(), getPackageName(), getPackageCategory(), getCountry(), getRegion(), getHabitat(), getDestinationImageUrl(), getPackageDesc());
+        return Objects.hash(getId(), getPackagePrice(), getPackageName(), getPackageCategory(), getCountry(), getRegion(), getHabitat(), getDestinationImageUrl(), getPackageDesc(), getHashtags());
     }
 }

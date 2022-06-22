@@ -25,6 +25,13 @@ public class BirdController {
         model.addAttribute("allBirds", birdRepo.findAll());
         return ("all-birds-template.html");
     }
+
+    @RequestMapping("/birdOrder")
+    public String displayAllBirdOrder(@PathVariable String birdOrder, Model model) {
+        model.addAttribute("orderBird", birdRepo.findByBirdOrder(birdOrder));
+        return ("redirect:/birds");
+    }
+
     @RequestMapping("/country")
     public String displayAllCountries(@PathVariable String country, Model model) {
         model.addAttribute("countryBird", birdRepo.findByCountry(country));
@@ -47,6 +54,12 @@ public class BirdController {
     public String displaySingleBirds(@PathVariable Long id, Model model) {
         model.addAttribute("singleBird", birdRepo.findById(id).get());
         return ("single-bird-template.html");
+    }
+
+    @RequestMapping("/bird/birdOrder/{birdOrder}")
+    public String displayBirdByOrder(@PathVariable String birdOrder, Model model) {
+        model.addAttribute("orderBird", birdRepo.findByBirdOrder(birdOrder));
+        return ("order-template.html");
     }
 
     @RequestMapping("/bird/country/{country}")

@@ -83,6 +83,7 @@
             <img class="grid-img" th:src="${singleBird.birdImageUrl}" th:alt="${singleBird.nameOfBird}">
             <h6 class="global-h6 continent" th:text="${singleBird.continent}">Continent</h6>
             <h5 class="global-h5 name" th:text="${singleBird.nameOfBird}">Bird Name</h5>
+            <h6 class="global-h6" th:text="${singleBird.birdOrder}">Order</h6>
             <h6 class="global-h6" th:text="${singleBird.species}">Species</h6>
             <p class="global-text" th:text="${singleBird.description}">Description</p>
         </div>
