@@ -21,6 +21,7 @@ public class Bird {
     private String country;
     private String countryRegion;
     private String habitat;
+    private String birdOrder;
 
     // Getters
     public Long getId() {
@@ -71,6 +72,10 @@ public class Bird {
         return habitat;
     }
 
+    public String getBirdOrder() {
+        return birdOrder;
+    }
+
     // Empty Constructor
     public Bird(){
     }
@@ -81,7 +86,7 @@ public class Bird {
     }
 
     public Bird(String nameOfBird, String birdImageUrl, String colorOfBird, double lengthOfBeak, double lengthOfWing,
-                String species, String description, String continent, String country, String countryRegion, String habitat) {
+                String species, String description, String continent, String country, String countryRegion, String habitat, String birdOrder) {
         this.nameOfBird = nameOfBird;
         this.birdImageUrl = birdImageUrl;
         this.colorOfBird = colorOfBird;
@@ -93,6 +98,7 @@ public class Bird {
         this.continent = continent;
         this.countryRegion = countryRegion;
         this.habitat = habitat;
+        this.birdOrder = birdOrder;
     }
 
     @Override
@@ -110,6 +116,7 @@ public class Bird {
                 ", country='" + country + '\'' +
                 ", countryRegion='" + countryRegion + '\'' +
                 ", habitat='" + habitat + '\'' +
+                ", order='" + birdOrder + '\'' +
                 '}';
     }
 
@@ -118,11 +125,11 @@ public class Bird {
         if (this == o) return true;
         if (!(o instanceof Bird)) return false;
         Bird bird = (Bird) o;
-        return getId() == bird.getId() && Double.compare(bird.getLengthOfBeak(), getLengthOfBeak()) == 0 && Double.compare(bird.getLengthOfWing(), getLengthOfWing()) == 0 && getNameOfBird().equals(bird.getNameOfBird()) && getBirdImageUrl().equals(bird.getBirdImageUrl()) && getColorOfBird().equals(bird.getColorOfBird()) && getSpecies().equals(bird.getSpecies()) && getDescription().equals(bird.getDescription()) && getContinent().equals(bird.getContinent()) && getCountry().equals(bird.getCountry()) && getCountryRegion().equals(bird.getCountryRegion()) && getHabitat().equals(bird.getHabitat());
+        return Double.compare(bird.getLengthOfBeak(), getLengthOfBeak()) == 0 && Double.compare(bird.getLengthOfWing(), getLengthOfWing()) == 0 && getId().equals(bird.getId()) && getNameOfBird().equals(bird.getNameOfBird()) && getBirdImageUrl().equals(bird.getBirdImageUrl()) && getColorOfBird().equals(bird.getColorOfBird()) && getSpecies().equals(bird.getSpecies()) && getDescription().equals(bird.getDescription()) && getContinent().equals(bird.getContinent()) && getCountry().equals(bird.getCountry()) && getCountryRegion().equals(bird.getCountryRegion()) && getHabitat().equals(bird.getHabitat()) && getBirdOrder().equals(bird.getBirdOrder());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getNameOfBird(), getBirdImageUrl(), getColorOfBird(), getLengthOfBeak(), getLengthOfWing(), getSpecies(), getDescription(), getContinent(), getCountry(), getCountryRegion(), getHabitat());
+        return Objects.hash(getId(), getNameOfBird(), getBirdImageUrl(), getColorOfBird(), getLengthOfBeak(), getLengthOfWing(), getSpecies(), getDescription(), getContinent(), getCountry(), getCountryRegion(), getHabitat(), getBirdOrder());
     }
 }

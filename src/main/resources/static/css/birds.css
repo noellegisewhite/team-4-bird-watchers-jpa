@@ -90,6 +90,12 @@ main {
     color: white;
 }
 
+.info-container__order {
+    grid-column: 3 / 3;
+    grid-row: 1 / span 2;
+    background-color: #F4983C;
+}
+
 .info-container__country {
     grid-column: 1 / 1;
     grid-row: span 2;
@@ -111,4 +117,9 @@ main {
 .info-card {
     padding: 50px 30px;
     border: 1px solid rgba(192,192,192,0.3);
+}
+
+.see-more {
+    background-color: #F4983C;
+    color: white;
 }

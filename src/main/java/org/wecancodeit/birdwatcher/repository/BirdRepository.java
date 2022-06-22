@@ -14,4 +14,5 @@ public interface BirdRepository extends CrudRepository<Bird, Long> {
     List<Bird> findByCountry(String country);
     List<Bird> findByCountryRegion(String countryRegion);
     List<Bird> findByHabitat(String habitat);
+    List<Bird> findByBirdOrder(String birdOrder);
 }
