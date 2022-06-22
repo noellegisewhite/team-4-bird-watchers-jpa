@@ -95,6 +95,7 @@
     transition: all 300ms ease;
     border-radius: 3px;
     font-weight: 700;
+    
 }
 
 .global-button:hover {
@@ -104,15 +105,17 @@
 }
 
 .global-button__dark-orange {
-    background-color: var(--color-dark-orange);
+    background-color: var(--color-dark-orange)
 }
 
 .global-button__orange {
     background-color: var(--color-orange);
+   
 }
 
 .global-button__yellow {
     background-color: var(--color-yellow);
+    margin: auto;
 }
 
 .global-button__purple {
@@ -179,5 +182,6 @@
 .global-cards__blue {
     background-color: var(--color-blue);
 }
+
 
 /* ========================== // GLOBAL ========================== */
