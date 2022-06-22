@@ -18,7 +18,7 @@ public class BirdController {
     private BirdRepository birdRepo;
 
     @Resource
-    DestinationsRepository destRepo;
+    private DestinationsRepository destRepo;
 
     @RequestMapping("/birds")
     public String displayAllBirds(Model model) {
@@ -50,12 +50,6 @@ public class BirdController {
         return ("redirect:/birds");
     }
 
-    @GetMapping("/single-bird/{id}")
-    public String displaySingleBirds(@PathVariable Long id, Model model) {
-        model.addAttribute("singleBird", birdRepo.findById(id).get());
-        return ("single-bird-template.html");
-    }
-
     @RequestMapping("/bird/birdOrder/{birdOrder}")
     public String displayBirdByOrder(@PathVariable String birdOrder, Model model) {
         model.addAttribute("orderBird", birdRepo.findByBirdOrder(birdOrder));
@@ -78,5 +72,11 @@ public class BirdController {
     public String displayBirdByHabitat(@PathVariable String habitat, Model model) {
         model.addAttribute("habitatBird", birdRepo.findByHabitat(habitat));
         return ("habitat-template.html");
+    }
+
+    @RequestMapping("/single-bird/{id}")
+    public String displaySingleBirds(@PathVariable Long id, Model model) {
+        model.addAttribute("singleBird", birdRepo.findById(id).get());
+        return ("single-bird-template.html");
     }
 }

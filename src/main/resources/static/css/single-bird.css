@@ -25,7 +25,7 @@
     width: 80%;
     margin: 0px auto;
     padding: 20px;
-    border: 2px solid rgba(192,192,192,0.4);
+    border: 1px solid rgba(192,192,192,0.4);
 }
 
 .grid-elements {
@@ -76,3 +76,30 @@
     width: 30%;
     font-family: 'Satisfy', cursive;
 }
+
+.bird-advent {
+    width:80%;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid rgba(192,192,192,0.4);
+}
+
+.advent-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+}
+
+.advent-container {
+    margin: 10px 10px;
+}
+
+.advent-h6 {
+    font-size: 1rem;
+}
+
+.advent-img {
+    width: 100%;
+}
+
+

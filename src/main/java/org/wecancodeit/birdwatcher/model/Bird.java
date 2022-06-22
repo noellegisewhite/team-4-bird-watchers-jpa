@@ -1,6 +1,8 @@
 package org.wecancodeit.birdwatcher.model;
 
 import javax.persistence.*;
+import java.util.Collection;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -22,6 +24,8 @@ public class Bird {
     private String countryRegion;
     private String habitat;
     private String birdOrder;
+    @ManyToMany
+    private Collection<Destinations> destinations;
 
     // Getters
     public Long getId() {
@@ -76,6 +80,10 @@ public class Bird {
         return birdOrder;
     }
 
+    public Collection<Destinations> getDestinations() {
+        return destinations;
+    }
+
     // Empty Constructor
     public Bird(){
     }
@@ -101,6 +109,24 @@ public class Bird {
         this.birdOrder = birdOrder;
     }
 
+    // Bird With Destinations
+    public Bird(String nameOfBird, String birdImageUrl, String colorOfBird, double lengthOfBeak, double lengthOfWing,
+                String species, String description, String continent, String country, String countryRegion, String habitat, String birdOrder, Destinations...destinations) {
+        this.nameOfBird = nameOfBird;
+        this.birdImageUrl = birdImageUrl;
+        this.colorOfBird = colorOfBird;
+        this.lengthOfBeak = lengthOfBeak;
+        this.lengthOfWing = lengthOfWing;
+        this.species = species;
+        this.description = description;
+        this.country = country;
+        this.continent = continent;
+        this.countryRegion = countryRegion;
+        this.habitat = habitat;
+        this.birdOrder = birdOrder;
+        this.destinations = List.of(destinations);
+    }
+
     @Override
     public String toString() {
         return "Bird{" +
@@ -116,7 +142,8 @@ public class Bird {
                 ", country='" + country + '\'' +
                 ", countryRegion='" + countryRegion + '\'' +
                 ", habitat='" + habitat + '\'' +
-                ", order='" + birdOrder + '\'' +
+                ", birdOrder='" + birdOrder + '\'' +
+                ", adventures=" + destinations +
                 '}';
     }
 
@@ -125,11 +152,11 @@ public class Bird {
         if (this == o) return true;
         if (!(o instanceof Bird)) return false;
         Bird bird = (Bird) o;
-        return Double.compare(bird.getLengthOfBeak(), getLengthOfBeak()) == 0 && Double.compare(bird.getLengthOfWing(), getLengthOfWing()) == 0 && getId().equals(bird.getId()) && getNameOfBird().equals(bird.getNameOfBird()) && getBirdImageUrl().equals(bird.getBirdImageUrl()) && getColorOfBird().equals(bird.getColorOfBird()) && getSpecies().equals(bird.getSpecies()) && getDescription().equals(bird.getDescription()) && getContinent().equals(bird.getContinent()) && getCountry().equals(bird.getCountry()) && getCountryRegion().equals(bird.getCountryRegion()) && getHabitat().equals(bird.getHabitat()) && getBirdOrder().equals(bird.getBirdOrder());
+        return Double.compare(bird.getLengthOfBeak(), getLengthOfBeak()) == 0 && Double.compare(bird.getLengthOfWing(), getLengthOfWing()) == 0 && getId().equals(bird.getId()) && getNameOfBird().equals(bird.getNameOfBird()) && getBirdImageUrl().equals(bird.getBirdImageUrl()) && getColorOfBird().equals(bird.getColorOfBird()) && getSpecies().equals(bird.getSpecies()) && getDescription().equals(bird.getDescription()) && getContinent().equals(bird.getContinent()) && getCountry().equals(bird.getCountry()) && getCountryRegion().equals(bird.getCountryRegion()) && getHabitat().equals(bird.getHabitat()) && getBirdOrder().equals(bird.getBirdOrder()) && getDestinations().equals(bird.getDestinations());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getNameOfBird(), getBirdImageUrl(), getColorOfBird(), getLengthOfBeak(), getLengthOfWing(), getSpecies(), getDescription(), getContinent(), getCountry(), getCountryRegion(), getHabitat(), getBirdOrder());
+        return Objects.hash(getId(), getNameOfBird(), getBirdImageUrl(), getColorOfBird(), getLengthOfBeak(), getLengthOfWing(), getSpecies(), getDescription(), getContinent(), getCountry(), getCountryRegion(), getHabitat(), getBirdOrder(), getDestinations());
     }
 }
