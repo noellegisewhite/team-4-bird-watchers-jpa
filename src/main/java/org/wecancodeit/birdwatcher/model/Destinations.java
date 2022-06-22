@@ -21,6 +21,8 @@ public class Destinations {
     private String packageDesc;
     @ManyToMany
     private Collection<Hashtag> hashtags;
+    @ManyToMany
+    private Collection<Bird> bird;
 
     // Stretch Task Variables ================================================================
 //    @OneToOne(mappedBy = "gallDest")
@@ -69,6 +71,10 @@ public class Destinations {
         return hashtags;
     }
 
+    public Collection<Bird> getBird() {
+        return bird;
+    }
+
 //    public Gallery getGallery() {
 //        return gallery;
 //    }
@@ -102,7 +108,7 @@ public class Destinations {
 
     // Stretch Constructor With Hashtags
     // this.hashtags = new HashSet<>();
-    public Destinations(Double packagePrice, String packageName, String packageCategory, String country, String region, String habitat, String destinationImageUrl, String packageDesc, Hashtag...hashtags) {
+    public Destinations(Double packagePrice, String packageName, String packageCategory, String country, String region, String habitat, String destinationImageUrl, String packageDesc ,Hashtag...hashtags) {
         this.packagePrice = packagePrice;
         this.packageName = packageName;
         this.packageCategory = packageCategory;
@@ -112,6 +118,19 @@ public class Destinations {
         this.destinationImageUrl = destinationImageUrl;
         this.packageDesc = packageDesc;
         this.hashtags = List.of(hashtags);
+    }
+
+    // Birds Mapping
+    public Destinations(Double packagePrice, String packageName, String packageCategory, String country, String region, String habitat, String destinationImageUrl, String packageDesc ,Bird...bird) {
+        this.packagePrice = packagePrice;
+        this.packageName = packageName;
+        this.packageCategory = packageCategory;
+        this.country = country;
+        this.region = region;
+        this.habitat = habitat;
+        this.destinationImageUrl = destinationImageUrl;
+        this.packageDesc = packageDesc;
+        this.bird = List.of(bird);
     }
 
     // Methods ===============================================================================
@@ -127,6 +146,7 @@ public class Destinations {
 //        reviews.add(reviewToAdd);
 //    }
 
+
     @Override
     public String toString() {
         return "Destinations{" +
@@ -140,6 +160,7 @@ public class Destinations {
                 ", destinationImageUrl='" + destinationImageUrl + '\'' +
                 ", packageDesc='" + packageDesc + '\'' +
                 ", hashtags=" + hashtags +
+                ", birds=" + bird +
                 '}';
     }
 
@@ -148,11 +169,11 @@ public class Destinations {
         if (this == o) return true;
         if (!(o instanceof Destinations)) return false;
         Destinations that = (Destinations) o;
-        return getId().equals(that.getId()) && getPackagePrice().equals(that.getPackagePrice()) && getPackageName().equals(that.getPackageName()) && getPackageCategory().equals(that.getPackageCategory()) && getCountry().equals(that.getCountry()) && getRegion().equals(that.getRegion()) && getHabitat().equals(that.getHabitat()) && getDestinationImageUrl().equals(that.getDestinationImageUrl()) && getPackageDesc().equals(that.getPackageDesc()) && getHashtags().equals(that.getHashtags());
+        return getId().equals(that.getId()) && getPackagePrice().equals(that.getPackagePrice()) && getPackageName().equals(that.getPackageName()) && getPackageCategory().equals(that.getPackageCategory()) && getCountry().equals(that.getCountry()) && getRegion().equals(that.getRegion()) && getHabitat().equals(that.getHabitat()) && getDestinationImageUrl().equals(that.getDestinationImageUrl()) && getPackageDesc().equals(that.getPackageDesc()) && getHashtags().equals(that.getHashtags()) && getBird().equals(that.getBird());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getPackagePrice(), getPackageName(), getPackageCategory(), getCountry(), getRegion(), getHabitat(), getDestinationImageUrl(), getPackageDesc(), getHashtags());
+        return Objects.hash(getId(), getPackagePrice(), getPackageName(), getPackageCategory(), getCountry(), getRegion(), getHabitat(), getDestinationImageUrl(), getPackageDesc(), getHashtags(), getBird());
     }
 }

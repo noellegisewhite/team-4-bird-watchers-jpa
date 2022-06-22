@@ -83,27 +83,38 @@
             <img class="grid-img" th:src="${singleBird.birdImageUrl}" th:alt="${singleBird.nameOfBird}">
             <h6 class="global-h6 continent" th:text="${singleBird.continent}">Continent</h6>
             <h5 class="global-h5 name" th:text="${singleBird.nameOfBird}">Bird Name</h5>
-            <h6 class="global-h6" th:text="${singleBird.birdOrder}">Order</h6>
-            <h6 class="global-h6" th:text="${singleBird.species}">Species</h6>
+            <h6 class="global-h6" th:text="'Order: '+${singleBird.birdOrder}">Order</h6>
+            <h6 class="global-h6" th:text="'Species: '+${singleBird.species}">Species</h6>
             <p class="global-text" th:text="${singleBird.description}">Description</p>
         </div>
     </section>
 
-<!--<section class="all-bird">-->
-<!--    <div class="bird-container">-->
-<!--        <h2 class="bird-name" th:text="${singleBird.nameOfBird}">Bird Name</h2>-->
-<!--        <h3 class="bird-species" th:text="${singleBird.species}">Bird Species</h3>-->
-<!--        <img class="bird-image" th:src="${singleBird.birdImageUrl}">-->
-<!--        <p class="bird-continent;" th:text="${singleBird.continent}">Bird Continent</p>-->
-<!--        <p class="bird-country" th:text="${singleBird.country}">Bird Country</p>-->
-<!--        <p class="bird-region" th:text="${singleBird.countryRegion}">Bird Region</p>-->
-<!--        <p class="bird-habitat" th:text="${singleBird.habitat}">Bird Habitat</p>-->
-<!--        <p class="bird-color" th:text="${singleBird.colorOfBird}">Bird Color</p>-->
-<!--        <p class="bird-beak" th:text="${singleBird.lengthOfBeak}">Bird Beak</p>-->
-<!--        <p class="bird-wing" th:text="${singleBird.lengthOfWing}">Bird Wing</p>-->
-<!--        <p class="bird-description" th:text="${singleBird.description}">Bird Description</p>-->
-<!--    </div>-->
-<!--</section>-->
+    <section class="bird-advent">
+        <h6 class="global-h6">Adventure Packages Available To See This Bird</h6>
+        <div class="advent-grid">
+        <div class="advent-container" th:each="destinations: ${singleBird.destinations}">
+                <h6 class="global-h6 advent-h6" th:text="${destinations.packageName}">Package Name</h6>
+                <img class="advent-img" th:src="${destinations.destinationImageUrl}">
+                <a class="global-button" th:href="'/single-destination/'+${destinations.id}">Learn More</a>
+        </div>
+        </div>
+    </section>
+
+    <!--<section class="all-bird">-->
+    <!--    <div class="bird-container">-->
+    <!--        <h2 class="bird-name" th:text="${singleBird.nameOfBird}">Bird Name</h2>-->
+    <!--        <h3 class="bird-species" th:text="${singleBird.species}">Bird Species</h3>-->
+    <!--        <img class="bird-image" th:src="${singleBird.birdImageUrl}">-->
+    <!--        <p class="bird-continent;" th:text="${singleBird.continent}">Bird Continent</p>-->
+    <!--        <p class="bird-country" th:text="${singleBird.country}">Bird Country</p>-->
+    <!--        <p class="bird-region" th:text="${singleBird.countryRegion}">Bird Region</p>-->
+    <!--        <p class="bird-habitat" th:text="${singleBird.habitat}">Bird Habitat</p>-->
+    <!--        <p class="bird-color" th:text="${singleBird.colorOfBird}">Bird Color</p>-->
+    <!--        <p class="bird-beak" th:text="${singleBird.lengthOfBeak}">Bird Beak</p>-->
+    <!--        <p class="bird-wing" th:text="${singleBird.lengthOfWing}">Bird Wing</p>-->
+    <!--        <p class="bird-description" th:text="${singleBird.description}">Bird Description</p>-->
+    <!--    </div>-->
+    <!--</section>-->
 </main>
 </body>
 </html>

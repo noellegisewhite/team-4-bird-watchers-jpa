@@ -126,8 +126,9 @@
 }
 
 #button2:checked ~ .dest-gallery__main .dest-gallery__elements #Madagascar,
-#button2:checked ~ .dest-gallery__main .dest-gallery__elements #Algeria,
-#button2:checked ~ .dest-gallery__main .dest-gallery__elements #Tanzania {
+#button2:checked ~ .dest-gallery__main .dest-gallery__elements #Gabon,
+#button2:checked ~ .dest-gallery__main .dest-gallery__elements #Guinea,
+#button2:checked ~ .dest-gallery__main .dest-gallery__elements #South {
     display: none;
 }
 
@@ -136,28 +137,42 @@
 }
 
 #button3:checked ~ .dest-gallery__main .dest-gallery__elements #Kenya,
-#button3:checked ~ .dest-gallery__main .dest-gallery__elements #Algeria,
-#button3:checked ~ .dest-gallery__main .dest-gallery__elements #Tanzania {
+#button3:checked ~ .dest-gallery__main .dest-gallery__elements #Gabon,
+#button3:checked ~ .dest-gallery__main .dest-gallery__elements #Guinea,
+#button3:checked ~ .dest-gallery__main .dest-gallery__elements #South {
     display: none;
 }
 
-#button4:checked ~ .dest-gallery__main .dest-gallery__elements #Algeria {
+#button4:checked ~ .dest-gallery__main .dest-gallery__elements #Gabon {
     display: block;
 }
 
 #button4:checked ~ .dest-gallery__main .dest-gallery__elements #Kenya,
 #button4:checked ~ .dest-gallery__main .dest-gallery__elements #Madagascar,
-#button4:checked ~ .dest-gallery__main .dest-gallery__elements #Tanzania {
+#button4:checked ~ .dest-gallery__main .dest-gallery__elements #Guinea,
+#button4:checked ~ .dest-gallery__main .dest-gallery__elements #South {
     display: none;
 }
 
-#button5:checked ~ .dest-gallery__main .dest-gallery__elements #Tanzania {
+#button5:checked ~ .dest-gallery__main .dest-gallery__elements #Guinea {
     display: block;
 }
 
 #button5:checked ~ .dest-gallery__main .dest-gallery__elements #Kenya,
 #button5:checked ~ .dest-gallery__main .dest-gallery__elements #Madagascar,
-#button5:checked ~ .dest-gallery__main .dest-gallery__elements #Algeria  {
+#button5:checked ~ .dest-gallery__main .dest-gallery__elements #Gabon,
+#button5:checked ~ .dest-gallery__main .dest-gallery__elements #South {
+    display: none;
+}
+
+#button6:checked ~ .dest-gallery__main .dest-gallery__elements #South {
+    display: block;
+}
+
+#button6:checked ~ .dest-gallery__main .dest-gallery__elements #Kenya,
+#button6:checked ~ .dest-gallery__main .dest-gallery__elements #Madagascar,
+#button6:checked ~ .dest-gallery__main .dest-gallery__elements #Gabon,
+#button6:checked ~ .dest-gallery__main .dest-gallery__elements #Guinea {
     display: none;
 }
 /* ================== // COUNTRY ================== */
@@ -171,7 +186,8 @@
 }
 
 #region2:checked ~ .dest-region__main .dest-region__elements #Island,
-#region2:checked ~ .dest-region__main .dest-region__elements #North {
+#region2:checked ~ .dest-region__main .dest-region__elements #South,
+#region2:checked ~ .dest-region__main .dest-region__elements #West {
     display: none;
 }
 
@@ -180,16 +196,28 @@
 }
 
 #region3:checked ~ .dest-region__main .dest-region__elements #East,
-#region3:checked ~ .dest-region__main .dest-region__elements #North {
+#region3:checked ~ .dest-region__main .dest-region__elements #South,
+#region3:checked ~ .dest-region__main .dest-region__elements #West {
     display: none;
 }
 
-#region4:checked ~ .dest-region__main .dest-region__elements #North {
+#region4:checked ~ .dest-region__main .dest-region__elements #South {
     display: block;
 }
 
 #region4:checked ~ .dest-region__main .dest-region__elements #East,
-#region4:checked ~ .dest-region__main .dest-region__elements #Island {
+#region4:checked ~ .dest-region__main .dest-region__elements #Island,
+#region4:checked ~ .dest-region__main .dest-region__elements #West {
+    display: none;
+}
+
+#region5:checked ~ .dest-region__main .dest-region__elements #West {
+    display: block;
+}
+
+#region5:checked ~ .dest-region__main .dest-region__elements #East,
+#region5:checked ~ .dest-region__main .dest-region__elements #Island,
+#region5:checked ~ .dest-region__main .dest-region__elements #South {
     display: none;
 }
 /* ================== // REGION =================== */
