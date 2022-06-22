@@ -199,4 +199,8 @@ body {
     background-color: var(--color-blue);
 }
 
+a:link {
+    text-decoration: none;
+}
+
 /* ========================== // GLOBAL ========================== */
