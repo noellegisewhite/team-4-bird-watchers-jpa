@@ -43,6 +43,7 @@ nav a {
     color: #E36414;
     font-weight: 700;
     text-decoration: none;
+    transition: all 500ms ease;
 }
 
 nav a:visited {
@@ -50,20 +51,13 @@ nav a:visited {
 }
 
 nav a:hover {
-    background: #FFDB78;
     color: #9A031E;
-    padding: 5px;
-    transition: all 300ms ease;
     border-radius: 3px;
 }
 
 .button {
     margin-bottom: 0px;
     color: white;
-}
-
-.button:hover {
-    padding: 10px 25px;
 }
 
 .button:visited {
@@ -137,8 +131,8 @@ nav a:hover {
 
 .staff-h3 {
     text-align: center;
-    color: #0F4C5C;
-    margin-top: 5px;
+    color: var(--color-purple);
+    margin-top: 30px;
 }
 
 .global-cards__group {
@@ -228,6 +222,27 @@ select {
 
 
 /* =================== // BOOKING ================== */
+/* ==================== ABOUT ===================== */
+
+.about {
+    background-color: var(--color-blue);
+}
+
+.about-text {
+    color: white;
+    margin-top: 20px;
+    padding: 100px;
+}
+
+.about-text p {
+    color: white;
+}
+
+.about-img {
+    margin: auto;
+}
+
+
 
 /* ==================== FOOTER ===================== */
 
