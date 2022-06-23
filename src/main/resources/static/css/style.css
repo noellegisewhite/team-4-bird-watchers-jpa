@@ -133,6 +133,7 @@ nav a:hover {
 }
 
 /* ================ // ABOUT SECTION ================== */
+/* ====================== STAFF ======================= */
 
 .staff-h3 {
     text-align: center;
@@ -145,6 +146,90 @@ nav a:hover {
     grid-template-columns: repeat(3, 1fr);
     margin: auto;
 }
+/* ==================== BOOKING ==================== */
+
+.booking {
+    margin: auto;
+    width: 100%;
+    height: 1200px;
+    background-color: var(--color-blue);
+}
+
+.booking-container {
+    width: 100%;
+    height: 100%;
+    background: url("/images/jungle-border.svg") no-repeat;
+    background-size: cover;
+    margin: auto;
+    padding-top: 15%;
+}
+
+.booking h3 {
+    text-align: center;
+    color: white;
+}
+
+.book-form {
+    border: none;
+}
+
+input,
+select {
+    display: block;
+    width: 40%;
+    margin: 10px auto;
+}
+
+.text-field {
+    height: 50px;
+    margin: 20px auto;
+    padding: 20px;
+    font-size: 20px;
+    border: 0px solid rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+
+.text-field::placeholder {
+    color: #0F4C5C;
+    font-weight: 700;
+}
+
+.select-field {
+    height: 50px;
+    margin: 20px auto;
+    padding-left: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #0F4C5C;
+    border: 0px solid rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+
+.reserve {
+    display: block;
+    color: var(--color-white);
+    background-color: var(--color-black);
+    border: 1px solid rgba(0,0,0,0);
+    margin: 10px auto;
+    padding: 10px 25px;
+    transition: all 300ms ease;
+    border-radius: 3px;
+    font-weight: 700;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.reserve:hover {
+    color: var(--color-black);
+    background-color: var(--color-white);
+    border: 1px solid var(--color-black);
+}
+
+
+
+/* =================== // BOOKING ================== */
+
+/* ==================== FOOTER ===================== */
 
 .footer {
     background-color: var(--color-blue);

@@ -90,7 +90,7 @@
     </section>
 
     <section class="bird-advent">
-        <h6 class="global-h6">Adventure Packages Available To See This Bird</h6>
+        <h6 class="global-h6 bird-advent__h6">Adventure Packages Available To See This Bird</h6>
         <div class="advent-grid">
         <div class="advent-container" th:each="destinations: ${singleBird.destinations}">
                 <h6 class="global-h6 advent-h6" th:text="${destinations.packageName}">Package Name</h6>

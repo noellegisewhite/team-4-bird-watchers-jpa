@@ -22,6 +22,9 @@ public class Populator implements CommandLineRunner {
     @Resource
     private BirdWatchersRepository birdWatchersStorage;
 
+    @Resource
+    private BookingRepository bookingStorage;
+
     @Override
     public void run(String... args) throws Exception {
 
@@ -196,5 +199,9 @@ public class Populator implements CommandLineRunner {
         birdWatchersStorage.save(watchersE);
         birdWatchersStorage.save(watchersF);
         birdWatchersStorage.save(watchersG);
+
+        Booking booking1 = new Booking("bob", "bob@gmail.com", "1231234", kenya1, "jan 21", "jan 30");
+
+        bookingStorage.save(booking1);
     }
 }
