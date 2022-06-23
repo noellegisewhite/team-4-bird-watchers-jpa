@@ -129,6 +129,27 @@
         </div>
     </section>
     <!-- ======================== // GROUP SECTION ======================== -->
+    <!-- ============================  FORM  ============================== -->
+
+    <section class="booking" id="book">
+        <h3 class="global-h3">Book Your Tour</h3>
+        <fieldset class="book-form">
+            <form name="addBooking" action="/addBooking" method="POST">
+                <input type="text" class="text-field" name="bookName" id="bookName" placeholder="Name" required>
+                <input type="email" class="text-field" name="bookEmail" id="bookEmail" placeholder="Email" required>
+                <input type="text" class="text-field" name="bookPhone" id="bookPhone" placeholder="Phone Number" required>
+                <select class="select-field">
+                    <option value="0">Select A Package</option>
+                    <option th:each="destinations: ${destinationModel}" th:text="${destinations.packageName}" name="destId" th:value="${destinations.id}"></option>
+                </select>
+                <input type="text" class="text-field" name="bookStart" id="bookStart" placeholder="Trip Start Date"
+                       required>
+                <input type="text" class="text-field" name="bookEnd" id="bookEnd" placeholder="Trip End Date" required>
+                <button type="submit" class="reserve">RESERVE MY TRIP</button>
+            </form>
+        </fieldset>
+    </section>
+
     <!-- =========================  FOOTER ========================= -->
     <footer class="footer">
         <small class="footer_copyright">&copy; TEAM 4 WCCI</small>
@@ -136,7 +157,6 @@
             <a href="https://twitter.com/audubonsociety" class="fa fa-twitter">Twitter</a>
             <a href="https://www.instagram.com/audubonsociety/?hl=en" class="fa fa-instagram">Instagram</a>
         </section>
-
     </footer>
 
     <!-- ======================== // FOOTER ======================== -->

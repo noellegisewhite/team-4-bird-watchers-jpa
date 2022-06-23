@@ -23,6 +23,8 @@ public class Destinations {
     private Collection<Hashtag> hashtags;
     @ManyToMany
     private Collection<Bird> bird;
+    @OneToMany(mappedBy = "destinations")
+    private Collection<Booking> bookings;
 
     // Stretch Task Variables ================================================================
 //    @OneToOne(mappedBy = "gallDest")
@@ -75,7 +77,11 @@ public class Destinations {
         return bird;
     }
 
-//    public Gallery getGallery() {
+    public Collection<Booking> getBookings() {
+        return bookings;
+    }
+
+    //    public Gallery getGallery() {
 //        return gallery;
 //    }
 
@@ -136,6 +142,10 @@ public class Destinations {
     // Methods ===============================================================================
     public void addOneHashtag(Hashtag hashtagToAdd) {
         hashtags.add(hashtagToAdd);
+    }
+
+    public void addBooking(Booking bookingToAdd) {
+        bookings.add(bookingToAdd);
     }
 
 //    public void addPhoto(Photos photoToAdd) {
