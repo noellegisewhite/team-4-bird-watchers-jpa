@@ -97,6 +97,11 @@ body {
     font-size: 2rem;
 }
 
+.global-flex {
+    display: flex;
+    justify-content: center;
+}
+
 .global-text {
     line-height: 1.8;
     color: var(--color-gray);
@@ -202,5 +207,16 @@ body {
 a:link {
     text-decoration: none;
 }
+
+.link-style {
+    color: #fff;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+}
+
+
 
 /* ========================== // GLOBAL ========================== */
