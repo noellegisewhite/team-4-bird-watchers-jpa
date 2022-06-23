@@ -132,8 +132,9 @@
     <!-- ============================  FORM  ============================== -->
 
     <section class="booking" id="book">
-        <h3 class="global-h3">Book Your Tour</h3>
+        <div class="booking-container">
         <fieldset class="book-form">
+            <h3 class="global-h3">Book Your Tour</h3>
             <form name="addBooking" action="/addBooking" method="POST">
                 <input type="text" class="text-field" name="bookName" id="bookName" placeholder="Name" required>
                 <input type="email" class="text-field" name="bookEmail" id="bookEmail" placeholder="Email" required>
@@ -148,6 +149,7 @@
                 <button type="submit" class="reserve">RESERVE MY TRIP</button>
             </form>
         </fieldset>
+        </div>
     </section>
 
     <!-- =========================  FOOTER ========================= -->
@@ -158,7 +160,6 @@
             <a href="https://www.instagram.com/audubonsociety/?hl=en" class="fa fa-instagram">Instagram</a>
         </section>
     </footer>
-
     <!-- ======================== // FOOTER ======================== -->
 </main>
 </body>

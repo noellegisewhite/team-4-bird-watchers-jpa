@@ -149,11 +149,24 @@ nav a:hover {
 /* ==================== BOOKING ==================== */
 
 .booking {
-    margin: 20px auto;
+    margin: auto;
+    width: 100%;
+    height: 1200px;
+    background-color: var(--color-blue);
+}
+
+.booking-container {
+    width: 100%;
+    height: 100%;
+    background: url("/images/jungle-border.svg") no-repeat;
+    background-size: cover;
+    margin: auto;
+    padding-top: 15%;
 }
 
 .booking h3 {
     text-align: center;
+    color: white;
 }
 
 .book-form {
@@ -172,7 +185,8 @@ select {
     margin: 20px auto;
     padding: 20px;
     font-size: 20px;
-    border: 1px solid rgba(0,0,0,0.2);
+    border: 0px solid rgba(0,0,0,0.2);
+    border-radius: 5px;
 }
 
 .text-field::placeholder {
@@ -187,7 +201,8 @@ select {
     font-size: 20px;
     font-weight: 700;
     color: #0F4C5C;
-    border: 1px solid rgba(0,0,0,0.2);
+    border: 0px solid rgba(0,0,0,0.2);
+    border-radius: 5px;
 }
 
 .reserve {
