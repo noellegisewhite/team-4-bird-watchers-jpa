@@ -95,11 +95,15 @@ body {
 
 .global-h6 {
     font-size: 2rem;
+    display: flex;
+    justify-content: center;
 }
 
 .global-text {
     line-height: 1.8;
     color: var(--color-gray);
+    display: flex;
+    justify-content: center;
 }
 
 .global-button {
@@ -201,6 +205,16 @@ body {
 
 a:link {
     text-decoration: none;
+    color: #fff;
+    display: flex;
+    justify-content: center;
 }
+
+.footer {
+    display: flex;
+    justify-content: center;
+}
+
+
 
 /* ========================== // GLOBAL ========================== */
