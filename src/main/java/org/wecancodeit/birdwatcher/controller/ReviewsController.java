@@ -18,24 +18,6 @@ public class ReviewsController {
         model.addAttribute("allReviews", reviewsRepo.findAll());
         return("reviews.html");
     }
-
-//    @GetMapping("/reviews/{name}")
-//    public String displayReviewsByNames(@PathVariable String name, Model model){
-//        model.addAttribute("reviewerName", reviewsRepo.findByName(name));
-//        return("reviews.html");
-//    }
-//
-//    @GetMapping("/reviews/{ratings}")
-//    public String displayReviewsByRatings(@PathVariable int rating, Model model){
-//        model.addAttribute("ratings", reviewsRepo.findByRating(rating));
-//        return("reviews.html");
-//    }
-//
-//    @GetMapping("/reviews/{tourist-location}")
-//    public String displayReviewsByTouristLocation(@PathVariable String touristLocation, Model model){
-//        model.addAttribute("touristLocation", reviewsRepo.findByTouristLocation(touristLocation));
-//        return("reviews.html");
-//    }
 //
 //    @GetMapping("/reviews/{id}")
 //    public String displayOneReviewById(@PathVariable Long id, Model model){

@@ -6,6 +6,7 @@ import org.wecancodeit.birdwatcher.model.*;
 import org.wecancodeit.birdwatcher.repository.*;
 
 import javax.annotation.Resource;
+import java.time.LocalDate;
 
 @Component
 public class Populator implements CommandLineRunner {
@@ -24,6 +25,9 @@ public class Populator implements CommandLineRunner {
 
     @Resource
     private BookingRepository bookingStorage;
+
+    @Resource
+    private ReviewsRepository reviewsStorage;
 
     @Override
     public void run(String... args) throws Exception {
@@ -72,6 +76,7 @@ public class Populator implements CommandLineRunner {
         Destinations south2 = new Destinations(4222.99, "Southern Hospitality", "safari", "South", "South", "mountain", "/images/dest (5).jpg", "Sandwiched between Namibia and Botswana, the Kgalagadi Trans Frontier Reserve is one of Africa’s wildest and least-known national parks. We’ll have a short journey to get to the reserve gate when it opens for the day. Once inside we’ll head for a small waterhole, where we should be treated to flocks of Namaqua Sandgrouse coming to drink, hopefully joined by good numbers of Burchell’s Sandgrouse and hordes of other birds such as Namaqua Doves, Cape Sparrows, Red-headed Finches, and of course those ubiquitous Sociable Weavers. We are allowed out of our vehicle in only a few designated places, so we’ll spend the morning slowly driving along a road that follow an old riverbed, using the vehicle almost as a mobile blind.", safariTag, africaTag);
         Destinations south3 = new Destinations(4111.99, "Sandy Southern Shores", "boat", "South", "South", "desert", "/images/dest (6).jpg", "You'd be mad to go to Africa and not embark on a safari. The continent is home to some of the world's most majestic creatures, from graceful giraffes to proud lions and lumbering elephants. But safaris can be hard work. So what better way to compliment your wildlife adventure than with a few days of R&R on the beach? From the white sands of Zanzibar to the windswept beaches of Swakopmund in Namibia and the southern point of Africa at Cape Town, there are loads of great options for creating your perfect beach and wildlife journey.", safariTag, africaTag);
 
+
         destinationStorage.save(kenya1);
         destinationStorage.save(kenya2);
         destinationStorage.save(kenya3);
@@ -94,6 +99,16 @@ public class Populator implements CommandLineRunner {
         destinationStorage.save(south1);
         destinationStorage.save(south2);
         destinationStorage.save(south3);
+
+//        LocalDate date = LocalDate.of(2022, 06, 23);
+
+        Reviews reviews1 = new Reviews("Karen", "01-23-4567", "HORRIBLE11!!", "I need to speak to the manager!", 1, south3);
+        Reviews reviews2 = new Reviews("Cliff Jenkins", "02-03-2022", "Wise Proverb", "All I know is fat meat is greasy and some people don't want to hear thunder or see lightning.", 4.9, south3);
+        Reviews reviews3 = new Reviews("Michael Scott", "06-16-2022", "Best Trip Ever", "When the son of the deposed king of Nigeria emails you directly, asking for help, you help! His father ran the freaking country! OK?.", 4.8, south3);
+
+        reviewsStorage.save(reviews1);
+        reviewsStorage.save(reviews2);
+        reviewsStorage.save(reviews3);
 
         // public Bird(long id, String nameOfBird, String birdImageUrl, String colorOfBird, double lengthOfBeak, double lengthOfWing, String species, String description, String continent, String country, String countryRegion, String habitat)
         Bird birdA = new Bird("Saddle-Billed Stork", "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/220922121/1200",
@@ -162,7 +177,6 @@ public class Populator implements CommandLineRunner {
                 "Brown", 1.1, 2.3, "Aythya Innotata", "Extremely rare diving duck that was long thought extinct before being rediscovered in 2006 in a remote site in northern Madagascar. A large duck that is mostly rich brown, with white under the tail. Shows a conspicuous white wing stripe in flight. Males have a pale eye and females a dark one. Lives on freshwater lakes and wetlands. Dives frequently, like a grebe, but is much larger. Lacks the pale face of White-faced Whistling-Duck. Smaller than Meller’s Duck, with darker brown coloration and white under the tail.",
                 "Africa", "madagascar", "island", "tropical", "anseriformes", mad1, mad2, mad3, mad4, mad5);
 
-        birdStorage.save(birdA);
         birdStorage.save(birdA);
         birdStorage.save(birdB);
         birdStorage.save(birdC);

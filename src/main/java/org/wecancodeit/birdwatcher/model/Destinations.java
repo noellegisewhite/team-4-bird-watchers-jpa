@@ -25,12 +25,12 @@ public class Destinations {
     private Collection<Bird> bird;
     @OneToMany(mappedBy = "destinations")
     private Collection<Booking> bookings;
+    @OneToMany(mappedBy = "destinations")
+    private Set<Reviews> reviews = new HashSet<>();
 
-    // Stretch Task Variables ================================================================
+//     Stretch Task Variables ================================================================
 //    @OneToOne(mappedBy = "gallDest")
 //    private Gallery gallery;
-//    @ManyToOne
-//    private Collection<Review> reviews;
 
     // Getters ===============================================================================
     public Long getId() {
@@ -81,14 +81,9 @@ public class Destinations {
         return bookings;
     }
 
-    //    public Gallery getGallery() {
-//        return gallery;
-//    }
-
-//    public Collection<Review> getReviews() {
-//        return review;
-//    }
-//
+    public Collection<Reviews> getReviews() {
+        return reviews;
+    }
 
     // Constructors ==========================================================================
     public Destinations() {
@@ -126,19 +121,6 @@ public class Destinations {
         this.hashtags = List.of(hashtags);
     }
 
-    // Birds Mapping
-    public Destinations(Double packagePrice, String packageName, String packageCategory, String country, String region, String habitat, String destinationImageUrl, String packageDesc ,Bird...bird) {
-        this.packagePrice = packagePrice;
-        this.packageName = packageName;
-        this.packageCategory = packageCategory;
-        this.country = country;
-        this.region = region;
-        this.habitat = habitat;
-        this.destinationImageUrl = destinationImageUrl;
-        this.packageDesc = packageDesc;
-        this.bird = List.of(bird);
-    }
-
     // Methods ===============================================================================
     public void addOneHashtag(Hashtag hashtagToAdd) {
         hashtags.add(hashtagToAdd);
@@ -147,15 +129,6 @@ public class Destinations {
     public void addBooking(Booking bookingToAdd) {
         bookings.add(bookingToAdd);
     }
-
-//    public void addPhoto(Photos photoToAdd) {
-//        photos.add(photoToAdd);
-//    }
-//
-//    public void addReview(Review reviewToAdd) {
-//        reviews.add(reviewToAdd);
-//    }
-
 
     @Override
     public String toString() {
