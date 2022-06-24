@@ -1,44 +1,50 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
-  <meta charset="UTF-8">
-  <!-- ============ VS Code Path ================= -->
-  <link rel="stylesheet" href="static/css/reviews.css">
-  <link rel="stylesheet" href="css/reviews.css">
-  <!-- Swiper CSS  -->
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <!-- ============ Global Styles ================= -->
+    <link rel="stylesheet" href="/css/z-global.css">
+    <link rel="stylesheet" href="/static/css/z-global.css">
+    <!-- ============ Review Styles ================= -->
+    <link rel="stylesheet" href="/css/reviews.css">
+    <link rel="stylesheet" href="/static/css/reviews.css">
+      <!-- Swiper CSS  -->
   <link rel="stylesheet" href="css/swiper-bundle.min.css">
-
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/static/css/style.css">
-  <!-- ============ Global Styles ================= -->
-  <link rel="stylesheet" href="/css/z-global.css">
-  <link rel="stylesheet" href="/static/css/z-global.css">
-
-  <title>Team 4-Reviews</title>
-  <!-- poppins-font-family -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-  <!--using-Font-Awesome-------------------->
-  <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <title>Reviews</title>
 </head>
+
 <header>
-  <nav>
-    <div class="nav-container">
-      <img src="/images/parrot-small.png"/>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/company">Company</a></li>
-        <li><a href="/birds">Birds</a></li>
-        <li><a href="/birdwatchers">Bird Watchers</a></li>
-        <li><a href="/destinations">Destinations</a></li>
-        <li><a href="/reviews">Reviews</a></li>
-        <li><a class="global-button global-button__red button" href="/#book">Book Now</a></li>
-      </ul>
-    </div>
-  </nav>
+    <nav>
+        <div class="nav-container">
+            <img src="/images/parrot-small.png"/>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/company">Company</a></li>
+                <li><a href="/birds">Birds</a></li>
+                <li><a href="/birdwatchers">Bird Watchers</a></li>
+                <li><a href="/destinations">Destinations</a></li>
+                <li><a href="/reviews">Reviews</a></li>
+                <li><a class="global-button global-button__red button" href="/#book">Book Now</a></li>
+            </ul>
+        </div>
+    </nav>
 </header>
 
 <body>
+    <section class="review-page">
+        <div class="review-page__container" th:each="reviews: ${allReviews}">
+            <p class="global-text" th:text="${reviews.revRating} + ' / Out of 5'">Rating</p>
+            <p class="global-text" th:text="${reviews.revDate}">Date</p>
+            <h6 class="global-h6" th:text="${reviews.revName}">User Name</h6>
+            <p class="global-text rev-title" th:text="${reviews.revTitle}">Title</p>
+            <p class="global-text" th:text="${reviews.revText}">Review Content</p>
+        </div>
+    </section>
+
 <div class="slide-container swiper">
   <div class="slide-content">
     <div class="card-wrapper swiper-wrapper">

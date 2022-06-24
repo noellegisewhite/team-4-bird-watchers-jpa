@@ -1,5 +1,7 @@
 package org.wecancodeit.birdwatcher.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import javax.persistence.*;
 import java.util.*;
 
@@ -24,13 +26,13 @@ public class Destinations {
     @ManyToMany
     private Collection<Bird> bird;
     @OneToMany(mappedBy = "destinations")
-    private Collection<Booking> bookings;
+    private Set<Booking> bookings = new HashSet<>();
+    @OneToMany(mappedBy = "destinations")
+    private Set<Reviews> reviews = new HashSet<>();
 
-    // Stretch Task Variables ================================================================
+//     Stretch Task Variables ================================================================
 //    @OneToOne(mappedBy = "gallDest")
 //    private Gallery gallery;
-//    @ManyToOne
-//    private Collection<Review> reviews;
 
     // Getters ===============================================================================
     public Long getId() {
@@ -81,14 +83,9 @@ public class Destinations {
         return bookings;
     }
 
-    //    public Gallery getGallery() {
-//        return gallery;
-//    }
-
-//    public Collection<Review> getReviews() {
-//        return review;
-//    }
-//
+    public Collection<Reviews> getReviews() {
+        return reviews;
+    }
 
     // Constructors ==========================================================================
     public Destinations() {
@@ -126,36 +123,10 @@ public class Destinations {
         this.hashtags = List.of(hashtags);
     }
 
-    // Birds Mapping
-    public Destinations(Double packagePrice, String packageName, String packageCategory, String country, String region, String habitat, String destinationImageUrl, String packageDesc ,Bird...bird) {
-        this.packagePrice = packagePrice;
-        this.packageName = packageName;
-        this.packageCategory = packageCategory;
-        this.country = country;
-        this.region = region;
-        this.habitat = habitat;
-        this.destinationImageUrl = destinationImageUrl;
-        this.packageDesc = packageDesc;
-        this.bird = List.of(bird);
-    }
-
     // Methods ===============================================================================
     public void addOneHashtag(Hashtag hashtagToAdd) {
         hashtags.add(hashtagToAdd);
     }
-
-    public void addBooking(Booking bookingToAdd) {
-        bookings.add(bookingToAdd);
-    }
-
-//    public void addPhoto(Photos photoToAdd) {
-//        photos.add(photoToAdd);
-//    }
-//
-//    public void addReview(Review reviewToAdd) {
-//        reviews.add(reviewToAdd);
-//    }
-
 
     @Override
     public String toString() {
@@ -170,7 +141,9 @@ public class Destinations {
                 ", destinationImageUrl='" + destinationImageUrl + '\'' +
                 ", packageDesc='" + packageDesc + '\'' +
                 ", hashtags=" + hashtags +
-                ", birds=" + bird +
+                ", bird=" + bird +
+                ", bookings=" + bookings +
+                ", reviews=" + reviews +
                 '}';
     }
 
@@ -179,7 +152,7 @@ public class Destinations {
         if (this == o) return true;
         if (!(o instanceof Destinations)) return false;
         Destinations that = (Destinations) o;
-        return getId().equals(that.getId()) && getPackagePrice().equals(that.getPackagePrice()) && getPackageName().equals(that.getPackageName()) && getPackageCategory().equals(that.getPackageCategory()) && getCountry().equals(that.getCountry()) && getRegion().equals(that.getRegion()) && getHabitat().equals(that.getHabitat()) && getDestinationImageUrl().equals(that.getDestinationImageUrl()) && getPackageDesc().equals(that.getPackageDesc()) && getHashtags().equals(that.getHashtags()) && getBird().equals(that.getBird());
+        return getId().equals(that.getId()) && getPackagePrice().equals(that.getPackagePrice()) && getPackageName().equals(that.getPackageName()) && getPackageCategory().equals(that.getPackageCategory()) && getCountry().equals(that.getCountry()) && getRegion().equals(that.getRegion()) && getHabitat().equals(that.getHabitat()) && getDestinationImageUrl().equals(that.getDestinationImageUrl()) && getPackageDesc().equals(that.getPackageDesc()) && getHashtags().equals(that.getHashtags()) && getBird().equals(that.getBird()) && getBookings().equals(that.getBookings());
     }
 
     @Override

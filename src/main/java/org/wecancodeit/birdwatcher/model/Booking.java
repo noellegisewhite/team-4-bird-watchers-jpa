@@ -63,16 +63,18 @@ public class Booking {
     }
 
     // Methods
+
+
     @Override
     public String toString() {
         return "Booking{" +
                 "id=" + id +
-                ", name='" + bookName + '\'' +
-                ", email='" + bookEmail + '\'' +
-                ", phone='" + bookPhone + '\'' +
+                ", bookName='" + bookName + '\'' +
+                ", bookEmail='" + bookEmail + '\'' +
+                ", bookPhone='" + bookPhone + '\'' +
                 ", destinations=" + destinations +
-                ", start='" + bookStart + '\'' +
-                ", end='" + bookEnd + '\'' +
+                ", bookStart='" + bookStart + '\'' +
+                ", bookEnd='" + bookEnd + '\'' +
                 '}';
     }
 

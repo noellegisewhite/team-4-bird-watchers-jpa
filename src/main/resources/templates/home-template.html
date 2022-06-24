@@ -7,6 +7,7 @@
     <!-- ============ Global Styles ================= -->
     <link rel="stylesheet" href="/css/z-global.css">
     <link rel="stylesheet" href="/static/css/z-global.css">
+    <script src="https://kit.fontawesome.com/fa2ea675bd.js" crossorigin="anonymous"></script>
     <title>Team 4 - Home</title>
 </head>
 
@@ -77,9 +78,9 @@
             <p class="global-text global-twocol__text">Wildlife Safari, Kayaking, and more...</p>
             <h6 class="global-h6 global-twocol__h6-2">Explore Destinations In Madagascar</h6>
             <p class="global-text global-twocol__text">Luxury Private Retreats</p>
-            <h6 class="global-h6 global-twocol__h6-3">Explore Destinations In Algeria</h6>
+            <h6 class="global-h6 global-twocol__h6-3">Explore Destinations In South Africa</h6>
             <p class="global-text global-twocol__text">Exotic foods</p>
-            <h6 class="global-h6 global-twocol__h6-3">Explore Destinations In Tanzania</h6>
+            <h6 class="global-h6 global-twocol__h6-3">Explore Destinations In Gabon</h6>
             <p class="global-text global-twocol__text">Private Dolphin Tour</p>
             <a href="/destinations" class="global-button global-button__orange">LEARN MORE</a>
         </div>
@@ -130,16 +131,15 @@
         <div class="booking-container">
         <fieldset class="book-form">
             <h3 class="global-h3">Book Your Tour<a href="/bookings">.</a></h3>
-            <form name="addBooking" action="/addBooking" method="POST">
+            <form name="addBooking" action="/addBooking" method="POST" th:object="${booking}">
                 <input type="text" class="text-field" name="bookName" id="bookName" placeholder="Name" required>
                 <input type="email" class="text-field" name="bookEmail" id="bookEmail" placeholder="Email" required>
                 <input type="text" class="text-field" name="bookPhone" id="bookPhone" placeholder="Phone Number" required>
                 <select class="select-field">
                     <option value="0">Select A Package</option>
-                    <option th:each="destinations: ${destinationModel}" th:text="${destinations.packageName}" name="destId" th:value="${destinations.id}"></option>
+                    <option th:each="destinations: ${destinationModel}" th:text="${destinations.packageName}" name="id" id="id" th:value="${destinations.id}"></option>
                 </select>
-                <input type="text" class="text-field" name="bookStart" id="bookStart" placeholder="Trip Start Date"
-                       required>
+                <input type="text" class="text-field" name="bookStart" id="bookStart" placeholder="Trip Start Date" required>
                 <input type="text" class="text-field" name="bookEnd" id="bookEnd" placeholder="Trip End Date" required>
                 <button type="submit" class="reserve">RESERVE MY TRIP</button>
             </form>
@@ -149,10 +149,18 @@
 
     <!-- =========================  FOOTER ========================= -->
     <footer class="footer">
-        <small class="footer_copyright">&copy; TEAM 4 WCCI</small>
-        <section class="footer_social">National Audubon Society
-            <a href="https://twitter.com/audubonsociety" class="fa fa-twitter">Twitter</a>
-            <a href="https://www.instagram.com/audubonsociety/?hl=en" class="fa fa-instagram">Instagram</a>
+        <section class="footer-social">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <a href="https://github.com/2022-April-Java-PT-Classroom/team-4-bird-watchers-jpa"><i class="fa-brands fa-github"></i></a>
+            <div>
+                <p>National Audubon Society</p>
+                <a href="https://twitter.com/audubonsociety" class="fa fa-twitter"> Twitter</a>
+                <a href="https://www.instagram.com/audubonsociety/?hl=en" class="fa fa-instagram"> Instagram</a>
+            </div>
+            <p class="footer_copyright">&copy; TEAM 4 WCCI</p>
         </section>
     </footer>
     <!-- ======================== // FOOTER ======================== -->
