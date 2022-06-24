@@ -1,5 +1,7 @@
 package org.wecancodeit.birdwatcher.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import javax.persistence.*;
 import java.util.*;
 
@@ -24,7 +26,7 @@ public class Destinations {
     @ManyToMany
     private Collection<Bird> bird;
     @OneToMany(mappedBy = "destinations")
-    private Collection<Booking> bookings;
+    private Set<Booking> bookings = new HashSet<>();
     @OneToMany(mappedBy = "destinations")
     private Set<Reviews> reviews = new HashSet<>();
 
@@ -126,10 +128,6 @@ public class Destinations {
         hashtags.add(hashtagToAdd);
     }
 
-    public void addBooking(Booking bookingToAdd) {
-        bookings.add(bookingToAdd);
-    }
-
     @Override
     public String toString() {
         return "Destinations{" +
@@ -143,7 +141,9 @@ public class Destinations {
                 ", destinationImageUrl='" + destinationImageUrl + '\'' +
                 ", packageDesc='" + packageDesc + '\'' +
                 ", hashtags=" + hashtags +
-                ", birds=" + bird +
+                ", bird=" + bird +
+                ", bookings=" + bookings +
+                ", reviews=" + reviews +
                 '}';
     }
 
@@ -152,7 +152,7 @@ public class Destinations {
         if (this == o) return true;
         if (!(o instanceof Destinations)) return false;
         Destinations that = (Destinations) o;
-        return getId().equals(that.getId()) && getPackagePrice().equals(that.getPackagePrice()) && getPackageName().equals(that.getPackageName()) && getPackageCategory().equals(that.getPackageCategory()) && getCountry().equals(that.getCountry()) && getRegion().equals(that.getRegion()) && getHabitat().equals(that.getHabitat()) && getDestinationImageUrl().equals(that.getDestinationImageUrl()) && getPackageDesc().equals(that.getPackageDesc()) && getHashtags().equals(that.getHashtags()) && getBird().equals(that.getBird());
+        return getId().equals(that.getId()) && getPackagePrice().equals(that.getPackagePrice()) && getPackageName().equals(that.getPackageName()) && getPackageCategory().equals(that.getPackageCategory()) && getCountry().equals(that.getCountry()) && getRegion().equals(that.getRegion()) && getHabitat().equals(that.getHabitat()) && getDestinationImageUrl().equals(that.getDestinationImageUrl()) && getPackageDesc().equals(that.getPackageDesc()) && getHashtags().equals(that.getHashtags()) && getBird().equals(that.getBird()) && getBookings().equals(that.getBookings());
     }
 
     @Override

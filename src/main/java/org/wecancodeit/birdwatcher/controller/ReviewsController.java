@@ -10,18 +10,19 @@ import javax.annotation.Resource;
 
 @Controller
 public class ReviewsController {
+
     @Resource
     private ReviewsRepository reviewsRepo;
 
     @RequestMapping("/reviews")
-    public String displayAllReviews(Model model){
+    public String displayAllReviews(Model model) {
         model.addAttribute("allReviews", reviewsRepo.findAll());
         return("reviews.html");
     }
-//
-//    @GetMapping("/reviews/{id}")
-//    public String displayOneReviewById(@PathVariable Long id, Model model){
-//        model.addAttribute("oneReview", reviewsRepo.findById(id));
-//        return ("single-review.html");
-//    }
+
+    @RequestMapping("/single-review/{id}")
+    public String displaySingleReview(@PathVariable Long revId, Model model) {
+        model.addAttribute("reviews", reviewsRepo.findById(revId).get());
+        return ("redirect:/reviews");
+    }
 }

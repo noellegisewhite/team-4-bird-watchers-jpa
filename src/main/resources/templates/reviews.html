@@ -1,178 +1,48 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
-  <meta charset="UTF-8">
-  <!-- ============ VS Code Path ================= -->
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/static/css/style.css">
-  <!-- ============ Global Styles ================= -->
-  <link rel="stylesheet" href="/css/z-global.css">
-  <link rel="stylesheet" href="/static/css/z-global.css">
-  <!-- ============ Review Styles ================= -->
-  <link rel="stylesheet" href="static/css/reviews.css">
-  <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
-  <title>Reviews</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <!-- ============ Global Styles ================= -->
+    <link rel="stylesheet" href="/css/z-global.css">
+    <link rel="stylesheet" href="/static/css/z-global.css">
+    <!-- ============ Review Styles ================= -->
+    <link rel="stylesheet" href="/css/reviews.css">
+    <link rel="stylesheet" href="/static/css/reviews.css">
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <title>Reviews</title>
 </head>
 
 <header>
-  <nav>
-    <div class="nav-container">
-      <img src="/images/parrot-small.png"/>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/company">Company</a></li>
-        <li><a href="/birds">Birds</a></li>
-        <li><a href="/birdwatchers">Bird Watchers</a></li>
-        <li><a href="/destinations">Destinations</a></li>
-        <li><a href="/reviews">Reviews</a></li>
-        <li><a class="global-button global-button__red button" href="/#book">Book Now</a></li>
-      </ul>
-    </div>
-  </nav>
+    <nav>
+        <div class="nav-container">
+            <img src="/images/parrot-small.png"/>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/company">Company</a></li>
+                <li><a href="/birds">Birds</a></li>
+                <li><a href="/birdwatchers">Bird Watchers</a></li>
+                <li><a href="/destinations">Destinations</a></li>
+                <li><a href="/reviews">Reviews</a></li>
+                <li><a class="global-button global-button__red button" href="/#book">Book Now</a></li>
+            </ul>
+        </div>
+    </nav>
 </header>
 
 <body>
-<!--Testimonials------------------->
-<section id="testimonials">
-  <!--heading--->
-  <div class="testimonial-heading">
-    <span>Reviews</span>
-    <h1>Tourists Say</h1>
-  </div>
-  <!--testimonials-box-container------>
-  <div class="testimonial-box-container">
-    <!--BOX-1-------------->
-    <div class="testimonial-box">
-      <!--top------------------------->
-      <div class="box-top">
-        <!--profile----->
-        <div class="profile">
-          <!--img---->
-          <div class="profile-img">
-            <img src="images/c-5.jpg" />
-          </div>
-          <!--name-and-username-->
-          <div class="name-user">
-            <strong>Lorem Ipsum</strong>
-            <span>@loremipsum</span>
-            <span>Visited Kruger National Park From 7/15/22 - 7/20/22</span>
-          </div>
+<main>
+    <section class="review-page">
+        <div class="review-page__container" th:each="reviews: ${allReviews}">
+            <p class="global-text" th:text="${reviews.revRating} + ' / Out of 5'">Rating</p>
+            <p class="global-text" th:text="${reviews.revDate}">Date</p>
+            <h6 class="global-h6" th:text="${reviews.revName}">User Name</h6>
+            <p class="global-text rev-title" th:text="${reviews.revTitle}">Title</p>
+            <p class="global-text" th:text="${reviews.revText}">Review Content</p>
         </div>
-        <!--reviews------>
-        <div class="reviews">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="far fa-star"></i>
-          <!--Empty star-->
-        </div>
-      </div>
-      <!--Comments---------------------------------------->
-      <div class="client-comment">
-        <p>I took the safari tour with my family and it was amazing. Although there were a lot of insects
-          around, I was able to see the animals and birds that I wanted to see. My favorites were
-          flamingos and parrots.</p>
-      </div>
-    </div>
-    <!--BOX-2-------------->
-    <div class="testimonial-box">
-      <!--top------------------------->
-      <div class="box-top">
-        <!--profile----->
-        <div class="profile">
-          <!--img---->
-          <div class="profile-img">
-            <img src="images/c-6.jpg" />
-          </div>
-          <!--name-and-username-->
-          <div class="name-user">
-            <strong>Jane Doe</strong>
-            <span>@JaneDoe</span>
-            <span>Visited Rift Valley From 11/21/22 - 11/26/22</span>
-          </div>
-        </div>
-        <!--reviews------>
-        <div class="reviews">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <!--Empty star-->
-        </div>
-      </div>
-      <!--Comments---------------------------------------->
-      <div class="client-comment">
-        <p>There was a lot of variety in wildlife around.I love seeing hornbills, parrots, and flamingos.
-        </p>
-      </div>
-    </div>
-    <!--BOX-3-------------->
-    <div class="testimonial-box">
-      <!--top------------------------->
-      <div class="box-top">
-        <!--profile----->
-        <div class="profile">
-          <!--img---->
-          <div class="profile-img">
-            <img src="images/c-7.jpg" />
-          </div>
-          <!--name-and-username-->
-          <div class="name-user">
-            <strong>John Smith</strong>
-            <span>@therealjsmith</span>
-          </div>
-        </div>
-        <!--reviews------>
-        <div class="reviews">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="far fa-star"></i>
-          <!--Empty star-->
-        </div>
-      </div>
-      <!--Comments---------------------------------------->
-      <div class="client-comment">
-        <p>I loved seeing all of the birds and I enjoyed many of the tourist activities.</p>
-      </div>
-    </div>
-    <!--BOX-4-------------->
-    <div class="testimonial-box">
-      <!--top------------------------->
-      <div class="box-top">
-        <!--profile----->
-        <div class="profile">
-          <!--img---->
-          <div class="profile-img">
-            <img src="images/c-8.jpg" />
-          </div>
-          <!--name-and-username-->
-          <div class="name-user">
-            <strong>Random Name</strong>
-            <span>@RandName</span>
-          </div>
-        </div>
-        <!--reviews------>
-        <div class="reviews">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="far fa-star"></i>
-          <!--Empty star-->
-        </div>
-      </div>
-      <!--Comments---------------------------------------->
-      <div class="client-comment">
-        <p>If you go on this tour, you will love every moment of it. The scenes are breathtaking and while capturing certain sights weren't easy, I got enough pictures. </p>
-      </div>
-    </div>
-  </div>
-</section>
-
+    </section>
+</main>
 </body>
 </html>

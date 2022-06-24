@@ -1,5 +1,7 @@
 package org.wecancodeit.birdwatcher.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
@@ -77,7 +79,6 @@ public class Reviews {
     }
 
     // Methods
-
     @Override
     public String toString() {
         return "Reviews{" +
@@ -98,12 +99,12 @@ public class Reviews {
         if (this == o) return true;
         if (!(o instanceof Reviews)) return false;
         Reviews reviews = (Reviews) o;
-        return Double.compare(reviews.getRevRating(), getRevRating()) == 0 && Double.compare(reviews.getOverallRate(), getOverallRate()) == 0 && getNumOfReviews() == reviews.getNumOfReviews() && Objects.equals(getRevId(), reviews.getRevId()) && Objects.equals(getRevName(), reviews.getRevName()) && Objects.equals(getRevDate(), reviews.getRevDate()) && Objects.equals(getRevTitle(), reviews.getRevTitle()) && Objects.equals(getRevText(), reviews.getRevText()) && Objects.equals(getDestinations(), reviews.getDestinations());
+        return Double.compare(reviews.getRevRating(), getRevRating()) == 0 && Double.compare(reviews.getOverallRate(), getOverallRate()) == 0 && getNumOfReviews() == reviews.getNumOfReviews() && getRevId().equals(reviews.getRevId()) && getRevName().equals(reviews.getRevName()) && getRevDate().equals(reviews.getRevDate()) && getRevTitle().equals(reviews.getRevTitle()) && getRevText().equals(reviews.getRevText());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getRevId(), getRevName(), getRevDate(), getRevTitle(), getRevText(), getRevRating(), getOverallRate(), getNumOfReviews(), getDestinations());
+        return Objects.hash(getRevId(), getRevName(), getRevDate(), getRevTitle(), getRevText(), getRevRating(), getOverallRate(), getNumOfReviews());
     }
 }
 

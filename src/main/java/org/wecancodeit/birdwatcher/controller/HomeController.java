@@ -51,14 +51,15 @@ public class HomeController {
         return ("z-global-template.html");
     }
 
+
     @PostMapping("/addBooking")
-    public String addBooking(@RequestParam String bookName, @RequestParam String bookEmail, @RequestParam String bookPhone, @RequestParam Long destId, @RequestParam String bookStart, @RequestParam String bookEnd, Model model) {
-        Destinations bookingDest = destinationRepo.findById(destId).get();
+    public String addBooking(@RequestParam String bookName, @RequestParam String bookEmail, @RequestParam String bookPhone, @RequestParam Long id, @RequestParam String bookStart, @RequestParam String bookEnd, Model model) {
+        Destinations bookingDest = destinationRepo.findById(id).get();
         Booking newBooking = new Booking(bookName, bookEmail, bookPhone, bookingDest, bookStart, bookEnd);
         bookingRepo.save(newBooking);
-        bookingDest.addBooking(newBooking);
         destinationRepo.save(bookingDest);
-        model.addAttribute("newBooking", newBooking);
+        model.addAttribute("booking", newBooking);
+        model.addAttribute("destinations", bookingDest);
         return ("bookings.html");
     }
 }
