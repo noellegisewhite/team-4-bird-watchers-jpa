@@ -10,257 +10,233 @@
     <!-- ============ Review Styles ================= -->
     <link rel="stylesheet" href="/css/reviews.css">
     <link rel="stylesheet" href="/static/css/reviews.css">
-      <!-- Swiper CSS  -->
-  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <!-- Swiper CSS  -->
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css">
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
     <title>Reviews</title>
 </head>
 
-<header>
-    <nav>
-        <div class="nav-container">
-            <img src="/images/parrot-small.png"/>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/company">Company</a></li>
-                <li><a href="/birds">Birds</a></li>
-                <li><a href="/birdwatchers">Bird Watchers</a></li>
-                <li><a href="/destinations">Destinations</a></li>
-                <li><a href="/reviews">Reviews</a></li>
-                <li><a class="global-button global-button__red button" href="/#book">Book Now</a></li>
-            </ul>
-        </div>
-    </nav>
-</header>
-
-<body>
-    <section class="review-page">
-        <div class="review-page__container" th:each="reviews: ${allReviews}">
-            <p class="global-text" th:text="${reviews.revRating} + ' / Out of 5'">Rating</p>
-            <p class="global-text" th:text="${reviews.revDate}">Date</p>
-            <h6 class="global-h6" th:text="${reviews.revName}">User Name</h6>
-            <p class="global-text rev-title" th:text="${reviews.revTitle}">Title</p>
-            <p class="global-text" th:text="${reviews.revText}">Review Content</p>
-        </div>
-    </section>
-
+<body class="rev-body">
+<main>
 <div class="slide-container swiper">
-  <div class="slide-content">
-    <div class="card-wrapper swiper-wrapper">
-      <div class="card swiper-slide">
-        <div class="image-content">
-          <span class="overlay"></span>
+    <div class="slide-content">
+        <div class="card-wrapper swiper-wrapper">
+            <div class="card swiper-slide">
+                <div class="image-content">
+                    <span class="overlay"></span>
 
-          <div class="card-image">
-            <img src="images/reviews/profile1.jpg" alt="" class="card-img">
-          </div>
+                    <div class="card-image">
+                        <img src="images/reviews/profile1.jpg" alt="" class="card-img">
+                    </div>
+                </div>
+
+                <div class="card-content">
+                    <h2 class="name">Lorem Ipsum</h2>
+                    <p class="description"> If you go on this tour, you will love every moment of it. The scenes are
+                        breathtaking
+                        and while capturing certain sights weren't easy, I got enough pictures.
+                    </p>
+
+                    <div class="reviews">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card swiper-slide">
+                <div class="image-content">
+                    <span class="overlay"></span>
+
+                    <div class="card-image">
+                        <img src="images/reviews/profile2.jpg" alt="" class="card-img">
+                    </div>
+                </div>
+
+                <div class="card-content">
+                    <h2 class="name">John Smith</h2>
+                    <p class="description">I took the safari tour with my family, and it was amazing. Although
+                        there were a lot of insects around, I was able to see the animals and birds that I wanted
+                        to see. My favorites were flamingos and parrots.
+                    </p>
+
+                    <div class="reviews">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half"></i>
+                    </div>
+
+                </div>
+            </div>
+            <div class="card swiper-slide">
+                <div class="image-content">
+                    <span class="overlay"></span>
+
+                    <div class="card-image">
+                        <img src="images/reviews/profile3.jpg" alt="" class="card-img">
+                    </div>
+                </div>
+
+                <div class="card-content">
+                    <h2 class="name">User</h2>
+                    <p class="description">There was a lot of variety in wildlife around. I loved seeing
+                        hornbills,eagles, and the kori bustard flying around and even hunting. </p>
+                    <div class="reviews">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card swiper-slide">
+                <div class="image-content">
+                    <span class="overlay"></span>
+
+                    <div class="card-image">
+                        <img src="images/reviews/profile4.jpg" alt="" class="card-img">
+                    </div>
+                </div>
+
+                <div class="card-content">
+                    <h2 class="name">Random Name</h2>
+                    <p class="description">I love seeing all of the birds and I enjoyed many of the tourist
+                        activities.</p>
+
+                    <div class="reviews">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half"></i>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="card swiper-slide">
+                <div class="image-content">
+                    <span class="overlay"></span>
+
+                    <div class="card-image">
+                        <img src="images/reviews/profile5.jpg" alt="" class="card-img">
+                    </div>
+                </div>
+
+                <div class="card-content">
+                    <h2 class="name">User-4</h2>
+                    <p class="description"></p>
+
+                    <div class="reviews">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+
+                        <i class="fas fa-star-half"></i>
+
+                    </div>
+                </div>
+            </div>
+            <div class="card swiper-slide">
+                <div class="image-content">
+                    <span class="overlay"></span>
+
+                    <div class="card-image">
+                        <img src="images/reviews/profile6.jpg" alt="" class="card-img">
+                    </div>
+                </div>
+
+                <div class="card-content">
+                    <h2 class="name">User-5</h2>
+                    <p class="description">A little too pricey, but worthwhile in certain spots. </p>
+                    <div class="reviews">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half"></i>
+
+                    </div>
+                </div>
+            </div>
+            <div class="card swiper-slide">
+                <div class="image-content">
+                    <span class="overlay"></span>
+
+                    <div class="card-image">
+                        <img src="images/reviews/profile7.jpg" alt="" class="card-img">
+                    </div>
+                </div>
+
+                <div class="card-content">
+                    <h2 class="name">User-6</h2>
+                    <p class="description">
+                    </p>
+                    <div class="reviews">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card swiper-slide">
+                <div class="image-content">
+                    <span class="overlay"></span>
+
+                    <div class="card-image">
+                        <img src="images/reviews/profile8.jpg" alt="" class="card-img">
+                    </div>
+                </div>
+
+                <div class="card-content">
+                    <h2 class="name">User-7</h2>
+                    <p class="description">Just a great trip from the sights to the birds. Highly recommended!</p>
+                    <div class="reviews">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card swiper-slide">
+                <div class="image-content">
+                    <span class="overlay"></span>
+
+                    <div class="card-image">
+                        <img src="images/reviews/profile9.jpg" alt="" class="card-img">
+                    </div>
+                </div>
+
+                <div class="card-content">
+                    <h2 class="name">User-8</h2>
+                    <p class="description">I loved the trip although it was hotter and rainier than I expected it to be.
+                        I wasn't able to get as many pictures as I wanted. But, I loved seeing the flock of
+                        flamingos.</p>
+                    <div class="reviews">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half"></i>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="card-content">
-          <h2 class="name">Lorem Ipsum</h2>
-          <p class="description"> If you go on this tour, you will love every moment of it. The scenes are breathtaking
-            and while capturing certain sights weren't easy, I got enough pictures.
-          </p>
-
-          <div class="reviews">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-          </div>
-
-
-        </div>
-      </div>
-      <div class="card swiper-slide">
-        <div class="image-content">
-          <span class="overlay"></span>
-
-          <div class="card-image">
-            <img src="images/reviews/profile2.jpg" alt="" class="card-img">
-          </div>
-        </div>
-
-        <div class="card-content">
-          <h2 class="name">John Smith</h2>
-          <p class="description">I took the safari tour with my family, and it was amazing. Although
-            there were a lot of insects around, I was able to see the animals and birds that I wanted
-            to see. My favorites were flamingos and parrots.
-          </p>
-
-          <div class="reviews">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star-half"></i>
-          </div>
-
-        </div>
-      </div>
-      <div class="card swiper-slide">
-        <div class="image-content">
-          <span class="overlay"></span>
-
-          <div class="card-image">
-            <img src="images/reviews/profile3.jpg" alt="" class="card-img">
-          </div>
-        </div>
-
-        <div class="card-content">
-          <h2 class="name">User</h2>
-          <p class="description">There was a lot of variety in wildlife around. I loved seeing hornbills,eagles, and the kori bustard flying around and even hunting. </p>
-          <div class="reviews">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-          </div>
-        </div>
-      </div>
-      <div class="card swiper-slide">
-        <div class="image-content">
-          <span class="overlay"></span>
-
-          <div class="card-image">
-            <img src="images/reviews/profile4.jpg" alt="" class="card-img">
-          </div>
-        </div>
-
-        <div class="card-content">
-          <h2 class="name">Random Name</h2>
-          <p class="description">I love seeing all of the birds and I enjoyed many of the tourist activities.</p>
-
-          <div class="reviews">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star-half"></i>
-
-          </div>
-
-        </div>
-      </div>
-      <div class="card swiper-slide">
-        <div class="image-content">
-          <span class="overlay"></span>
-
-          <div class="card-image">
-            <img src="images/reviews/profile5.jpg" alt="" class="card-img">
-          </div>
-        </div>
-
-        <div class="card-content">
-          <h2 class="name">User-4</h2>
-          <p class="description"></p>
-
-          <div class="reviews">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-
-            <i class="fas fa-star-half"></i>
-
-          </div>
-        </div>
-      </div>
-      <div class="card swiper-slide">
-        <div class="image-content">
-          <span class="overlay"></span>
-
-          <div class="card-image">
-            <img src="images/reviews/profile6.jpg" alt="" class="card-img">
-          </div>
-        </div>
-
-        <div class="card-content">
-          <h2 class="name">User-5</h2>
-          <p class="description">A little too pricey, but worthwhile in certain spots. </p>
-          <div class="reviews">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star-half"></i>
-
-          </div>
-        </div>
-      </div>
-      <div class="card swiper-slide">
-        <div class="image-content">
-          <span class="overlay"></span>
-
-          <div class="card-image">
-            <img src="images/reviews/profile7.jpg" alt="" class="card-img">
-          </div>
-        </div>
-
-        <div class="card-content">
-          <h2 class="name">User-6</h2>
-          <p class="description">
-          </p>
-          <div class="reviews">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-          </div>
-        </div>
-      </div>
-      <div class="card swiper-slide">
-        <div class="image-content">
-          <span class="overlay"></span>
-
-          <div class="card-image">
-            <img src="images/reviews/profile8.jpg" alt="" class="card-img">
-          </div>
-        </div>
-
-        <div class="card-content">
-          <h2 class="name">User-7</h2>
-          <p class="description">Just a great trip from the sights to the birds. Highly recommended!</p>
-          <div class="reviews">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-          </div>
-        </div>
-      </div>
-      <div class="card swiper-slide">
-        <div class="image-content">
-          <span class="overlay"></span>
-
-          <div class="card-image">
-            <img src="images/reviews/profile9.jpg" alt="" class="card-img">
-          </div>
-        </div>
-
-        <div class="card-content">
-          <h2 class="name">User-8</h2>
-          <p class="description">I loved the trip although it was hotter and rainier than I expected it to be. I wasn't able to get as many pictures as I wanted. But, I loved seeing the flock of flamingos.</p>
-          <div class="reviews">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star-half"></i>
-          </div>
-        </div>
-      </div>
     </div>
-  </div>
 
-  <div class="swiper-button-next swiper-navBtn"></div>
-  <div class="swiper-button-prev swiper-navBtn"></div>
-  <div class="swiper-pagination"></div>
+    <div class="swiper-button-next swiper-navBtn"></div>
+    <div class="swiper-button-prev swiper-navBtn"></div>
+    <div class="swiper-pagination"></div>
 </div>
-
+</main>
 </body>
 <!-- Swiper JS -->
 <script src="js/swiper-bundle.min.js"></script>
