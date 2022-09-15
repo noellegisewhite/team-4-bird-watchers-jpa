@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <!-- ============ Global Styles ================= -->
+    <link rel="stylesheet" href="/css/z-global.css">
+    <link rel="stylesheet" href="/static/css/z-global.css">
+    <title>All Bookings</title>
+</head>
+
+<header>
+    <nav>
+        <div class="nav-container">
+            <img src="/images/parrot-small.png"/>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/company">Company</a></li>
+                <li><a href="/birds">Birds</a></li>
+                <li><a href="/birdwatchers">Bird Watchers</a></li>
+                <li><a href="/destinations">Destinations</a></li>
+                <li><a href="/reviews">Reviews</a></li>
+                <li><a class="global-button global-button__red button" href="/#book">Book Now</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<body>
+<section>
+    <div th:each="booking: ${allBookings}">
+        <h6 class="global-h6" th:text="'Customer Name: '+${booking.bookName}">Name</h6>
+        <h6 class="global-h6" th:text="'Customer Email: '+${booking.bookEmail}">Email</h6>
+        <h6 class="global-h6" th:text="'Customer Phone Number: '+${booking.bookPhone}">Number</h6>
+        <h6 class="global-h6" th:text="'Destination Booked '+${booking.destinations.packageName}">Destination</h6>
+        <img th:src="${booking.destinations.destinationImageUrl}">
+        <h6 class="global-h6" th:text="'Customer Trip Start '+${booking.bookStart}">Start</h6>
+        <h6 class="global-h6" th:text="'Customer Trip End '+${booking.bookEnd}">End</h6>
+    </div>
+</section>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <!-- ============ Global Styles ================= -->
+    <link rel="stylesheet" href="/css/z-global.css">
+    <link rel="stylesheet" href="/static/css/z-global.css">
+    <!-- ============ Sng Dest Styles =============== -->
+    <link rel="stylesheet" href="/css/single-destination.css">
+    <link rel="stylesheet" href="/static/css/single-destination.css">
+    <script src="https://kit.fontawesome.com/fa2ea675bd.js" crossorigin="anonymous"></script>
+    <title>Single Destination Page</title>
+</head>
+
+<header>
+    <nav>
+        <div class="nav-container">
+            <img src="/images/parrot-small.png"/>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/company">Company</a></li>
+                <li><a href="/birds">Birds</a></li>
+                <li><a href="/birdwatchers">Bird Watchers</a></li>
+                <li><a href="/destinations">Destinations</a></li>
+                <li><a href="/reviews">Reviews</a></li>
+                <li><a class="global-button global-button__red button" href="/#book">Book Now</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<body>
+<section class="single-hero">
+    <div class="single-hero__container">
+        <h5 class="global-h5" th:text="${singleDestination.country}">Country</h5>
+        <h3 class="global-h3" th:text="${singleDestination.packageName}">Package Name</h3>
+    </div>
+</section>
+<main>
+    <section class="dest-main">
+        <div class="grid-elements">
+            <div class="grid-elements__div">
+                <i class="fa-solid fa-tag"></i>
+                <p class="grid-text">Category:</p>
+                <p class="global-text grid-text__low" th:text="${singleDestination.packageCategory}">Category</p>
+            </div>
+
+            <div class="grid-elements__div">
+                <i class="fa-solid fa-earth-africa"></i>
+                <p class="grid-text">Country:</p>
+                <p class="global-text grid-text__low" th:text="${singleDestination.country}">Country</p>
+            </div>
+
+            <div class="grid-elements__div">
+                <i class="fa-solid fa-globe"></i>
+                <p class="grid-text">Region:</p>
+                <p class="global-text grid-text__low" th:text="${singleDestination.region}">Region</p>
+            </div>
+
+            <div class="grid-elements__div hab">
+                <i class="fa-solid fa-mountain"></i>
+                <p class="grid-text">Habitat:</p>
+                <p class="global-text grid-text__low" th:text="${singleDestination.habitat}">Habitat</p>
+            </div>
+        </div>
+
+        <div class="dest-flex">
+            <img class="grid-img" th:src="${singleDestination.destinationImageUrl}"
+                 th:alt="${singleDestination.packageName}">
+            <h6 class="global-h6 price" th:text="${singleDestination.packagePrice}+' USD'">Price</h6>
+            <h5 class="global-h5 name" th:text="${singleDestination.packageName}">Package Name</h5>
+            <div class="all-tags">
+                <button class="global-button htag" th:each="hashtag: ${singleDestination.hashtags}"
+                        th:text="${hashtag.tagName}">Hashtag
+                </button>
+            </div>
+            <p class="global-text" th:text="${singleDestination.packageDesc}">Description</p>
+        </div>
+    </section>
+
+    <section class="review-form">
+        <fieldset>
+            <form name="addReview" action="/addReview" method="post" th:object="${reviews}">
+                <legend><h5 class="global-h5">Review This Adventure</h5></legend>
+                <input type="hidden" name="id" th:value="${singleDestination.id}">
+                <input type="date" class="rev-field" name="revDate" id="revDate" placeholder="Date Of Stay">
+                <input type="text" class="rev-field" name="revName" id="revName" placeholder="Your Name">
+                <input type="text" class="rev-field" name="revTitle" id="revTitle" placeholder="Review Title">
+                <input type="text" class="rev-field" name="revText" id="revText" placeholder="Comments">
+                <input type="number" step="0.1" min="1" max="5" class="rev-field" name="revRating" id="revRating" placeholder="Your Score (Ex. 4.9)">
+                <button class="global-button rev-submit">Submit Review</button>
+            </form>
+        </fieldset>
+    </section>
+
+    <section class="review-container" id="reviews">
+        <article class="review" th:each="reviews :${singleDestination.reviews}">
+            <p class="global-text" th:text="${reviews.revRating} + ' / Out of 5'">Rating</p>
+            <p class="global-text" th:text="${reviews.revDate}">Date</p>
+            <h6 class="global-h6" th:text="${reviews.revName}">User Name</h6>
+            <p class="global-text rev-title" th:text="${reviews.revTitle}">Title</p>
+            <p class="global-text" th:text="${reviews.revText}">Review Content</p>
+        </article>
+    </section>
+</main>
+</body>
+</html>

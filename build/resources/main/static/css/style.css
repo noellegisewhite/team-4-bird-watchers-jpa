@@ -1,0 +1,286 @@
+:root {
+
+    /* variables */
+    --color-off-gray: #e7e7e7;
+    --color-off-white: #f8f8f8;
+    --color-white: #fff;
+    --color-black: #0B0B0D;
+    --color-gray: #272932;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* =============== NAVIGATION ================ */
+
+.nav-container {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color:#5F0F40;
+    padding: 5px 20px;
+}
+
+.nav-container img {
+    width: 45px;
+    margin: auto 0px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+}
+
+nav a {
+    margin: auto 20px;
+    color: #E36414;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 500ms ease;
+}
+
+nav a:visited {
+    color: #E36414;
+}
+
+nav a:hover {
+    color: #9A031E;
+    border-radius: 3px;
+}
+
+.button {
+    margin-bottom: 0px;
+    color: white;
+}
+
+.button:visited {
+    color: white;
+}
+
+/* =============== // NAVIGATION ================ */
+
+/* ================ HERO SECTION ================ */
+
+.hero-section {
+    height: 500px;
+    background: url("/images/hero.png") center no-repeat;
+    background-size: cover;
+}
+
+.hero-section__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%
+}
+
+.hero-section__content h5 {
+    color: #0F4C5C;
+}
+
+.hero-section__content h3 {
+    color: #F4983C;
+}
+
+.hero-section__content a {
+    font-size: 1.5rem;
+}
+
+/* ================ // HERO SECTION ================ */
+/* ================ ABOUT SECTION ================== */
+
+.single-hero {
+    width: 100%;
+    height: 40vh;
+    background: url("/images/lake.jpg") no-repeat;
+    background-size: cover;
+    background-position: 50% 60%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.single-hero__container {
+    text-align: center;
+}
+
+.single-hero h5 {
+    font-family: 'Satisfy', cursive;
+}
+
+.sh2 {
+    background: url("/images/river.jpg") no-repeat;
+    background-size: cover;
+    background-position: 50% 60%;
+}
+
+/* ================ // ABOUT SECTION ================== */
+/* ====================== STAFF ======================= */
+
+.staff-h3 {
+    text-align: center;
+    color: var(--color-purple);
+    margin-top: 30px;
+}
+
+.global-cards__group {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: auto;
+}
+/* ==================== BOOKING ==================== */
+
+.booking {
+    margin: auto;
+    width: 100%;
+    height: 1200px;
+    background-color: var(--color-blue);
+}
+
+.booking-container {
+    width: 100%;
+    height: 100%;
+    background: url("/images/jungle-border.svg") no-repeat;
+    background-size: cover;
+    margin: auto;
+    padding-top: 15%;
+}
+
+.booking h3 {
+    text-align: center;
+    color: white;
+}
+
+.book-form {
+    border: none;
+}
+
+input,
+select {
+    display: block;
+    width: 40%;
+    margin: 10px auto;
+}
+
+.text-field {
+    height: 50px;
+    margin: 20px auto;
+    padding: 20px;
+    font-size: 20px;
+    border: 0px solid rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+
+.text-field::placeholder {
+    color: #0F4C5C;
+    font-weight: 700;
+}
+
+.select-field {
+    height: 50px;
+    margin: 20px auto;
+    padding-left: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #0F4C5C;
+    border: 0px solid rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+
+.reserve {
+    display: block;
+    color: var(--color-white);
+    background-color: var(--color-black);
+    border: 1px solid rgba(0,0,0,0);
+    margin: 10px auto;
+    padding: 10px 25px;
+    transition: all 300ms ease;
+    border-radius: 3px;
+    font-weight: 700;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.reserve:hover {
+    color: var(--color-black);
+    background-color: var(--color-white);
+    border: 1px solid var(--color-black);
+}
+
+
+
+/* =================== // BOOKING ================== */
+/* ==================== ABOUT ===================== */
+
+.about {
+    background-color: var(--color-blue);
+}
+
+.about-text {
+    color: white;
+    margin-top: 20px;
+    padding: 100px;
+}
+
+.about-text p {
+    color: white;
+}
+
+.about-img {
+    margin: auto;
+}
+
+/* ==================== FOOTER ===================== */
+
+.footer {
+    display: block;
+    background-color: var(--color-blue);
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+
+.footer-social {
+    margin-top: 10px;
+}
+
+i {
+    font-size: 20px;
+    margin: 10px;
+}
+
+.footer a:visited {
+    color: white;
+}
+
+.fa {
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.fa:hover{
+opacity: .7;
+}
+
+.fa-twitter{
+color: white;
+}
+
+.fa-instagram{
+color: white;
+}

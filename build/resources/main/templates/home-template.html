@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <!-- ============ Global Styles ================= -->
+    <link rel="stylesheet" href="/css/z-global.css">
+    <link rel="stylesheet" href="/static/css/z-global.css">
+    <script src="https://kit.fontawesome.com/fa2ea675bd.js" crossorigin="anonymous"></script>
+    <title>Team 4 - Home</title>
+</head>
+
+<header>
+    <nav>
+        <div class="nav-container">
+            <img src="/images/parrot-small.png"/>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/company">Company</a></li>
+                <li><a href="/birds">Birds</a></li>
+                <li><a href="/birdwatchers">Bird Watchers</a></li>
+                <li><a href="/destinations">Destinations</a></li>
+                <li><a href="/reviews">Reviews</a></li>
+                <li><a class="global-button global-button__red button" href="/#book">Book Now</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<body>
+<section class="hero-section">
+    <div class="hero-section__content">
+        <h5 class="global-h5 cursive">premium birdwatching tours</h5>
+        <h3 class="global-h3">african adventure.</h3>
+        <h6 class="global-h6">Let Us Take You On A Full Wild Life Ride...</h6>
+        <h6 class="global-h6">Explore Africa's Wild Birds Like Never Before</h6>
+        <a href="/birds" class="global-button global-button__purple">SEE OUR BIRDS</a>
+    </div>
+</section>
+<main>
+    <section class="single-hero">
+        <div class="single-hero__container">
+            <h5 class="global-h5">About</h5>
+            <h3 class="global-h3">The Birds</h3>
+        </div>
+    </section>
+
+    <section class="global-twocol">
+        <div class="global-twocol__right">
+            <h6 class="global-h6 global-twocol__h6-1">See Birds Of Africa Like Never Before</h6>
+            <p class="global-text global-twocol__text">Learn all about Africa's birds</p>
+            <h6 class="global-h6 global-twocol__h6-2">Flamingos Of Kenya</h6>
+            <p class="global-text global-twocol__text">Learn how they get their vibrant color</p>
+            <h6 class="global-h6 global-twocol__h6-3">Saddle-Billed Storks of South Africa</h6>
+            <p class="global-text global-twocol__text">Learn about their diet</p>
+            <h6 class="global-h6 global-twocol__h6-3">And Much More</h6>
+            <p class="global-text global-twocol__text">We have all types of bird from Africa</p>
+            <a href="/birds" class="global-button global-button__red">LEARN MORE</a>
+        </div>
+        <img src="https://images.pexels.com/photos/987947/pexels-photo-987947.jpeg" alt="flamingo"
+             class="global-twocol__img" width="100%" height="100%">
+    </section>
+
+    <section class="single-hero sh2">
+        <div class="single-hero__container">
+            <h5 class="global-h5">About</h5>
+            <h3 class="global-h3">Destinations</h3>
+        </div>
+    </section>
+
+    <section class="global-twocol">
+        <img src="https://images.pexels.com/photos/276334/pexels-photo-276334.jpeg" alt="safari"
+             class="global-twocol__img" width="100%" height="100%">
+        <div class="global-twocol__right">
+            <h6 class="global-h6 global-twocol__h6-1">Explore Destinations In Kenya</h6>
+            <p class="global-text global-twocol__text">Wildlife Safari, Kayaking, and more...</p>
+            <h6 class="global-h6 global-twocol__h6-2">Explore Destinations In Madagascar</h6>
+            <p class="global-text global-twocol__text">Luxury Private Retreats</p>
+            <h6 class="global-h6 global-twocol__h6-3">Explore Destinations In South Africa</h6>
+            <p class="global-text global-twocol__text">Exotic foods</p>
+            <h6 class="global-h6 global-twocol__h6-3">Explore Destinations In Gabon</h6>
+            <p class="global-text global-twocol__text">Private Dolphin Tour</p>
+            <a href="/destinations" class="global-button global-button__orange">LEARN MORE</a>
+        </div>
+    </section>
+
+    <section class="single-hero sh3">
+        <div class="single-hero__container">
+            <h5 class="global-h5">About</h5>
+            <h3 class="global-h3">Bird Watchers</h3>
+        </div>
+    </section>
+
+    <section class="global-twocol">
+        <div class="global-twocol__right">
+            <h6 class="global-h6 global-twocol__h6-1">Learn all the type of Bird Watchers...</h6>
+            <p class="global-text global-twocol__text">Each have a specific role and goal!</p>
+            <h6 class="global-h6 global-twocol__h6-2">From hobbyists to professionals..</h6>
+            <p class="global-text global-twocol__text">They dedicate their lives on the wild birds</p>
+            <h6 class="global-h6 global-twocol__h6-3">A true life passion!</h6>
+            <a href="/birdwatchers" class="global-button global-button__yellow">LEARN MORE</a>
+        </div>
+        <img src="/images/birdWatching.jpg" class="global-twocol__img" width="100%" height="100%">
+    </section>
+
+    <!-- =========================  LINK SECTION ========================= -->
+    <section class="global-threecol">
+        <div class="global-threecol__container">
+            <img src="/images/about-team.jpg" alt="image" class="global-threecol__img">
+            <h6 class="global-h6 global-threecol__h6-1">About Our Team</h6>
+            <a class="global-button" href="/about">About</a>
+        </div>
+        <div class="global-threecol__container">
+            <img src="/images/about-company.jpg" alt="image" class="global-threecol__img">
+            <h6 class="global-h6 global-threecol__h6-1">Our Company</h6>
+            <a class="global-button" href="/company">Company</a>
+        </div>
+        <div class="global-threecol__container">
+            <img src="/images/about-review.jpg" alt="image" class="global-threecol__img">
+            <h6 class="global-h6 global-threecol__h6-1">Read Our Reviews</h6>
+            <a class="global-button" href="/reviews">Reviews</a>
+
+        </div>
+    </section>
+    <!-- ======================== // LINK SECTION ======================== -->
+    <!-- ============================  FORM  ============================== -->
+
+    <section class="booking" id="book">
+        <div class="booking-container">
+        <fieldset class="book-form">
+            <h3 class="global-h3">Book Your Tour<a href="/bookings">.</a></h3>
+            <form name="addBooking" action="/addBooking" method="POST" th:object="${booking}">
+                <input type="text" class="text-field" name="bookName" id="bookName" placeholder="Name" required>
+                <input type="email" class="text-field" name="bookEmail" id="bookEmail" placeholder="Email" required>
+                <input type="text" class="text-field" name="bookPhone" id="bookPhone" placeholder="Phone Number" required>
+                <select class="select-field">
+                    <option value="0">Select A Package</option>
+                    <option th:each="destinations: ${destinationModel}" th:text="${destinations.packageName}" name="id" id="id" th:value="${destinations.id}"></option>
+                </select>
+                <input type="text" class="text-field" name="bookStart" id="bookStart" placeholder="Trip Start Date" required>
+                <input type="text" class="text-field" name="bookEnd" id="bookEnd" placeholder="Trip End Date" required>
+                <button type="submit" class="reserve">RESERVE MY TRIP</button>
+            </form>
+        </fieldset>
+        </div>
+    </section>
+
+    <!-- =========================  FOOTER ========================= -->
+    <footer class="footer">
+        <section class="footer-social">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <a href="https://github.com/2022-April-Java-PT-Classroom/team-4-bird-watchers-jpa"><i class="fa-brands fa-github"></i></a>
+            <div>
+                <p>National Audubon Society</p>
+                <a href="https://twitter.com/audubonsociety" class="fa fa-twitter"> Twitter</a>
+                <a href="https://www.instagram.com/audubonsociety/?hl=en" class="fa fa-instagram"> Instagram</a>
+            </div>
+            <p class="footer_copyright">&copy; TEAM 4 WCCI</p>
+        </section>
+    </footer>
+    <!-- ======================== // FOOTER ======================== -->
+</main>
+</body>
+</html>
