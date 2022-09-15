@@ -28,7 +28,7 @@ tasks.named('test') {
 jar {
     manifest {
         attributes(
-                'Main-Class': 'org.wecancodeit.birdwatcher.BirdWatcherApplication.java'
+                'Main-Class': 'BirdWatcherApplication.java'
         )
     }
 }
